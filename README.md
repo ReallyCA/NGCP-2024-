@@ -4,6 +4,7 @@ hello ros 2 is not on this repo yet
 **PX4 Gazebo Fixed Wing**
 
 ``
+cd PX4-Autopilot
 make px4_sitl gz_rc_cessna
 ``
 
