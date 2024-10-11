@@ -1,0 +1,140 @@
+[0.000000] (-) TimerEvent: {}
+[0.000654] (px4_msgs) JobQueued: {'identifier': 'px4_msgs', 'dependencies': OrderedDict()}
+[0.000726] (px4_ros_com) JobQueued: {'identifier': 'px4_ros_com', 'dependencies': OrderedDict([('px4_msgs', '/home/cali/ws_sensor_combined/install/px4_msgs')])}
+[0.000750] (px4_msgs) JobStarted: {'identifier': 'px4_msgs'}
+[0.010377] (px4_msgs) JobProgress: {'identifier': 'px4_msgs', 'progress': 'cmake'}
+[0.011212] (px4_msgs) JobProgress: {'identifier': 'px4_msgs', 'progress': 'build'}
+[0.012359] (px4_msgs) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/cali/ws_sensor_combined/build/px4_msgs', '--', '-j8', '-l8'], 'cwd': '/home/cali/ws_sensor_combined/build/px4_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'cali'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/cali'), ('OLDPWD', '/home/cali/ws_sensor_combined/src'), ('DESKTOP_SESSION', 'ubuntu'), ('NVM_BIN', '/home/cali/.nvm/versions/node/v22.2.0/bin'), ('NVM_INC', '/home/cali/.nvm/versions/node/v22.2.0/include/node'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1078'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('NVM_DIR', '/home/cali/.nvm'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'cali'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'cali'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/cali/.nvm/versions/node/v22.2.0/bin:/opt/gcc-arm-none-eabi-9-2020-q2-update/bin:/usr/lib/ccache:/home/cali/ardupilot/Tools/autotest:/opt/gcc-arm-none-eabi-10-2020-q4-major/bin:/home/cali/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/cali/ros2_ws/Micro-XRCE-DDS-Gen/scripts:/home/cali/ros2_ws/Micro-XRCE-DDS-Gen/scripts'), ('SESSION_MANAGER', 'local/sus:@/tmp/.ICE-unix/1047,unix/sus:/tmp/.ICE-unix/1047'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/589f0445_1047_4324_9850_14f7a5da34fa'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.1MNPV2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.99'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/cali/ws_sensor_combined/build/px4_msgs'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('NVM_CD_FLAGS', ''), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.099570] (-) TimerEvent: {}
+[0.199817] (-) TimerEvent: {}
+[0.300123] (-) TimerEvent: {}
+[0.400360] (-) TimerEvent: {}
+[0.500595] (-) TimerEvent: {}
+[0.600861] (-) TimerEvent: {}
+[0.701082] (-) TimerEvent: {}
+[0.801334] (-) TimerEvent: {}
+[0.901579] (-) TimerEvent: {}
+[0.962862] (px4_msgs) StdoutLine: {'line': b'[  0%] Built target px4_msgs__cpp\n'}
+[1.000938] (px4_msgs) StdoutLine: {'line': b'[  0%] Built target ament_cmake_python_copy_px4_msgs\n'}
+[1.001648] (-) TimerEvent: {}
+[1.032583] (px4_msgs) StdoutLine: {'line': b'[ 12%] Built target px4_msgs__rosidl_generator_c\n'}
+[1.103052] (-) TimerEvent: {}
+[1.148268] (px4_msgs) StdoutLine: {'line': b'[ 25%] Built target px4_msgs__rosidl_typesupport_c\n'}
+[1.162262] (px4_msgs) StdoutLine: {'line': b'[ 37%] Built target px4_msgs__rosidl_typesupport_cpp\n'}
+[1.194221] (px4_msgs) StdoutLine: {'line': b'[ 50%] Built target px4_msgs__rosidl_typesupport_introspection_c\n'}
+[1.198472] (px4_msgs) StdoutLine: {'line': b'[ 63%] Built target px4_msgs__rosidl_typesupport_introspection_cpp\n'}
+[1.203150] (-) TimerEvent: {}
+[1.206861] (px4_msgs) StdoutLine: {'line': b'[ 75%] Built target px4_msgs__rosidl_typesupport_fastrtps_cpp\n'}
+[1.270327] (px4_msgs) StdoutLine: {'line': b'[ 88%] Built target px4_msgs__rosidl_typesupport_fastrtps_c\n'}
+[1.299160] (px4_msgs) StdoutLine: {'line': b'[ 88%] Built target px4_msgs\n'}
+[1.303208] (-) TimerEvent: {}
+[1.338091] (px4_msgs) StdoutLine: {'line': b'[ 88%] Built target px4_msgs__py\n'}
+[1.366200] (px4_msgs) StdoutLine: {'line': b'running egg_info\n'}
+[1.392868] (px4_msgs) StdoutLine: {'line': b'writing px4_msgs.egg-info/PKG-INFO\n'}
+[1.393409] (px4_msgs) StdoutLine: {'line': b'writing dependency_links to px4_msgs.egg-info/dependency_links.txt\n'}
+[1.393866] (px4_msgs) StdoutLine: {'line': b'writing top-level names to px4_msgs.egg-info/top_level.txt\n'}
+[1.403333] (-) TimerEvent: {}
+[1.467161] (px4_msgs) StdoutLine: {'line': b"reading manifest file 'px4_msgs.egg-info/SOURCES.txt'\n"}
+[1.492724] (px4_msgs) StderrLine: {'line': b'Traceback (most recent call last):\n'}
+[1.493014] (px4_msgs) StderrLine: {'line': b'  File "/home/cali/ws_sensor_combined/build/px4_msgs/ament_cmake_python/px4_msgs/setup.py", line 4, in <module>\n'}
+[1.493126] (px4_msgs) StderrLine: {'line': b'    setup(\n'}
+[1.493228] (px4_msgs) StderrLine: {'line': b'  File "/home/cali/.local/lib/python3.10/site-packages/setuptools/__init__.py", line 117, in setup\n'}
+[1.493360] (px4_msgs) StderrLine: {'line': b'    return distutils.core.setup(**attrs)\n'}
+[1.493417] (px4_msgs) StderrLine: {'line': b'  File "/home/cali/.local/lib/python3.10/site-packages/setuptools/_distutils/core.py", line 183, in setup\n'}
+[1.493478] (px4_msgs) StderrLine: {'line': b'    return run_commands(dist)\n'}
+[1.493538] (px4_msgs) StderrLine: {'line': b'  File "/home/cali/.local/lib/python3.10/site-packages/setuptools/_distutils/core.py", line 199, in run_commands\n'}
+[1.493598] (px4_msgs) StderrLine: {'line': b'    dist.run_commands()\n'}
+[1.493658] (px4_msgs) StderrLine: {'line': b'  File "/home/cali/.local/lib/python3.10/site-packages/setuptools/_distutils/dist.py", line 954, in run_commands\n'}
+[1.493717] (px4_msgs) StderrLine: {'line': b'    self.run_command(cmd)\n'}
+[1.493810] (px4_msgs) StderrLine: {'line': b'  File "/home/cali/.local/lib/python3.10/site-packages/setuptools/dist.py", line 950, in run_command\n'}
+[1.493870] (px4_msgs) StderrLine: {'line': b'    super().run_command(command)\n'}
+[1.493930] (px4_msgs) StderrLine: {'line': b'  File "/home/cali/.local/lib/python3.10/site-packages/setuptools/_distutils/dist.py", line 973, in run_command\n'}
+[1.493989] (px4_msgs) StderrLine: {'line': b'    cmd_obj.run()\n'}
+[1.494049] (px4_msgs) StderrLine: {'line': b'  File "/home/cali/.local/lib/python3.10/site-packages/setuptools/command/egg_info.py", line 311, in run\n'}
+[1.494131] (px4_msgs) StderrLine: {'line': b'    self.find_sources()\n'}
+[1.494232] (px4_msgs) StderrLine: {'line': b'  File "/home/cali/.local/lib/python3.10/site-packages/setuptools/command/egg_info.py", line 319, in find_sources\n'}
+[1.494329] (px4_msgs) StderrLine: {'line': b'    mm.run()\n'}
+[1.494388] (px4_msgs) StderrLine: {'line': b'  File "/home/cali/.local/lib/python3.10/site-packages/setuptools/command/egg_info.py", line 545, in run\n'}
+[1.494446] (px4_msgs) StderrLine: {'line': b'    self.prune_file_list()\n'}
+[1.494504] (px4_msgs) StderrLine: {'line': b'  File "/home/cali/.local/lib/python3.10/site-packages/setuptools/command/sdist.py", line 161, in prune_file_list\n'}
+[1.494563] (px4_msgs) StderrLine: {'line': b'    super().prune_file_list()\n'}
+[1.494620] (px4_msgs) StderrLine: {'line': b'  File "/home/cali/.local/lib/python3.10/site-packages/setuptools/_distutils/command/sdist.py", line 380, in prune_file_list\n'}
+[1.494680] (px4_msgs) StderrLine: {'line': b'    base_dir = self.distribution.get_fullname()\n'}
+[1.494739] (px4_msgs) StderrLine: {'line': b'  File "/home/cali/.local/lib/python3.10/site-packages/setuptools/_core_metadata.py", line 267, in get_fullname\n'}
+[1.494832] (px4_msgs) StderrLine: {'line': b'    return _distribution_fullname(self.get_name(), self.get_version())\n'}
+[1.494889] (px4_msgs) StderrLine: {'line': b'  File "/home/cali/.local/lib/python3.10/site-packages/setuptools/_core_metadata.py", line 285, in _distribution_fullname\n'}
+[1.494942] (px4_msgs) StderrLine: {'line': b'    canonicalize_version(version, strip_trailing_zero=False),\n'}
+[1.494994] (px4_msgs) StderrLine: {'line': b"TypeError: canonicalize_version() got an unexpected keyword argument 'strip_trailing_zero'\n"}
+[1.499661] (px4_msgs) StdoutLine: {'line': b'[100%] Built target px4_msgs__rosidl_generator_py\n'}
+[1.503441] (-) TimerEvent: {}
+[1.513072] (px4_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target px4_msgs__rosidl_typesupport_introspection_c__pyext\x1b[0m\n'}
+[1.513418] (px4_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target px4_msgs__rosidl_typesupport_fastrtps_c__pyext\x1b[0m\n'}
+[1.513607] (px4_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target px4_msgs__rosidl_typesupport_c__pyext\x1b[0m\n'}
+[1.532950] (px4_msgs) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/ament_cmake_python_build_px4_msgs_egg.dir/build.make:70: CMakeFiles/ament_cmake_python_build_px4_msgs_egg] Error 1\n'}
+[1.533276] (px4_msgs) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:447: CMakeFiles/ament_cmake_python_build_px4_msgs_egg.dir/all] Error 2\n'}
+[1.533450] (px4_msgs) StderrLine: {'line': b'gmake[1]: *** Waiting for unfinished jobs....\n'}
+[1.537259] (px4_msgs) StdoutLine: {'line': b'[100%] Built target px4_msgs__rosidl_typesupport_fastrtps_c__pyext\n'}
+[1.537481] (px4_msgs) StdoutLine: {'line': b'[100%] Built target px4_msgs__rosidl_typesupport_c__pyext\n'}
+[1.539160] (px4_msgs) StdoutLine: {'line': b'[100%] Built target px4_msgs__rosidl_typesupport_introspection_c__pyext\n'}
+[1.541455] (px4_msgs) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[1.544696] (px4_msgs) CommandEnded: {'returncode': 2}
+[1.603557] (-) TimerEvent: {}
+[1.703920] (-) TimerEvent: {}
+[1.804202] (-) TimerEvent: {}
+[1.904442] (-) TimerEvent: {}
+[2.004703] (-) TimerEvent: {}
+[2.104976] (-) TimerEvent: {}
+[2.205323] (-) TimerEvent: {}
+[2.305634] (-) TimerEvent: {}
+[2.405988] (-) TimerEvent: {}
+[2.506275] (-) TimerEvent: {}
+[2.606511] (-) TimerEvent: {}
+[2.706771] (-) TimerEvent: {}
+[2.807024] (-) TimerEvent: {}
+[2.907286] (-) TimerEvent: {}
+[3.007563] (-) TimerEvent: {}
+[3.107811] (-) TimerEvent: {}
+[3.208228] (-) TimerEvent: {}
+[3.308595] (-) TimerEvent: {}
+[3.408816] (-) TimerEvent: {}
+[3.509125] (-) TimerEvent: {}
+[3.609571] (-) TimerEvent: {}
+[3.709901] (-) TimerEvent: {}
+[3.810194] (-) TimerEvent: {}
+[3.910517] (-) TimerEvent: {}
+[4.010799] (-) TimerEvent: {}
+[4.111103] (-) TimerEvent: {}
+[4.211354] (-) TimerEvent: {}
+[4.311592] (-) TimerEvent: {}
+[4.411843] (-) TimerEvent: {}
+[4.512111] (-) TimerEvent: {}
+[4.612419] (-) TimerEvent: {}
+[4.712658] (-) TimerEvent: {}
+[4.813118] (-) TimerEvent: {}
+[4.913381] (-) TimerEvent: {}
+[5.013736] (-) TimerEvent: {}
+[5.114101] (-) TimerEvent: {}
+[5.214395] (-) TimerEvent: {}
+[5.314651] (-) TimerEvent: {}
+[5.414898] (-) TimerEvent: {}
+[5.515128] (-) TimerEvent: {}
+[5.615479] (-) TimerEvent: {}
+[5.715722] (-) TimerEvent: {}
+[5.815987] (-) TimerEvent: {}
+[5.916211] (-) TimerEvent: {}
+[6.016454] (-) TimerEvent: {}
+[6.116806] (-) TimerEvent: {}
+[6.217154] (-) TimerEvent: {}
+[6.317391] (-) TimerEvent: {}
+[6.417637] (-) TimerEvent: {}
+[6.517883] (-) TimerEvent: {}
+[6.618096] (-) TimerEvent: {}
+[6.718336] (-) TimerEvent: {}
+[6.818557] (-) TimerEvent: {}
+[6.918808] (-) TimerEvent: {}
+[7.019099] (-) TimerEvent: {}
+[7.119423] (-) TimerEvent: {}
+[7.219632] (-) TimerEvent: {}
+[7.254798] (px4_msgs) JobEnded: {'identifier': 'px4_msgs', 'rc': 2}
+[7.265474] (px4_ros_com) JobSkipped: {'identifier': 'px4_ros_com'}
+[7.265559] (-) EventReactorShutdown: {}

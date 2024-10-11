@@ -1,0 +1,1363 @@
+[0.000000] (-) TimerEvent: {}
+[0.000693] (px4_msgs) JobQueued: {'identifier': 'px4_msgs', 'dependencies': OrderedDict()}
+[0.000749] (px4_ros_com) JobQueued: {'identifier': 'px4_ros_com', 'dependencies': OrderedDict([('px4_msgs', '/home/cali/ws_sensor_combined/install/px4_msgs')])}
+[0.000774] (px4_msgs) JobStarted: {'identifier': 'px4_msgs'}
+[0.010565] (px4_msgs) JobProgress: {'identifier': 'px4_msgs', 'progress': 'cmake'}
+[0.010729] (px4_msgs) Command: {'cmd': ['/usr/bin/cmake', '/home/cali/ws_sensor_combined/src/px4_msgs', '-DCMAKE_INSTALL_PREFIX=/home/cali/ws_sensor_combined/install/px4_msgs'], 'cwd': '/home/cali/ws_sensor_combined/build/px4_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'cali'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/cali'), ('OLDPWD', '/home/cali/ws_sensor_combined/src'), ('DESKTOP_SESSION', 'ubuntu'), ('NVM_BIN', '/home/cali/.nvm/versions/node/v22.2.0/bin'), ('NVM_INC', '/home/cali/.nvm/versions/node/v22.2.0/include/node'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1078'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('NVM_DIR', '/home/cali/.nvm'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'cali'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'cali'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/cali/.nvm/versions/node/v22.2.0/bin:/opt/gcc-arm-none-eabi-9-2020-q2-update/bin:/usr/lib/ccache:/home/cali/ardupilot/Tools/autotest:/opt/gcc-arm-none-eabi-10-2020-q4-major/bin:/home/cali/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/cali/ros2_ws/Micro-XRCE-DDS-Gen/scripts:/home/cali/ros2_ws/Micro-XRCE-DDS-Gen/scripts'), ('SESSION_MANAGER', 'local/sus:@/tmp/.ICE-unix/1047,unix/sus:/tmp/.ICE-unix/1047'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/589f0445_1047_4324_9850_14f7a5da34fa'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.1MNPV2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.99'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/cali/ws_sensor_combined/build/px4_msgs'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('NVM_CD_FLAGS', ''), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.099759] (-) TimerEvent: {}
+[0.154523] (px4_msgs) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.199861] (-) TimerEvent: {}
+[0.279170] (px4_msgs) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.293660] (px4_msgs) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.299991] (-) TimerEvent: {}
+[0.367252] (px4_msgs) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.377145] (px4_msgs) StdoutLine: {'line': b'-- Check for working C compiler: /usr/lib/ccache/cc - skipped\n'}
+[0.377587] (px4_msgs) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.378265] (px4_msgs) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.383284] (px4_msgs) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.400080] (-) TimerEvent: {}
+[0.468671] (px4_msgs) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.477807] (px4_msgs) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/lib/ccache/c++ - skipped\n'}
+[0.478116] (px4_msgs) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.478588] (px4_msgs) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.485060] (px4_msgs) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.500189] (-) TimerEvent: {}
+[0.600450] (-) TimerEvent: {}
+[0.700694] (-) TimerEvent: {}
+[0.800972] (-) TimerEvent: {}
+[0.901305] (-) TimerEvent: {}
+[1.001555] (-) TimerEvent: {}
+[1.007774] (px4_msgs) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[1.101657] (-) TimerEvent: {}
+[1.135356] (px4_msgs) StdoutLine: {'line': b'-- Found builtin_interfaces: 1.2.1 (/opt/ros/humble/share/builtin_interfaces/cmake)\n'}
+[1.187185] (px4_msgs) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[1.193751] (px4_msgs) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[1.201749] (-) TimerEvent: {}
+[1.207588] (px4_msgs) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[1.227757] (px4_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.255947] (px4_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.278701] (px4_msgs) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)\n'}
+[1.301850] (-) TimerEvent: {}
+[1.402115] (-) TimerEvent: {}
+[1.502355] (-) TimerEvent: {}
+[1.602592] (-) TimerEvent: {}
+[1.702875] (-) TimerEvent: {}
+[1.803166] (-) TimerEvent: {}
+[1.903418] (-) TimerEvent: {}
+[2.003709] (-) TimerEvent: {}
+[2.104020] (-) TimerEvent: {}
+[2.204297] (-) TimerEvent: {}
+[2.304513] (-) TimerEvent: {}
+[2.404787] (-) TimerEvent: {}
+[2.505037] (-) TimerEvent: {}
+[2.605346] (-) TimerEvent: {}
+[2.705616] (-) TimerEvent: {}
+[2.805844] (-) TimerEvent: {}
+[2.906062] (-) TimerEvent: {}
+[3.006349] (-) TimerEvent: {}
+[3.106701] (-) TimerEvent: {}
+[3.207100] (-) TimerEvent: {}
+[3.307445] (-) TimerEvent: {}
+[3.407815] (-) TimerEvent: {}
+[3.508191] (-) TimerEvent: {}
+[3.608527] (-) TimerEvent: {}
+[3.708806] (-) TimerEvent: {}
+[3.809026] (-) TimerEvent: {}
+[3.909348] (-) TimerEvent: {}
+[4.009671] (-) TimerEvent: {}
+[4.109910] (-) TimerEvent: {}
+[4.129893] (px4_msgs) StdoutLine: {'line': b'-- Found ament_cmake_cppcheck: 0.12.11 (/opt/ros/humble/share/ament_cmake_cppcheck/cmake)\n'}
+[4.132441] (px4_msgs) StdoutLine: {'line': b'-- Found ament_cmake_cpplint: 0.12.11 (/opt/ros/humble/share/ament_cmake_cpplint/cmake)\n'}
+[4.137184] (px4_msgs) StdoutLine: {'line': b'-- Found ament_cmake_uncrustify: 0.12.11 (/opt/ros/humble/share/ament_cmake_uncrustify/cmake)\n'}
+[4.140652] (px4_msgs) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)\n'}
+[4.210041] (-) TimerEvent: {}
+[4.310433] (-) TimerEvent: {}
+[4.411012] (-) TimerEvent: {}
+[4.511268] (-) TimerEvent: {}
+[4.611494] (-) TimerEvent: {}
+[4.711736] (-) TimerEvent: {}
+[4.752919] (px4_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[4.811823] (-) TimerEvent: {}
+[4.912043] (-) TimerEvent: {}
+[4.961392] (px4_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[4.994582] (px4_msgs) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") \n'}
+[4.996209] (px4_msgs) StdoutLine: {'line': b'-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)\n'}
+[5.012173] (-) TimerEvent: {}
+[5.032751] (px4_msgs) StdoutLine: {'line': b'-- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") \n'}
+[5.033046] (px4_msgs) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[5.033235] (px4_msgs) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10\n'}
+[5.033380] (px4_msgs) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so\n'}
+[5.062572] (px4_msgs) StdoutLine: {'line': b'-- Found PythonExtra: .so  \n'}
+[5.112257] (-) TimerEvent: {}
+[5.161966] (px4_msgs) StdoutLine: {'line': b'-- Found ament_cmake_flake8: 0.12.11 (/opt/ros/humble/share/ament_cmake_flake8/cmake)\n'}
+[5.164445] (px4_msgs) StdoutLine: {'line': b'-- Found ament_cmake_pep257: 0.12.11 (/opt/ros/humble/share/ament_cmake_pep257/cmake)\n'}
+[5.188519] (px4_msgs) StdoutLine: {'line': b'-- Configuring done\n'}
+[5.212351] (-) TimerEvent: {}
+[5.312583] (-) TimerEvent: {}
+[5.412824] (-) TimerEvent: {}
+[5.513090] (-) TimerEvent: {}
+[5.613388] (-) TimerEvent: {}
+[5.713683] (-) TimerEvent: {}
+[5.776645] (px4_msgs) StdoutLine: {'line': b'-- Generating done\n'}
+[5.780090] (px4_msgs) StdoutLine: {'line': b'-- Build files have been written to: /home/cali/ws_sensor_combined/build/px4_msgs\n'}
+[5.809364] (px4_msgs) CommandEnded: {'returncode': 0}
+[5.811964] (px4_msgs) JobProgress: {'identifier': 'px4_msgs', 'progress': 'build'}
+[5.812093] (px4_msgs) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/cali/ws_sensor_combined/build/px4_msgs', '--', '-j8', '-l8'], 'cwd': '/home/cali/ws_sensor_combined/build/px4_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'cali'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/cali'), ('OLDPWD', '/home/cali/ws_sensor_combined/src'), ('DESKTOP_SESSION', 'ubuntu'), ('NVM_BIN', '/home/cali/.nvm/versions/node/v22.2.0/bin'), ('NVM_INC', '/home/cali/.nvm/versions/node/v22.2.0/include/node'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1078'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('NVM_DIR', '/home/cali/.nvm'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'cali'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'cali'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/cali/.nvm/versions/node/v22.2.0/bin:/opt/gcc-arm-none-eabi-9-2020-q2-update/bin:/usr/lib/ccache:/home/cali/ardupilot/Tools/autotest:/opt/gcc-arm-none-eabi-10-2020-q4-major/bin:/home/cali/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/cali/ros2_ws/Micro-XRCE-DDS-Gen/scripts:/home/cali/ros2_ws/Micro-XRCE-DDS-Gen/scripts'), ('SESSION_MANAGER', 'local/sus:@/tmp/.ICE-unix/1047,unix/sus:/tmp/.ICE-unix/1047'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/589f0445_1047_4324_9850_14f7a5da34fa'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.1MNPV2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.99'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/cali/ws_sensor_combined/build/px4_msgs'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('NVM_CD_FLAGS', ''), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[5.813783] (-) TimerEvent: {}
+[5.913989] (-) TimerEvent: {}
+[6.014240] (-) TimerEvent: {}
+[6.114469] (-) TimerEvent: {}
+[6.214811] (-) TimerEvent: {}
+[6.315045] (-) TimerEvent: {}
+[6.415331] (-) TimerEvent: {}
+[6.515565] (-) TimerEvent: {}
+[6.615813] (-) TimerEvent: {}
+[6.716151] (-) TimerEvent: {}
+[6.754800] (px4_msgs) StdoutLine: {'line': b'[  0%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[6.759693] (px4_msgs) StdoutLine: {'line': b'[  0%] Built target ament_cmake_python_copy_px4_msgs\n'}
+[6.783154] (px4_msgs) StdoutLine: {'line': b'[  0%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[6.816255] (-) TimerEvent: {}
+[6.916614] (-) TimerEvent: {}
+[7.016990] (-) TimerEvent: {}
+[7.108689] (px4_msgs) StdoutLine: {'line': b'running egg_info\n'}
+[7.109786] (px4_msgs) StdoutLine: {'line': b'creating px4_msgs.egg-info\n'}
+[7.117085] (-) TimerEvent: {}
+[7.135211] (px4_msgs) StdoutLine: {'line': b'writing px4_msgs.egg-info/PKG-INFO\n'}
+[7.135822] (px4_msgs) StdoutLine: {'line': b'writing dependency_links to px4_msgs.egg-info/dependency_links.txt\n'}
+[7.136522] (px4_msgs) StdoutLine: {'line': b'writing top-level names to px4_msgs.egg-info/top_level.txt\n'}
+[7.136725] (px4_msgs) StdoutLine: {'line': b"writing manifest file 'px4_msgs.egg-info/SOURCES.txt'\n"}
+[7.214509] (px4_msgs) StdoutLine: {'line': b"reading manifest file 'px4_msgs.egg-info/SOURCES.txt'\n"}
+[7.217191] (-) TimerEvent: {}
+[7.236930] (px4_msgs) StderrLine: {'line': b'Traceback (most recent call last):\n'}
+[7.237203] (px4_msgs) StderrLine: {'line': b'  File "/home/cali/ws_sensor_combined/build/px4_msgs/ament_cmake_python/px4_msgs/setup.py", line 4, in <module>\n'}
+[7.237690] (px4_msgs) StderrLine: {'line': b'    setup(\n'}
+[7.237799] (px4_msgs) StderrLine: {'line': b'  File "/home/cali/.local/lib/python3.10/site-packages/setuptools/__init__.py", line 117, in setup\n'}
+[7.238006] (px4_msgs) StderrLine: {'line': b'    return distutils.core.setup(**attrs)\n'}
+[7.238214] (px4_msgs) StderrLine: {'line': b'  File "/home/cali/.local/lib/python3.10/site-packages/setuptools/_distutils/core.py", line 183, in setup\n'}
+[7.238348] (px4_msgs) StderrLine: {'line': b'    return run_commands(dist)\n'}
+[7.238498] (px4_msgs) StderrLine: {'line': b'  File "/home/cali/.local/lib/python3.10/site-packages/setuptools/_distutils/core.py", line 199, in run_commands\n'}
+[7.238623] (px4_msgs) StderrLine: {'line': b'    dist.run_commands()\n'}
+[7.238760] (px4_msgs) StderrLine: {'line': b'  File "/home/cali/.local/lib/python3.10/site-packages/setuptools/_distutils/dist.py", line 954, in run_commands\n'}
+[7.238884] (px4_msgs) StderrLine: {'line': b'    self.run_command(cmd)\n'}
+[7.239052] (px4_msgs) StderrLine: {'line': b'  File "/home/cali/.local/lib/python3.10/site-packages/setuptools/dist.py", line 950, in run_command\n'}
+[7.239250] (px4_msgs) StderrLine: {'line': b'    super().run_command(command)\n'}
+[7.239362] (px4_msgs) StderrLine: {'line': b'  File "/home/cali/.local/lib/python3.10/site-packages/setuptools/_distutils/dist.py", line 973, in run_command\n'}
+[7.239541] (px4_msgs) StderrLine: {'line': b'    cmd_obj.run()\n'}
+[7.239667] (px4_msgs) StderrLine: {'line': b'  File "/home/cali/.local/lib/python3.10/site-packages/setuptools/command/egg_info.py", line 311, in run\n'}
+[7.239791] (px4_msgs) StderrLine: {'line': b'    self.find_sources()\n'}
+[7.239915] (px4_msgs) StderrLine: {'line': b'  File "/home/cali/.local/lib/python3.10/site-packages/setuptools/command/egg_info.py", line 319, in find_sources\n'}
+[7.240038] (px4_msgs) StderrLine: {'line': b'    mm.run()\n'}
+[7.240226] (px4_msgs) StderrLine: {'line': b'  File "/home/cali/.local/lib/python3.10/site-packages/setuptools/command/egg_info.py", line 545, in run\n'}
+[7.240338] (px4_msgs) StderrLine: {'line': b'    self.prune_file_list()\n'}
+[7.240449] (px4_msgs) StderrLine: {'line': b'  File "/home/cali/.local/lib/python3.10/site-packages/setuptools/command/sdist.py", line 161, in prune_file_list\n'}
+[7.240578] (px4_msgs) StderrLine: {'line': b'    super().prune_file_list()\n'}
+[7.240704] (px4_msgs) StderrLine: {'line': b'  File "/home/cali/.local/lib/python3.10/site-packages/setuptools/_distutils/command/sdist.py", line 380, in prune_file_list\n'}
+[7.240831] (px4_msgs) StderrLine: {'line': b'    base_dir = self.distribution.get_fullname()\n'}
+[7.240956] (px4_msgs) StderrLine: {'line': b'  File "/home/cali/.local/lib/python3.10/site-packages/setuptools/_core_metadata.py", line 267, in get_fullname\n'}
+[7.241161] (px4_msgs) StderrLine: {'line': b'    return _distribution_fullname(self.get_name(), self.get_version())\n'}
+[7.241326] (px4_msgs) StderrLine: {'line': b'  File "/home/cali/.local/lib/python3.10/site-packages/setuptools/_core_metadata.py", line 285, in _distribution_fullname\n'}
+[7.241430] (px4_msgs) StderrLine: {'line': b'    canonicalize_version(version, strip_trailing_zero=False),\n'}
+[7.241532] (px4_msgs) StderrLine: {'line': b"TypeError: canonicalize_version() got an unexpected keyword argument 'strip_trailing_zero'\n"}
+[7.280410] (px4_msgs) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/ament_cmake_python_build_px4_msgs_egg.dir/build.make:70: CMakeFiles/ament_cmake_python_build_px4_msgs_egg] Error 1\n'}
+[7.280726] (px4_msgs) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:447: CMakeFiles/ament_cmake_python_build_px4_msgs_egg.dir/all] Error 2\n'}
+[7.280840] (px4_msgs) StderrLine: {'line': b'gmake[1]: *** Waiting for unfinished jobs....\n'}
+[7.317283] (-) TimerEvent: {}
+[7.417581] (-) TimerEvent: {}
+[7.517866] (-) TimerEvent: {}
+[7.618186] (-) TimerEvent: {}
+[7.718475] (-) TimerEvent: {}
+[7.818806] (-) TimerEvent: {}
+[7.919178] (-) TimerEvent: {}
+[8.019442] (-) TimerEvent: {}
+[8.119687] (-) TimerEvent: {}
+[8.219937] (-) TimerEvent: {}
+[8.320165] (-) TimerEvent: {}
+[8.420413] (-) TimerEvent: {}
+[8.520666] (-) TimerEvent: {}
+[8.620902] (-) TimerEvent: {}
+[8.721149] (-) TimerEvent: {}
+[8.821399] (-) TimerEvent: {}
+[8.921640] (-) TimerEvent: {}
+[9.021885] (-) TimerEvent: {}
+[9.122210] (-) TimerEvent: {}
+[9.222481] (-) TimerEvent: {}
+[9.322839] (-) TimerEvent: {}
+[9.423084] (-) TimerEvent: {}
+[9.523359] (-) TimerEvent: {}
+[9.623617] (-) TimerEvent: {}
+[9.723901] (-) TimerEvent: {}
+[9.824155] (-) TimerEvent: {}
+[9.924395] (-) TimerEvent: {}
+[10.024648] (-) TimerEvent: {}
+[10.125032] (-) TimerEvent: {}
+[10.225335] (-) TimerEvent: {}
+[10.325604] (-) TimerEvent: {}
+[10.425874] (-) TimerEvent: {}
+[10.526115] (-) TimerEvent: {}
+[10.626358] (-) TimerEvent: {}
+[10.726600] (-) TimerEvent: {}
+[10.826902] (-) TimerEvent: {}
+[10.927216] (-) TimerEvent: {}
+[11.027439] (-) TimerEvent: {}
+[11.127682] (-) TimerEvent: {}
+[11.227932] (-) TimerEvent: {}
+[11.328273] (-) TimerEvent: {}
+[11.428608] (-) TimerEvent: {}
+[11.528908] (-) TimerEvent: {}
+[11.629169] (-) TimerEvent: {}
+[11.729409] (-) TimerEvent: {}
+[11.829678] (-) TimerEvent: {}
+[11.929961] (-) TimerEvent: {}
+[12.030206] (-) TimerEvent: {}
+[12.130446] (-) TimerEvent: {}
+[12.230727] (-) TimerEvent: {}
+[12.330949] (-) TimerEvent: {}
+[12.431165] (-) TimerEvent: {}
+[12.531379] (-) TimerEvent: {}
+[12.631648] (-) TimerEvent: {}
+[12.731870] (-) TimerEvent: {}
+[12.832166] (-) TimerEvent: {}
+[12.932469] (-) TimerEvent: {}
+[13.032714] (-) TimerEvent: {}
+[13.133049] (-) TimerEvent: {}
+[13.233325] (-) TimerEvent: {}
+[13.333595] (-) TimerEvent: {}
+[13.433850] (-) TimerEvent: {}
+[13.534079] (-) TimerEvent: {}
+[13.634345] (-) TimerEvent: {}
+[13.734685] (-) TimerEvent: {}
+[13.834930] (-) TimerEvent: {}
+[13.935161] (-) TimerEvent: {}
+[14.035405] (-) TimerEvent: {}
+[14.135693] (-) TimerEvent: {}
+[14.235936] (-) TimerEvent: {}
+[14.336204] (-) TimerEvent: {}
+[14.436479] (-) TimerEvent: {}
+[14.536733] (-) TimerEvent: {}
+[14.636970] (-) TimerEvent: {}
+[14.737190] (-) TimerEvent: {}
+[14.837488] (-) TimerEvent: {}
+[14.937810] (-) TimerEvent: {}
+[15.038111] (-) TimerEvent: {}
+[15.138353] (-) TimerEvent: {}
+[15.238582] (-) TimerEvent: {}
+[15.338838] (-) TimerEvent: {}
+[15.439195] (-) TimerEvent: {}
+[15.539503] (-) TimerEvent: {}
+[15.639743] (-) TimerEvent: {}
+[15.739991] (-) TimerEvent: {}
+[15.840254] (-) TimerEvent: {}
+[15.940574] (-) TimerEvent: {}
+[16.040876] (-) TimerEvent: {}
+[16.141108] (-) TimerEvent: {}
+[16.241369] (-) TimerEvent: {}
+[16.341657] (-) TimerEvent: {}
+[16.441881] (-) TimerEvent: {}
+[16.542130] (-) TimerEvent: {}
+[16.642365] (-) TimerEvent: {}
+[16.742638] (-) TimerEvent: {}
+[16.842857] (-) TimerEvent: {}
+[16.943105] (-) TimerEvent: {}
+[17.043384] (-) TimerEvent: {}
+[17.143663] (-) TimerEvent: {}
+[17.243931] (-) TimerEvent: {}
+[17.344177] (-) TimerEvent: {}
+[17.444448] (-) TimerEvent: {}
+[17.544749] (-) TimerEvent: {}
+[17.645007] (-) TimerEvent: {}
+[17.745396] (-) TimerEvent: {}
+[17.845709] (-) TimerEvent: {}
+[17.946012] (-) TimerEvent: {}
+[18.046356] (-) TimerEvent: {}
+[18.146664] (-) TimerEvent: {}
+[18.246979] (-) TimerEvent: {}
+[18.347325] (-) TimerEvent: {}
+[18.447668] (-) TimerEvent: {}
+[18.547997] (-) TimerEvent: {}
+[18.648529] (-) TimerEvent: {}
+[18.748847] (-) TimerEvent: {}
+[18.849531] (-) TimerEvent: {}
+[18.949809] (-) TimerEvent: {}
+[19.050056] (-) TimerEvent: {}
+[19.150405] (-) TimerEvent: {}
+[19.250793] (-) TimerEvent: {}
+[19.351096] (-) TimerEvent: {}
+[19.451395] (-) TimerEvent: {}
+[19.551690] (-) TimerEvent: {}
+[19.651984] (-) TimerEvent: {}
+[19.752297] (-) TimerEvent: {}
+[19.852629] (-) TimerEvent: {}
+[19.952960] (-) TimerEvent: {}
+[20.053436] (-) TimerEvent: {}
+[20.153792] (-) TimerEvent: {}
+[20.254087] (-) TimerEvent: {}
+[20.354469] (-) TimerEvent: {}
+[20.454747] (-) TimerEvent: {}
+[20.555046] (-) TimerEvent: {}
+[20.655351] (-) TimerEvent: {}
+[20.755661] (-) TimerEvent: {}
+[20.856022] (-) TimerEvent: {}
+[20.956461] (-) TimerEvent: {}
+[21.056751] (-) TimerEvent: {}
+[21.157058] (-) TimerEvent: {}
+[21.257393] (-) TimerEvent: {}
+[21.357825] (-) TimerEvent: {}
+[21.458177] (-) TimerEvent: {}
+[21.558525] (-) TimerEvent: {}
+[21.658852] (-) TimerEvent: {}
+[21.759192] (-) TimerEvent: {}
+[21.859542] (-) TimerEvent: {}
+[21.959882] (-) TimerEvent: {}
+[22.060217] (-) TimerEvent: {}
+[22.160562] (-) TimerEvent: {}
+[22.260820] (-) TimerEvent: {}
+[22.361107] (-) TimerEvent: {}
+[22.461466] (-) TimerEvent: {}
+[22.561842] (-) TimerEvent: {}
+[22.662175] (-) TimerEvent: {}
+[22.762501] (-) TimerEvent: {}
+[22.862871] (-) TimerEvent: {}
+[22.963274] (-) TimerEvent: {}
+[23.063583] (-) TimerEvent: {}
+[23.163935] (-) TimerEvent: {}
+[23.264286] (-) TimerEvent: {}
+[23.364602] (-) TimerEvent: {}
+[23.464975] (-) TimerEvent: {}
+[23.565324] (-) TimerEvent: {}
+[23.665672] (-) TimerEvent: {}
+[23.766064] (-) TimerEvent: {}
+[23.866372] (-) TimerEvent: {}
+[23.966804] (-) TimerEvent: {}
+[24.067203] (-) TimerEvent: {}
+[24.167488] (-) TimerEvent: {}
+[24.267832] (-) TimerEvent: {}
+[24.368186] (-) TimerEvent: {}
+[24.468514] (-) TimerEvent: {}
+[24.568832] (-) TimerEvent: {}
+[24.669173] (-) TimerEvent: {}
+[24.769436] (-) TimerEvent: {}
+[24.869718] (-) TimerEvent: {}
+[24.970008] (-) TimerEvent: {}
+[25.070370] (-) TimerEvent: {}
+[25.170687] (-) TimerEvent: {}
+[25.271418] (-) TimerEvent: {}
+[25.371770] (-) TimerEvent: {}
+[25.472161] (-) TimerEvent: {}
+[25.572481] (-) TimerEvent: {}
+[25.672794] (-) TimerEvent: {}
+[25.773087] (-) TimerEvent: {}
+[25.873435] (-) TimerEvent: {}
+[25.973760] (-) TimerEvent: {}
+[26.074400] (-) TimerEvent: {}
+[26.174729] (-) TimerEvent: {}
+[26.275058] (-) TimerEvent: {}
+[26.375402] (-) TimerEvent: {}
+[26.475985] (-) TimerEvent: {}
+[26.576290] (-) TimerEvent: {}
+[26.676551] (-) TimerEvent: {}
+[26.776866] (-) TimerEvent: {}
+[26.877157] (-) TimerEvent: {}
+[26.977494] (-) TimerEvent: {}
+[27.077879] (-) TimerEvent: {}
+[27.178214] (-) TimerEvent: {}
+[27.278536] (-) TimerEvent: {}
+[27.378856] (-) TimerEvent: {}
+[27.479232] (-) TimerEvent: {}
+[27.579545] (-) TimerEvent: {}
+[27.679868] (-) TimerEvent: {}
+[27.780235] (-) TimerEvent: {}
+[27.880696] (-) TimerEvent: {}
+[27.981021] (-) TimerEvent: {}
+[28.081308] (-) TimerEvent: {}
+[28.181572] (-) TimerEvent: {}
+[28.281868] (-) TimerEvent: {}
+[28.382170] (-) TimerEvent: {}
+[28.482422] (-) TimerEvent: {}
+[28.582697] (-) TimerEvent: {}
+[28.683002] (-) TimerEvent: {}
+[28.783281] (-) TimerEvent: {}
+[28.883591] (-) TimerEvent: {}
+[28.983904] (-) TimerEvent: {}
+[29.084353] (-) TimerEvent: {}
+[29.184777] (-) TimerEvent: {}
+[29.285038] (-) TimerEvent: {}
+[29.385492] (-) TimerEvent: {}
+[29.486154] (-) TimerEvent: {}
+[29.586506] (-) TimerEvent: {}
+[29.686934] (-) TimerEvent: {}
+[29.787428] (-) TimerEvent: {}
+[29.887853] (-) TimerEvent: {}
+[29.988231] (-) TimerEvent: {}
+[30.088536] (-) TimerEvent: {}
+[30.188841] (-) TimerEvent: {}
+[30.289157] (-) TimerEvent: {}
+[30.389502] (-) TimerEvent: {}
+[30.489848] (-) TimerEvent: {}
+[30.590175] (-) TimerEvent: {}
+[30.690488] (-) TimerEvent: {}
+[30.790779] (-) TimerEvent: {}
+[30.891103] (-) TimerEvent: {}
+[30.991404] (-) TimerEvent: {}
+[31.091684] (-) TimerEvent: {}
+[31.192049] (-) TimerEvent: {}
+[31.292325] (-) TimerEvent: {}
+[31.392580] (-) TimerEvent: {}
+[31.492852] (-) TimerEvent: {}
+[31.593187] (-) TimerEvent: {}
+[31.693518] (-) TimerEvent: {}
+[31.793849] (-) TimerEvent: {}
+[31.894188] (-) TimerEvent: {}
+[31.994528] (-) TimerEvent: {}
+[32.095015] (-) TimerEvent: {}
+[32.195384] (-) TimerEvent: {}
+[32.295725] (-) TimerEvent: {}
+[32.396099] (-) TimerEvent: {}
+[32.496546] (-) TimerEvent: {}
+[32.596893] (-) TimerEvent: {}
+[32.697196] (-) TimerEvent: {}
+[32.797519] (-) TimerEvent: {}
+[32.897771] (-) TimerEvent: {}
+[32.998049] (-) TimerEvent: {}
+[33.098408] (-) TimerEvent: {}
+[33.198788] (-) TimerEvent: {}
+[33.299088] (-) TimerEvent: {}
+[33.399405] (-) TimerEvent: {}
+[33.499706] (-) TimerEvent: {}
+[33.600140] (-) TimerEvent: {}
+[33.700421] (-) TimerEvent: {}
+[33.800790] (-) TimerEvent: {}
+[33.901168] (-) TimerEvent: {}
+[34.001517] (-) TimerEvent: {}
+[34.101847] (-) TimerEvent: {}
+[34.202193] (-) TimerEvent: {}
+[34.302533] (-) TimerEvent: {}
+[34.402845] (-) TimerEvent: {}
+[34.503164] (-) TimerEvent: {}
+[34.603466] (-) TimerEvent: {}
+[34.703767] (-) TimerEvent: {}
+[34.804098] (-) TimerEvent: {}
+[34.904436] (-) TimerEvent: {}
+[35.004750] (-) TimerEvent: {}
+[35.105072] (-) TimerEvent: {}
+[35.205426] (-) TimerEvent: {}
+[35.305748] (-) TimerEvent: {}
+[35.406164] (-) TimerEvent: {}
+[35.506526] (-) TimerEvent: {}
+[35.606875] (-) TimerEvent: {}
+[35.707242] (-) TimerEvent: {}
+[35.807570] (-) TimerEvent: {}
+[35.908042] (-) TimerEvent: {}
+[36.008544] (-) TimerEvent: {}
+[36.108888] (-) TimerEvent: {}
+[36.209479] (-) TimerEvent: {}
+[36.309846] (-) TimerEvent: {}
+[36.410180] (-) TimerEvent: {}
+[36.510496] (-) TimerEvent: {}
+[36.610895] (-) TimerEvent: {}
+[36.711370] (-) TimerEvent: {}
+[36.811749] (-) TimerEvent: {}
+[36.912180] (-) TimerEvent: {}
+[37.012502] (-) TimerEvent: {}
+[37.112965] (-) TimerEvent: {}
+[37.213348] (-) TimerEvent: {}
+[37.313643] (-) TimerEvent: {}
+[37.413907] (-) TimerEvent: {}
+[37.514246] (-) TimerEvent: {}
+[37.614606] (-) TimerEvent: {}
+[37.714929] (-) TimerEvent: {}
+[37.815246] (-) TimerEvent: {}
+[37.915659] (-) TimerEvent: {}
+[38.015974] (-) TimerEvent: {}
+[38.116290] (-) TimerEvent: {}
+[38.216603] (-) TimerEvent: {}
+[38.316942] (-) TimerEvent: {}
+[38.417227] (-) TimerEvent: {}
+[38.517659] (-) TimerEvent: {}
+[38.617942] (-) TimerEvent: {}
+[38.718199] (-) TimerEvent: {}
+[38.818533] (-) TimerEvent: {}
+[38.918845] (-) TimerEvent: {}
+[39.019173] (-) TimerEvent: {}
+[39.119421] (-) TimerEvent: {}
+[39.219677] (-) TimerEvent: {}
+[39.319995] (-) TimerEvent: {}
+[39.420412] (-) TimerEvent: {}
+[39.520674] (-) TimerEvent: {}
+[39.620968] (-) TimerEvent: {}
+[39.721302] (-) TimerEvent: {}
+[39.821670] (-) TimerEvent: {}
+[39.921926] (-) TimerEvent: {}
+[40.022208] (-) TimerEvent: {}
+[40.122469] (-) TimerEvent: {}
+[40.222792] (-) TimerEvent: {}
+[40.323375] (-) TimerEvent: {}
+[40.423681] (-) TimerEvent: {}
+[40.524161] (-) TimerEvent: {}
+[40.624545] (-) TimerEvent: {}
+[40.724873] (-) TimerEvent: {}
+[40.825188] (-) TimerEvent: {}
+[40.925477] (-) TimerEvent: {}
+[41.025778] (-) TimerEvent: {}
+[41.126132] (-) TimerEvent: {}
+[41.226438] (-) TimerEvent: {}
+[41.326761] (-) TimerEvent: {}
+[41.427201] (-) TimerEvent: {}
+[41.527605] (-) TimerEvent: {}
+[41.627962] (-) TimerEvent: {}
+[41.728365] (-) TimerEvent: {}
+[41.828688] (-) TimerEvent: {}
+[41.929438] (-) TimerEvent: {}
+[42.029815] (-) TimerEvent: {}
+[42.130136] (-) TimerEvent: {}
+[42.230424] (-) TimerEvent: {}
+[42.330703] (-) TimerEvent: {}
+[42.431276] (-) TimerEvent: {}
+[42.531616] (-) TimerEvent: {}
+[42.631944] (-) TimerEvent: {}
+[42.732301] (-) TimerEvent: {}
+[42.832631] (-) TimerEvent: {}
+[42.932952] (-) TimerEvent: {}
+[43.033304] (-) TimerEvent: {}
+[43.133614] (-) TimerEvent: {}
+[43.233933] (-) TimerEvent: {}
+[43.334176] (-) TimerEvent: {}
+[43.434438] (-) TimerEvent: {}
+[43.534737] (-) TimerEvent: {}
+[43.635068] (-) TimerEvent: {}
+[43.735392] (-) TimerEvent: {}
+[43.835782] (-) TimerEvent: {}
+[43.936200] (-) TimerEvent: {}
+[44.036477] (-) TimerEvent: {}
+[44.136778] (-) TimerEvent: {}
+[44.237119] (-) TimerEvent: {}
+[44.337427] (-) TimerEvent: {}
+[44.437767] (-) TimerEvent: {}
+[44.538046] (-) TimerEvent: {}
+[44.638446] (-) TimerEvent: {}
+[44.738799] (-) TimerEvent: {}
+[44.839219] (-) TimerEvent: {}
+[44.939564] (-) TimerEvent: {}
+[45.039900] (-) TimerEvent: {}
+[45.140180] (-) TimerEvent: {}
+[45.240520] (-) TimerEvent: {}
+[45.340997] (-) TimerEvent: {}
+[45.441292] (-) TimerEvent: {}
+[45.541662] (-) TimerEvent: {}
+[45.642009] (-) TimerEvent: {}
+[45.742324] (-) TimerEvent: {}
+[45.842639] (-) TimerEvent: {}
+[45.942945] (-) TimerEvent: {}
+[46.043193] (-) TimerEvent: {}
+[46.143580] (-) TimerEvent: {}
+[46.243978] (-) TimerEvent: {}
+[46.344278] (-) TimerEvent: {}
+[46.444630] (-) TimerEvent: {}
+[46.544916] (-) TimerEvent: {}
+[46.645281] (-) TimerEvent: {}
+[46.745770] (-) TimerEvent: {}
+[46.846202] (-) TimerEvent: {}
+[46.946637] (-) TimerEvent: {}
+[47.047035] (-) TimerEvent: {}
+[47.147473] (-) TimerEvent: {}
+[47.247798] (-) TimerEvent: {}
+[47.348118] (-) TimerEvent: {}
+[47.448559] (-) TimerEvent: {}
+[47.548957] (-) TimerEvent: {}
+[47.649396] (-) TimerEvent: {}
+[47.749857] (-) TimerEvent: {}
+[47.850278] (-) TimerEvent: {}
+[47.950570] (-) TimerEvent: {}
+[48.051186] (-) TimerEvent: {}
+[48.151567] (-) TimerEvent: {}
+[48.252074] (-) TimerEvent: {}
+[48.352427] (-) TimerEvent: {}
+[48.452735] (-) TimerEvent: {}
+[48.552994] (-) TimerEvent: {}
+[48.653355] (-) TimerEvent: {}
+[48.753696] (-) TimerEvent: {}
+[48.854076] (-) TimerEvent: {}
+[48.954465] (-) TimerEvent: {}
+[49.054773] (-) TimerEvent: {}
+[49.155102] (-) TimerEvent: {}
+[49.255437] (-) TimerEvent: {}
+[49.355764] (-) TimerEvent: {}
+[49.456081] (-) TimerEvent: {}
+[49.556422] (-) TimerEvent: {}
+[49.656761] (-) TimerEvent: {}
+[49.757146] (-) TimerEvent: {}
+[49.857516] (-) TimerEvent: {}
+[49.957835] (-) TimerEvent: {}
+[50.058104] (-) TimerEvent: {}
+[50.158380] (-) TimerEvent: {}
+[50.258654] (-) TimerEvent: {}
+[50.358962] (-) TimerEvent: {}
+[50.459225] (-) TimerEvent: {}
+[50.559490] (-) TimerEvent: {}
+[50.659759] (-) TimerEvent: {}
+[50.760059] (-) TimerEvent: {}
+[50.860378] (-) TimerEvent: {}
+[50.960685] (-) TimerEvent: {}
+[51.061020] (-) TimerEvent: {}
+[51.161310] (-) TimerEvent: {}
+[51.261642] (-) TimerEvent: {}
+[51.361923] (-) TimerEvent: {}
+[51.462201] (-) TimerEvent: {}
+[51.562495] (-) TimerEvent: {}
+[51.662813] (-) TimerEvent: {}
+[51.763099] (-) TimerEvent: {}
+[51.863408] (-) TimerEvent: {}
+[51.963728] (-) TimerEvent: {}
+[52.063975] (-) TimerEvent: {}
+[52.164246] (-) TimerEvent: {}
+[52.264586] (-) TimerEvent: {}
+[52.364906] (-) TimerEvent: {}
+[52.465191] (-) TimerEvent: {}
+[52.565539] (-) TimerEvent: {}
+[52.665845] (-) TimerEvent: {}
+[52.766189] (-) TimerEvent: {}
+[52.866434] (-) TimerEvent: {}
+[52.966739] (-) TimerEvent: {}
+[53.067112] (-) TimerEvent: {}
+[53.167513] (-) TimerEvent: {}
+[53.267850] (-) TimerEvent: {}
+[53.368247] (-) TimerEvent: {}
+[53.468649] (-) TimerEvent: {}
+[53.568979] (-) TimerEvent: {}
+[53.669345] (-) TimerEvent: {}
+[53.769787] (-) TimerEvent: {}
+[53.870115] (-) TimerEvent: {}
+[53.970506] (-) TimerEvent: {}
+[54.070832] (-) TimerEvent: {}
+[54.171454] (-) TimerEvent: {}
+[54.271779] (-) TimerEvent: {}
+[54.372119] (-) TimerEvent: {}
+[54.472503] (-) TimerEvent: {}
+[54.572816] (-) TimerEvent: {}
+[54.673135] (-) TimerEvent: {}
+[54.773587] (-) TimerEvent: {}
+[54.873939] (-) TimerEvent: {}
+[54.974277] (-) TimerEvent: {}
+[55.074574] (-) TimerEvent: {}
+[55.174856] (-) TimerEvent: {}
+[55.275179] (-) TimerEvent: {}
+[55.375492] (-) TimerEvent: {}
+[55.475818] (-) TimerEvent: {}
+[55.576159] (-) TimerEvent: {}
+[55.676527] (-) TimerEvent: {}
+[55.776929] (-) TimerEvent: {}
+[55.877396] (-) TimerEvent: {}
+[55.977719] (-) TimerEvent: {}
+[56.078089] (-) TimerEvent: {}
+[56.178590] (-) TimerEvent: {}
+[56.278918] (-) TimerEvent: {}
+[56.379246] (-) TimerEvent: {}
+[56.479763] (-) TimerEvent: {}
+[56.580114] (-) TimerEvent: {}
+[56.680433] (-) TimerEvent: {}
+[56.780765] (-) TimerEvent: {}
+[56.881090] (-) TimerEvent: {}
+[56.981415] (-) TimerEvent: {}
+[57.081765] (-) TimerEvent: {}
+[57.182156] (-) TimerEvent: {}
+[57.282517] (-) TimerEvent: {}
+[57.382859] (-) TimerEvent: {}
+[57.483175] (-) TimerEvent: {}
+[57.583503] (-) TimerEvent: {}
+[57.683918] (-) TimerEvent: {}
+[57.784214] (-) TimerEvent: {}
+[57.884517] (-) TimerEvent: {}
+[57.984799] (-) TimerEvent: {}
+[58.085111] (-) TimerEvent: {}
+[58.185431] (-) TimerEvent: {}
+[58.285762] (-) TimerEvent: {}
+[58.386090] (-) TimerEvent: {}
+[58.486466] (-) TimerEvent: {}
+[58.586811] (-) TimerEvent: {}
+[58.687240] (-) TimerEvent: {}
+[58.787835] (-) TimerEvent: {}
+[58.888078] (-) TimerEvent: {}
+[58.988392] (-) TimerEvent: {}
+[59.088641] (-) TimerEvent: {}
+[59.189005] (-) TimerEvent: {}
+[59.289435] (-) TimerEvent: {}
+[59.389798] (-) TimerEvent: {}
+[59.490080] (-) TimerEvent: {}
+[59.590450] (-) TimerEvent: {}
+[59.690793] (-) TimerEvent: {}
+[59.791098] (-) TimerEvent: {}
+[59.891899] (-) TimerEvent: {}
+[59.992254] (-) TimerEvent: {}
+[60.092639] (-) TimerEvent: {}
+[60.192916] (-) TimerEvent: {}
+[60.293171] (-) TimerEvent: {}
+[60.393448] (-) TimerEvent: {}
+[60.493884] (-) TimerEvent: {}
+[60.594344] (-) TimerEvent: {}
+[60.694680] (-) TimerEvent: {}
+[60.794980] (-) TimerEvent: {}
+[60.895325] (-) TimerEvent: {}
+[60.995620] (-) TimerEvent: {}
+[61.095929] (-) TimerEvent: {}
+[61.196325] (-) TimerEvent: {}
+[61.296624] (-) TimerEvent: {}
+[61.397035] (-) TimerEvent: {}
+[61.497388] (-) TimerEvent: {}
+[61.597757] (-) TimerEvent: {}
+[61.698046] (-) TimerEvent: {}
+[61.798463] (-) TimerEvent: {}
+[61.898751] (-) TimerEvent: {}
+[61.999165] (-) TimerEvent: {}
+[62.099575] (-) TimerEvent: {}
+[62.200015] (-) TimerEvent: {}
+[62.300429] (-) TimerEvent: {}
+[62.400749] (-) TimerEvent: {}
+[62.501097] (-) TimerEvent: {}
+[62.601481] (-) TimerEvent: {}
+[62.701877] (-) TimerEvent: {}
+[62.802203] (-) TimerEvent: {}
+[62.903464] (-) TimerEvent: {}
+[63.003918] (-) TimerEvent: {}
+[63.104327] (-) TimerEvent: {}
+[63.204624] (-) TimerEvent: {}
+[63.304951] (-) TimerEvent: {}
+[63.405178] (-) TimerEvent: {}
+[63.505498] (-) TimerEvent: {}
+[63.605947] (-) TimerEvent: {}
+[63.706313] (-) TimerEvent: {}
+[63.806710] (-) TimerEvent: {}
+[63.907005] (-) TimerEvent: {}
+[64.007331] (-) TimerEvent: {}
+[64.107624] (-) TimerEvent: {}
+[64.207897] (-) TimerEvent: {}
+[64.308619] (-) TimerEvent: {}
+[64.408987] (-) TimerEvent: {}
+[64.509384] (-) TimerEvent: {}
+[64.609805] (-) TimerEvent: {}
+[64.710110] (-) TimerEvent: {}
+[64.810401] (-) TimerEvent: {}
+[64.910726] (-) TimerEvent: {}
+[65.011018] (-) TimerEvent: {}
+[65.111416] (-) TimerEvent: {}
+[65.211681] (-) TimerEvent: {}
+[65.311948] (-) TimerEvent: {}
+[65.412279] (-) TimerEvent: {}
+[65.512546] (-) TimerEvent: {}
+[65.612827] (-) TimerEvent: {}
+[65.713139] (-) TimerEvent: {}
+[65.813406] (-) TimerEvent: {}
+[65.913779] (-) TimerEvent: {}
+[66.014169] (-) TimerEvent: {}
+[66.114429] (-) TimerEvent: {}
+[66.214702] (-) TimerEvent: {}
+[66.315020] (-) TimerEvent: {}
+[66.415312] (-) TimerEvent: {}
+[66.515641] (-) TimerEvent: {}
+[66.615983] (-) TimerEvent: {}
+[66.716292] (-) TimerEvent: {}
+[66.816553] (-) TimerEvent: {}
+[66.916873] (-) TimerEvent: {}
+[67.017318] (-) TimerEvent: {}
+[67.117799] (-) TimerEvent: {}
+[67.218131] (-) TimerEvent: {}
+[67.318442] (-) TimerEvent: {}
+[67.418714] (-) TimerEvent: {}
+[67.519022] (-) TimerEvent: {}
+[67.619358] (-) TimerEvent: {}
+[67.719849] (-) TimerEvent: {}
+[67.820155] (-) TimerEvent: {}
+[67.920423] (-) TimerEvent: {}
+[68.020780] (-) TimerEvent: {}
+[68.121152] (-) TimerEvent: {}
+[68.221408] (-) TimerEvent: {}
+[68.321711] (-) TimerEvent: {}
+[68.421986] (-) TimerEvent: {}
+[68.522300] (-) TimerEvent: {}
+[68.622589] (-) TimerEvent: {}
+[68.722845] (-) TimerEvent: {}
+[68.823138] (-) TimerEvent: {}
+[68.923449] (-) TimerEvent: {}
+[69.023795] (-) TimerEvent: {}
+[69.124164] (-) TimerEvent: {}
+[69.224517] (-) TimerEvent: {}
+[69.324859] (-) TimerEvent: {}
+[69.425148] (-) TimerEvent: {}
+[69.525464] (-) TimerEvent: {}
+[69.625770] (-) TimerEvent: {}
+[69.726058] (-) TimerEvent: {}
+[69.826375] (-) TimerEvent: {}
+[69.927003] (-) TimerEvent: {}
+[70.027530] (-) TimerEvent: {}
+[70.127850] (-) TimerEvent: {}
+[70.228174] (-) TimerEvent: {}
+[70.328525] (-) TimerEvent: {}
+[70.428796] (-) TimerEvent: {}
+[70.529084] (-) TimerEvent: {}
+[70.629373] (-) TimerEvent: {}
+[70.729666] (-) TimerEvent: {}
+[70.829923] (-) TimerEvent: {}
+[70.930231] (-) TimerEvent: {}
+[71.030505] (-) TimerEvent: {}
+[71.130830] (-) TimerEvent: {}
+[71.231207] (-) TimerEvent: {}
+[71.331570] (-) TimerEvent: {}
+[71.431821] (-) TimerEvent: {}
+[71.532115] (-) TimerEvent: {}
+[71.632847] (-) TimerEvent: {}
+[71.733167] (-) TimerEvent: {}
+[71.833460] (-) TimerEvent: {}
+[71.933798] (-) TimerEvent: {}
+[72.034118] (-) TimerEvent: {}
+[72.134409] (-) TimerEvent: {}
+[72.234768] (-) TimerEvent: {}
+[72.335083] (-) TimerEvent: {}
+[72.435519] (-) TimerEvent: {}
+[72.535843] (-) TimerEvent: {}
+[72.636184] (-) TimerEvent: {}
+[72.736509] (-) TimerEvent: {}
+[72.836874] (-) TimerEvent: {}
+[72.937264] (-) TimerEvent: {}
+[73.037664] (-) TimerEvent: {}
+[73.137992] (-) TimerEvent: {}
+[73.238286] (-) TimerEvent: {}
+[73.338559] (-) TimerEvent: {}
+[73.438833] (-) TimerEvent: {}
+[73.539147] (-) TimerEvent: {}
+[73.639483] (-) TimerEvent: {}
+[73.739777] (-) TimerEvent: {}
+[73.840153] (-) TimerEvent: {}
+[73.940585] (-) TimerEvent: {}
+[74.040845] (-) TimerEvent: {}
+[74.141174] (-) TimerEvent: {}
+[74.241545] (-) TimerEvent: {}
+[74.341988] (-) TimerEvent: {}
+[74.442335] (-) TimerEvent: {}
+[74.542723] (-) TimerEvent: {}
+[74.643055] (-) TimerEvent: {}
+[74.743460] (-) TimerEvent: {}
+[74.843807] (-) TimerEvent: {}
+[74.944118] (-) TimerEvent: {}
+[75.044494] (-) TimerEvent: {}
+[75.144808] (-) TimerEvent: {}
+[75.245143] (-) TimerEvent: {}
+[75.345520] (-) TimerEvent: {}
+[75.445903] (-) TimerEvent: {}
+[75.546309] (-) TimerEvent: {}
+[75.646928] (-) TimerEvent: {}
+[75.747185] (-) TimerEvent: {}
+[75.847552] (-) TimerEvent: {}
+[75.947938] (-) TimerEvent: {}
+[76.048201] (-) TimerEvent: {}
+[76.148550] (-) TimerEvent: {}
+[76.248920] (-) TimerEvent: {}
+[76.349177] (-) TimerEvent: {}
+[76.449500] (-) TimerEvent: {}
+[76.549777] (-) TimerEvent: {}
+[76.650078] (-) TimerEvent: {}
+[76.750398] (-) TimerEvent: {}
+[76.850680] (-) TimerEvent: {}
+[76.950958] (-) TimerEvent: {}
+[77.051391] (-) TimerEvent: {}
+[77.151710] (-) TimerEvent: {}
+[77.251981] (-) TimerEvent: {}
+[77.352300] (-) TimerEvent: {}
+[77.452655] (-) TimerEvent: {}
+[77.552946] (-) TimerEvent: {}
+[77.653335] (-) TimerEvent: {}
+[77.753815] (-) TimerEvent: {}
+[77.854161] (-) TimerEvent: {}
+[77.954557] (-) TimerEvent: {}
+[78.054833] (-) TimerEvent: {}
+[78.155141] (-) TimerEvent: {}
+[78.255472] (-) TimerEvent: {}
+[78.355756] (-) TimerEvent: {}
+[78.456017] (-) TimerEvent: {}
+[78.556345] (-) TimerEvent: {}
+[78.657199] (-) TimerEvent: {}
+[78.757705] (-) TimerEvent: {}
+[78.857982] (-) TimerEvent: {}
+[78.958328] (-) TimerEvent: {}
+[79.058650] (-) TimerEvent: {}
+[79.158974] (-) TimerEvent: {}
+[79.259288] (-) TimerEvent: {}
+[79.359626] (-) TimerEvent: {}
+[79.459888] (-) TimerEvent: {}
+[79.560169] (-) TimerEvent: {}
+[79.660450] (-) TimerEvent: {}
+[79.760795] (-) TimerEvent: {}
+[79.861091] (-) TimerEvent: {}
+[79.961504] (-) TimerEvent: {}
+[80.061928] (-) TimerEvent: {}
+[80.162303] (-) TimerEvent: {}
+[80.262639] (-) TimerEvent: {}
+[80.362929] (-) TimerEvent: {}
+[80.463445] (-) TimerEvent: {}
+[80.563724] (-) TimerEvent: {}
+[80.664064] (-) TimerEvent: {}
+[80.764421] (-) TimerEvent: {}
+[80.864770] (-) TimerEvent: {}
+[80.965146] (-) TimerEvent: {}
+[81.065516] (-) TimerEvent: {}
+[81.165928] (-) TimerEvent: {}
+[81.266327] (-) TimerEvent: {}
+[81.366642] (-) TimerEvent: {}
+[81.466988] (-) TimerEvent: {}
+[81.567400] (-) TimerEvent: {}
+[81.667885] (-) TimerEvent: {}
+[81.768494] (-) TimerEvent: {}
+[81.868921] (-) TimerEvent: {}
+[81.969270] (-) TimerEvent: {}
+[82.071514] (-) TimerEvent: {}
+[82.171861] (-) TimerEvent: {}
+[82.272441] (-) TimerEvent: {}
+[82.375328] (-) TimerEvent: {}
+[82.475823] (-) TimerEvent: {}
+[82.576416] (-) TimerEvent: {}
+[82.676822] (-) TimerEvent: {}
+[82.779097] (-) TimerEvent: {}
+[82.879705] (-) TimerEvent: {}
+[82.980337] (-) TimerEvent: {}
+[83.081477] (-) TimerEvent: {}
+[83.184881] (-) TimerEvent: {}
+[83.287183] (-) TimerEvent: {}
+[83.387606] (-) TimerEvent: {}
+[83.490004] (-) TimerEvent: {}
+[83.592965] (-) TimerEvent: {}
+[83.694174] (-) TimerEvent: {}
+[83.798196] (-) TimerEvent: {}
+[83.898716] (-) TimerEvent: {}
+[84.001863] (-) TimerEvent: {}
+[84.104080] (-) TimerEvent: {}
+[84.204758] (-) TimerEvent: {}
+[84.306636] (-) TimerEvent: {}
+[84.407081] (-) TimerEvent: {}
+[84.509264] (-) TimerEvent: {}
+[84.610370] (-) TimerEvent: {}
+[84.711608] (-) TimerEvent: {}
+[84.813748] (-) TimerEvent: {}
+[84.914775] (-) TimerEvent: {}
+[85.020100] (-) TimerEvent: {}
+[85.120627] (-) TimerEvent: {}
+[85.221763] (-) TimerEvent: {}
+[85.322499] (-) TimerEvent: {}
+[85.425258] (-) TimerEvent: {}
+[85.525697] (-) TimerEvent: {}
+[85.546277] (px4_msgs) StdoutLine: {'line': b'[  0%] Built target px4_msgs__cpp\n'}
+[85.625798] (-) TimerEvent: {}
+[85.726405] (-) TimerEvent: {}
+[85.827360] (-) TimerEvent: {}
+[85.929707] (-) TimerEvent: {}
+[86.030599] (-) TimerEvent: {}
+[86.131403] (-) TimerEvent: {}
+[86.233272] (-) TimerEvent: {}
+[86.333970] (-) TimerEvent: {}
+[86.434560] (-) TimerEvent: {}
+[86.538459] (-) TimerEvent: {}
+[86.640253] (-) TimerEvent: {}
+[86.744471] (-) TimerEvent: {}
+[86.844957] (-) TimerEvent: {}
+[86.945567] (-) TimerEvent: {}
+[87.046204] (-) TimerEvent: {}
+[87.146669] (-) TimerEvent: {}
+[87.251214] (-) TimerEvent: {}
+[87.351666] (-) TimerEvent: {}
+[87.452162] (-) TimerEvent: {}
+[87.552567] (-) TimerEvent: {}
+[87.652998] (-) TimerEvent: {}
+[87.754330] (-) TimerEvent: {}
+[87.857456] (-) TimerEvent: {}
+[87.960327] (-) TimerEvent: {}
+[88.060903] (-) TimerEvent: {}
+[88.166161] (-) TimerEvent: {}
+[88.266640] (-) TimerEvent: {}
+[88.367282] (-) TimerEvent: {}
+[88.468682] (-) TimerEvent: {}
+[88.569964] (-) TimerEvent: {}
+[88.670394] (-) TimerEvent: {}
+[88.771289] (-) TimerEvent: {}
+[88.871845] (-) TimerEvent: {}
+[88.972918] (-) TimerEvent: {}
+[89.073652] (-) TimerEvent: {}
+[89.174667] (-) TimerEvent: {}
+[89.277424] (-) TimerEvent: {}
+[89.377869] (-) TimerEvent: {}
+[89.419257] (px4_msgs) StdoutLine: {'line': b'[  0%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/actuator_controls_status__functions.c.o\x1b[0m\n'}
+[89.419621] (px4_msgs) StdoutLine: {'line': b'[  0%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/actuator_armed__functions.c.o\x1b[0m\n'}
+[89.419825] (px4_msgs) StdoutLine: {'line': b'[  0%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/actuator_motors__functions.c.o\x1b[0m\n'}
+[89.423867] (px4_msgs) StdoutLine: {'line': b'[  0%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/actuator_servos_trim__functions.c.o\x1b[0m\n'}
+[89.426410] (px4_msgs) StdoutLine: {'line': b'[  0%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/action_request__functions.c.o\x1b[0m\n'}
+[89.426719] (px4_msgs) StdoutLine: {'line': b'[  0%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/actuator_servos__functions.c.o\x1b[0m\n'}
+[89.429434] (px4_msgs) StdoutLine: {'line': b'[  0%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/actuator_outputs__functions.c.o\x1b[0m\n'}
+[89.478250] (-) TimerEvent: {}
+[89.581200] (-) TimerEvent: {}
+[89.629476] (px4_msgs) StdoutLine: {'line': b'[  0%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/actuator_test__functions.c.o\x1b[0m\n'}
+[89.629825] (px4_msgs) StdoutLine: {'line': b'[  0%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/adc_report__functions.c.o\x1b[0m\n'}
+[89.630035] (px4_msgs) StdoutLine: {'line': b'[  0%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/airspeed__functions.c.o\x1b[0m\n'}
+[89.637413] (px4_msgs) StdoutLine: {'line': b'[  0%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/airspeed_validated__functions.c.o\x1b[0m\n'}
+[89.639201] (px4_msgs) StdoutLine: {'line': b'[  0%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/airspeed_wind__functions.c.o\x1b[0m\n'}
+[89.647774] (px4_msgs) StdoutLine: {'line': b'[  0%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/arming_check_reply__functions.c.o\x1b[0m\n'}
+[89.659399] (px4_msgs) StdoutLine: {'line': b'[  0%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/arming_check_request__functions.c.o\x1b[0m\n'}
+[89.681546] (-) TimerEvent: {}
+[89.783688] (-) TimerEvent: {}
+[89.838313] (px4_msgs) StdoutLine: {'line': b'[  0%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/autotune_attitude_control_status__functions.c.o\x1b[0m\n'}
+[89.839189] (px4_msgs) StdoutLine: {'line': b'[  1%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/battery_status__functions.c.o\x1b[0m\n'}
+[89.847878] (px4_msgs) StdoutLine: {'line': b'[  1%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/buffer128__functions.c.o\x1b[0m\n'}
+[89.862702] (px4_msgs) StdoutLine: {'line': b'[  1%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/button_event__functions.c.o\x1b[0m\n'}
+[89.863083] (px4_msgs) StdoutLine: {'line': b'[  1%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/camera_capture__functions.c.o\x1b[0m\n'}
+[89.868593] (px4_msgs) StdoutLine: {'line': b'[  1%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/camera_status__functions.c.o\x1b[0m\n'}
+[89.883888] (-) TimerEvent: {}
+[89.900077] (px4_msgs) StdoutLine: {'line': b'[  1%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/camera_trigger__functions.c.o\x1b[0m\n'}
+[89.983993] (-) TimerEvent: {}
+[90.064190] (px4_msgs) StdoutLine: {'line': b'[  1%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/cellular_status__functions.c.o\x1b[0m\n'}
+[90.064620] (px4_msgs) StdoutLine: {'line': b'[  1%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/can_interface_status__functions.c.o\x1b[0m\n'}
+[90.077252] (px4_msgs) StdoutLine: {'line': b'[  1%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/collision_constraints__functions.c.o\x1b[0m\n'}
+[90.084605] (-) TimerEvent: {}
+[90.085294] (px4_msgs) StdoutLine: {'line': b'[  1%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/collision_report__functions.c.o\x1b[0m\n'}
+[90.097471] (px4_msgs) StdoutLine: {'line': b'[  1%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/config_overrides__functions.c.o\x1b[0m\n'}
+[90.115250] (px4_msgs) StdoutLine: {'line': b'[  1%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/control_allocator_status__functions.c.o\x1b[0m\n'}
+[90.135084] (px4_msgs) StdoutLine: {'line': b'[  1%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/cpuload__functions.c.o\x1b[0m\n'}
+[90.185548] (-) TimerEvent: {}
+[90.272231] (px4_msgs) StdoutLine: {'line': b'[  1%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/dataman_response__functions.c.o\x1b[0m\n'}
+[90.280478] (px4_msgs) StdoutLine: {'line': b'[  1%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/dataman_request__functions.c.o\x1b[0m\n'}
+[90.286153] (-) TimerEvent: {}
+[90.298076] (px4_msgs) StdoutLine: {'line': b'[  1%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/debug_array__functions.c.o\x1b[0m\n'}
+[90.317772] (px4_msgs) StdoutLine: {'line': b'[  1%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/debug_key_value__functions.c.o\x1b[0m\n'}
+[90.338527] (px4_msgs) StdoutLine: {'line': b'[  1%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/debug_value__functions.c.o\x1b[0m\n'}
+[90.357565] (px4_msgs) StdoutLine: {'line': b'[  2%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/debug_vect__functions.c.o\x1b[0m\n'}
+[90.364848] (px4_msgs) StdoutLine: {'line': b'[  2%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/differential_pressure__functions.c.o\x1b[0m\n'}
+[90.370232] (px4_msgs) StdoutLine: {'line': b'[  2%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/distance_sensor__functions.c.o\x1b[0m\n'}
+[90.389424] (-) TimerEvent: {}
+[90.490854] (-) TimerEvent: {}
+[90.540837] (px4_msgs) StdoutLine: {'line': b'[  2%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/distance_sensor_mode_change_request__functions.c.o\x1b[0m\n'}
+[90.577409] (px4_msgs) StdoutLine: {'line': b'[  2%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/ekf2_timestamps__functions.c.o\x1b[0m\n'}
+[90.582190] (px4_msgs) StdoutLine: {'line': b'[  2%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/esc_status__functions.c.o\x1b[0m\n'}
+[90.586491] (px4_msgs) StdoutLine: {'line': b'[  2%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/esc_report__functions.c.o\x1b[0m\n'}
+[90.593218] (-) TimerEvent: {}
+[90.598720] (px4_msgs) StdoutLine: {'line': b'[  2%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/estimator_aid_source1d__functions.c.o\x1b[0m\n'}
+[90.610358] (px4_msgs) StdoutLine: {'line': b'[  2%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/estimator_aid_source2d__functions.c.o\x1b[0m\n'}
+[90.622513] (px4_msgs) StdoutLine: {'line': b'[  2%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/estimator_aid_source3d__functions.c.o\x1b[0m\n'}
+[90.660483] (px4_msgs) StdoutLine: {'line': b'[  2%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/estimator_bias__functions.c.o\x1b[0m\n'}
+[90.696096] (-) TimerEvent: {}
+[90.796533] (-) TimerEvent: {}
+[90.815002] (px4_msgs) StdoutLine: {'line': b'[  2%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/estimator_event_flags__functions.c.o\x1b[0m\n'}
+[90.821018] (px4_msgs) StdoutLine: {'line': b'[  2%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/estimator_bias3d__functions.c.o\x1b[0m\n'}
+[90.823545] (px4_msgs) StdoutLine: {'line': b'[  2%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/estimator_gps_status__functions.c.o\x1b[0m\n'}
+[90.830505] (px4_msgs) StdoutLine: {'line': b'[  2%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/estimator_innovations__functions.c.o\x1b[0m\n'}
+[90.853895] (px4_msgs) StdoutLine: {'line': b'[  2%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/estimator_sensor_bias__functions.c.o\x1b[0m\n'}
+[90.854240] (px4_msgs) StdoutLine: {'line': b'[  2%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/estimator_selector_status__functions.c.o\x1b[0m\n'}
+[90.896926] (-) TimerEvent: {}
+[90.919935] (px4_msgs) StdoutLine: {'line': b'[  2%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/estimator_states__functions.c.o\x1b[0m\n'}
+[90.920379] (px4_msgs) StdoutLine: {'line': b'[  2%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/estimator_status__functions.c.o\x1b[0m\n'}
+[90.998332] (-) TimerEvent: {}
+[91.077106] (px4_msgs) StdoutLine: {'line': b'[  3%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/estimator_status_flags__functions.c.o\x1b[0m\n'}
+[91.099080] (-) TimerEvent: {}
+[91.102505] (px4_msgs) StdoutLine: {'line': b'[  3%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/event__functions.c.o\x1b[0m\n'}
+[91.127441] (px4_msgs) StdoutLine: {'line': b'[  3%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/failure_detector_status__functions.c.o\x1b[0m\n'}
+[91.128018] (px4_msgs) StdoutLine: {'line': b'[  3%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/failsafe_flags__functions.c.o\x1b[0m\n'}
+[91.133173] (px4_msgs) StdoutLine: {'line': b'[  3%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/figure_eight_status__functions.c.o\x1b[0m\n'}
+[91.156321] (px4_msgs) StdoutLine: {'line': b'[  3%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/flight_phase_estimation__functions.c.o\x1b[0m\n'}
+[91.166170] (px4_msgs) StdoutLine: {'line': b'[  3%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/follow_target__functions.c.o\x1b[0m\n'}
+[91.200359] (-) TimerEvent: {}
+[91.202381] (px4_msgs) StdoutLine: {'line': b'[  3%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/follow_target_estimator__functions.c.o\x1b[0m\n'}
+[91.301209] (-) TimerEvent: {}
+[91.354394] (px4_msgs) StdoutLine: {'line': b'[  3%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/follow_target_status__functions.c.o\x1b[0m\n'}
+[91.384404] (px4_msgs) StdoutLine: {'line': b'[  3%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/fuel_tank_status__functions.c.o\x1b[0m\n'}
+[91.401202] (px4_msgs) StdoutLine: {'line': b'[  3%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/generator_status__functions.c.o\x1b[0m\n'}
+[91.401508] (-) TimerEvent: {}
+[91.402732] (px4_msgs) StdoutLine: {'line': b'[  3%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/geofence_result__functions.c.o\x1b[0m\n'}
+[91.411271] (px4_msgs) StdoutLine: {'line': b'[  3%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/geofence_status__functions.c.o\x1b[0m\n'}
+[91.417760] (px4_msgs) StdoutLine: {'line': b'[  3%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/gimbal_controls__functions.c.o\x1b[0m\n'}
+[91.421917] (px4_msgs) StdoutLine: {'line': b'[  3%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/gimbal_device_attitude_status__functions.c.o\x1b[0m\n'}
+[91.502280] (-) TimerEvent: {}
+[91.508170] (px4_msgs) StdoutLine: {'line': b'[  3%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/gimbal_device_information__functions.c.o\x1b[0m\n'}
+[91.603603] (-) TimerEvent: {}
+[91.605956] (px4_msgs) StdoutLine: {'line': b'[  3%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/gimbal_device_set_attitude__functions.c.o\x1b[0m\n'}
+[91.629522] (px4_msgs) StdoutLine: {'line': b'[  3%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/gimbal_manager_information__functions.c.o\x1b[0m\n'}
+[91.650453] (px4_msgs) StdoutLine: {'line': b'[  4%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/gimbal_manager_set_attitude__functions.c.o\x1b[0m\n'}
+[91.667958] (px4_msgs) StdoutLine: {'line': b'[  4%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/gimbal_manager_set_manual_control__functions.c.o\x1b[0m\n'}
+[91.679341] (px4_msgs) StdoutLine: {'line': b'[  4%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/gimbal_manager_status__functions.c.o\x1b[0m\n'}
+[91.705292] (-) TimerEvent: {}
+[91.716263] (px4_msgs) StdoutLine: {'line': b'[  4%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/goto_setpoint__functions.c.o\x1b[0m\n'}
+[91.745591] (px4_msgs) StdoutLine: {'line': b'[  4%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/gpio_config__functions.c.o\x1b[0m\n'}
+[91.805973] (-) TimerEvent: {}
+[91.833315] (px4_msgs) StdoutLine: {'line': b'[  4%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/gpio_in__functions.c.o\x1b[0m\n'}
+[91.888168] (px4_msgs) StdoutLine: {'line': b'[  4%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/gpio_out__functions.c.o\x1b[0m\n'}
+[91.888640] (px4_msgs) StdoutLine: {'line': b'[  4%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/gpio_request__functions.c.o\x1b[0m\n'}
+[91.906381] (-) TimerEvent: {}
+[91.915188] (px4_msgs) StdoutLine: {'line': b'[  4%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/gps_dump__functions.c.o\x1b[0m\n'}
+[91.929157] (px4_msgs) StdoutLine: {'line': b'[  4%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/gripper__functions.c.o\x1b[0m\n'}
+[91.933996] (px4_msgs) StdoutLine: {'line': b'[  4%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/gps_inject_data__functions.c.o\x1b[0m\n'}
+[92.008065] (-) TimerEvent: {}
+[92.021320] (px4_msgs) StdoutLine: {'line': b'[  4%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/health_report__functions.c.o\x1b[0m\n'}
+[92.037505] (px4_msgs) StdoutLine: {'line': b'[  4%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/heater_status__functions.c.o\x1b[0m\n'}
+[92.106853] (px4_msgs) StdoutLine: {'line': b'[  4%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/home_position__functions.c.o\x1b[0m\n'}
+[92.108211] (-) TimerEvent: {}
+[92.126567] (px4_msgs) StdoutLine: {'line': b'[  4%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/hover_thrust_estimate__functions.c.o\x1b[0m\n'}
+[92.174880] (px4_msgs) StdoutLine: {'line': b'[  4%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/input_rc__functions.c.o\x1b[0m\n'}
+[92.176977] (px4_msgs) StdoutLine: {'line': b'[  4%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/internal_combustion_engine_status__functions.c.o\x1b[0m\n'}
+[92.182891] (px4_msgs) StdoutLine: {'line': b'[  4%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/iridiumsbd_status__functions.c.o\x1b[0m\n'}
+[92.195913] (px4_msgs) StdoutLine: {'line': b'[  4%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/irlock_report__functions.c.o\x1b[0m\n'}
+[92.210202] (-) TimerEvent: {}
+[92.295263] (px4_msgs) StdoutLine: {'line': b'[  5%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/landing_gear__functions.c.o\x1b[0m\n'}
+[92.307231] (px4_msgs) StdoutLine: {'line': b'[  5%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/landing_gear_wheel__functions.c.o\x1b[0m\n'}
+[92.316249] (-) TimerEvent: {}
+[92.394260] (px4_msgs) StdoutLine: {'line': b'[  5%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/landing_target_innovations__functions.c.o\x1b[0m\n'}
+[92.416363] (-) TimerEvent: {}
+[92.428766] (px4_msgs) StdoutLine: {'line': b'[  5%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/launch_detection_status__functions.c.o\x1b[0m\n'}
+[92.432586] (px4_msgs) StdoutLine: {'line': b'[  5%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/landing_target_pose__functions.c.o\x1b[0m\n'}
+[92.441717] (px4_msgs) StdoutLine: {'line': b'[  5%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/led_control__functions.c.o\x1b[0m\n'}
+[92.474283] (px4_msgs) StdoutLine: {'line': b'[  5%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/log_message__functions.c.o\x1b[0m\n'}
+[92.477048] (px4_msgs) StdoutLine: {'line': b'[  5%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/logger_status__functions.c.o\x1b[0m\n'}
+[92.516962] (-) TimerEvent: {}
+[92.535859] (px4_msgs) StdoutLine: {'line': b'[  5%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/mag_worker_data__functions.c.o\x1b[0m\n'}
+[92.560705] (px4_msgs) StdoutLine: {'line': b'[  5%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/magnetometer_bias_estimate__functions.c.o\x1b[0m\n'}
+[92.619312] (-) TimerEvent: {}
+[92.640778] (px4_msgs) StdoutLine: {'line': b'[  5%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/manual_control_setpoint__functions.c.o\x1b[0m\n'}
+[92.702262] (px4_msgs) StdoutLine: {'line': b'[  5%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/manual_control_switches__functions.c.o\x1b[0m\n'}
+[92.714003] (px4_msgs) StdoutLine: {'line': b'[  5%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/mavlink_log__functions.c.o\x1b[0m\n'}
+[92.719592] (-) TimerEvent: {}
+[92.723854] (px4_msgs) StdoutLine: {'line': b'[  5%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/message_format_response__functions.c.o\x1b[0m\n'}
+[92.724940] (px4_msgs) StdoutLine: {'line': b'[  5%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/mavlink_tunnel__functions.c.o\x1b[0m\n'}
+[92.732738] (px4_msgs) StdoutLine: {'line': b'[  5%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/message_format_request__functions.c.o\x1b[0m\n'}
+[92.738519] (px4_msgs) StdoutLine: {'line': b'[  5%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/mission__functions.c.o\x1b[0m\n'}
+[92.802972] (px4_msgs) StdoutLine: {'line': b'[  5%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/mission_result__functions.c.o\x1b[0m\n'}
+[92.819712] (-) TimerEvent: {}
+[92.864527] (px4_msgs) StdoutLine: {'line': b'[  6%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/mode_completed__functions.c.o\x1b[0m\n'}
+[92.921218] (-) TimerEvent: {}
+[92.959544] (px4_msgs) StdoutLine: {'line': b'[  6%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/navigator_mission_item__functions.c.o\x1b[0m\n'}
+[92.964374] (px4_msgs) StdoutLine: {'line': b'[  6%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/mount_orientation__functions.c.o\x1b[0m\n'}
+[92.975307] (px4_msgs) StdoutLine: {'line': b'[  6%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/navigator_status__functions.c.o\x1b[0m\n'}
+[92.980656] (px4_msgs) StdoutLine: {'line': b'[  6%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/normalized_unsigned_setpoint__functions.c.o\x1b[0m\n'}
+[92.997273] (px4_msgs) StdoutLine: {'line': b'[  6%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/npfg_status__functions.c.o\x1b[0m\n'}
+[93.004535] (px4_msgs) StdoutLine: {'line': b'[  6%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/obstacle_distance__functions.c.o\x1b[0m\n'}
+[93.016624] (px4_msgs) StdoutLine: {'line': b'[  6%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/offboard_control_mode__functions.c.o\x1b[0m\n'}
+[93.021636] (-) TimerEvent: {}
+[93.124694] (-) TimerEvent: {}
+[93.180655] (px4_msgs) StdoutLine: {'line': b'[  6%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/onboard_computer_status__functions.c.o\x1b[0m\n'}
+[93.213235] (px4_msgs) StdoutLine: {'line': b'[  6%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/open_drone_id_arm_status__functions.c.o\x1b[0m\n'}
+[93.225375] (px4_msgs) StdoutLine: {'line': b'[  6%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/open_drone_id_operator_id__functions.c.o\x1b[0m\n'}
+[93.225869] (-) TimerEvent: {}
+[93.232179] (px4_msgs) StdoutLine: {'line': b'[  6%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/open_drone_id_system__functions.c.o\x1b[0m\n'}
+[93.238685] (px4_msgs) StdoutLine: {'line': b'[  6%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/open_drone_id_self_id__functions.c.o\x1b[0m\n'}
+[93.239816] (px4_msgs) StdoutLine: {'line': b'[  6%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/orb_test__functions.c.o\x1b[0m\n'}
+[93.280368] (px4_msgs) StdoutLine: {'line': b'[  6%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/orb_test_medium__functions.c.o\x1b[0m\n'}
+[93.284089] (px4_msgs) StdoutLine: {'line': b'[  6%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/orb_test_large__functions.c.o\x1b[0m\n'}
+[93.325999] (-) TimerEvent: {}
+[93.426502] (-) TimerEvent: {}
+[93.438296] (px4_msgs) StdoutLine: {'line': b'[  6%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/orbit_status__functions.c.o\x1b[0m\n'}
+[93.466905] (px4_msgs) StdoutLine: {'line': b'[  6%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/parameter_reset_request__functions.c.o\x1b[0m\n'}
+[93.479330] (px4_msgs) StdoutLine: {'line': b'[  6%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/parameter_set_used_request__functions.c.o\x1b[0m\n'}
+[93.489752] (px4_msgs) StdoutLine: {'line': b'[  7%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/parameter_set_value_request__functions.c.o\x1b[0m\n'}
+[93.494723] (px4_msgs) StdoutLine: {'line': b'[  7%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/parameter_set_value_response__functions.c.o\x1b[0m\n'}
+[93.514844] (px4_msgs) StdoutLine: {'line': b'[  7%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/parameter_update__functions.c.o\x1b[0m\n'}
+[93.526788] (-) TimerEvent: {}
+[93.528418] (px4_msgs) StdoutLine: {'line': b'[  7%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/ping__functions.c.o\x1b[0m\n'}
+[93.540283] (px4_msgs) StdoutLine: {'line': b'[  7%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/position_controller_landing_status__functions.c.o\x1b[0m\n'}
+[93.629781] (-) TimerEvent: {}
+[93.712658] (px4_msgs) StdoutLine: {'line': b'[  7%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/position_controller_status__functions.c.o\x1b[0m\n'}
+[93.725698] (px4_msgs) StdoutLine: {'line': b'[  7%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/position_setpoint__functions.c.o\x1b[0m\n'}
+[93.729911] (-) TimerEvent: {}
+[93.742132] (px4_msgs) StdoutLine: {'line': b'[  7%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/position_setpoint_triplet__functions.c.o\x1b[0m\n'}
+[93.748331] (px4_msgs) StdoutLine: {'line': b'[  7%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/power_button_state__functions.c.o\x1b[0m\n'}
+[93.757114] (px4_msgs) StdoutLine: {'line': b'[  7%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/power_monitor__functions.c.o\x1b[0m\n'}
+[93.774212] (px4_msgs) StdoutLine: {'line': b'[  7%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/pps_capture__functions.c.o\x1b[0m\n'}
+[93.778209] (px4_msgs) StdoutLine: {'line': b'[  7%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/pwm_input__functions.c.o\x1b[0m\n'}
+[93.817473] (px4_msgs) StdoutLine: {'line': b'[  7%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/px4io_status__functions.c.o\x1b[0m\n'}
+[93.830030] (-) TimerEvent: {}
+[93.932258] (-) TimerEvent: {}
+[93.945191] (px4_msgs) StdoutLine: {'line': b'[  7%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/qshell_req__functions.c.o\x1b[0m\n'}
+[93.981491] (px4_msgs) StdoutLine: {'line': b'[  7%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/radio_status__functions.c.o\x1b[0m\n'}
+[93.995237] (px4_msgs) StdoutLine: {'line': b'[  7%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/qshell_retval__functions.c.o\x1b[0m\n'}
+[93.998222] (px4_msgs) StdoutLine: {'line': b'[  7%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/rate_ctrl_status__functions.c.o\x1b[0m\n'}
+[94.032533] (-) TimerEvent: {}
+[94.033257] (px4_msgs) StdoutLine: {'line': b'[  7%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/rc_channels__functions.c.o\x1b[0m\n'}
+[94.042936] (px4_msgs) StdoutLine: {'line': b'[  8%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/rc_parameter_map__functions.c.o\x1b[0m\n'}
+[94.064883] (px4_msgs) StdoutLine: {'line': b'[  8%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/register_ext_component_reply__functions.c.o\x1b[0m\n'}
+[94.122117] (px4_msgs) StdoutLine: {'line': b'[  8%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/register_ext_component_request__functions.c.o\x1b[0m\n'}
+[94.132829] (-) TimerEvent: {}
+[94.173519] (px4_msgs) StdoutLine: {'line': b'[  8%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/rover_ackermann_guidance_status__functions.c.o\x1b[0m\n'}
+[94.225501] (px4_msgs) StdoutLine: {'line': b'[  8%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/rover_ackermann_status__functions.c.o\x1b[0m\n'}
+[94.235221] (-) TimerEvent: {}
+[94.254310] (px4_msgs) StdoutLine: {'line': b'[  8%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/rover_differential_guidance_status__functions.c.o\x1b[0m\n'}
+[94.254684] (px4_msgs) StdoutLine: {'line': b'[  8%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/rover_differential_setpoint__functions.c.o\x1b[0m\n'}
+[94.308633] (px4_msgs) StdoutLine: {'line': b'[  8%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/rover_differential_status__functions.c.o\x1b[0m\n'}
+[94.330904] (px4_msgs) StdoutLine: {'line': b'[  8%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/rover_mecanum_guidance_status__functions.c.o\x1b[0m\n'}
+[94.337111] (-) TimerEvent: {}
+[94.345430] (px4_msgs) StdoutLine: {'line': b'[  8%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/rover_mecanum_setpoint__functions.c.o\x1b[0m\n'}
+[94.345757] (px4_msgs) StdoutLine: {'line': b'[  8%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/rover_mecanum_status__functions.c.o\x1b[0m\n'}
+[94.434293] (px4_msgs) StdoutLine: {'line': b'[  8%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/rpm__functions.c.o\x1b[0m\n'}
+[94.436895] (-) TimerEvent: {}
+[94.471819] (px4_msgs) StdoutLine: {'line': b'[  8%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/rtl_status__functions.c.o\x1b[0m\n'}
+[94.491463] (px4_msgs) StdoutLine: {'line': b'[  8%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/rtl_time_estimate__functions.c.o\x1b[0m\n'}
+[94.511080] (px4_msgs) StdoutLine: {'line': b'[  8%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/satellite_info__functions.c.o\x1b[0m\n'}
+[94.537021] (-) TimerEvent: {}
+[94.588607] (px4_msgs) StdoutLine: {'line': b'[  8%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/sensor_accel__functions.c.o\x1b[0m\n'}
+[94.592258] (px4_msgs) StdoutLine: {'line': b'[  8%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/sensor_airflow__functions.c.o\x1b[0m\n'}
+[94.594610] (px4_msgs) StdoutLine: {'line': b'[  8%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/sensor_accel_fifo__functions.c.o\x1b[0m\n'}
+[94.621921] (px4_msgs) StdoutLine: {'line': b'[  8%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/sensor_baro__functions.c.o\x1b[0m\n'}
+[94.637201] (-) TimerEvent: {}
+[94.693001] (px4_msgs) StdoutLine: {'line': b'[  9%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/sensor_combined__functions.c.o\x1b[0m\n'}
+[94.737322] (-) TimerEvent: {}
+[94.746542] (px4_msgs) StdoutLine: {'line': b'[  9%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/sensor_correction__functions.c.o\x1b[0m\n'}
+[94.755333] (px4_msgs) StdoutLine: {'line': b'[  9%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/sensor_gnss_relative__functions.c.o\x1b[0m\n'}
+[94.776097] (px4_msgs) StdoutLine: {'line': b'[  9%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/sensor_gps__functions.c.o\x1b[0m\n'}
+[94.803814] (px4_msgs) StdoutLine: {'line': b'[  9%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/sensor_gyro__functions.c.o\x1b[0m\n'}
+[94.808765] (px4_msgs) StdoutLine: {'line': b'[  9%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/sensor_gyro_fft__functions.c.o\x1b[0m\n'}
+[94.838903] (-) TimerEvent: {}
+[94.860759] (px4_msgs) StdoutLine: {'line': b'[  9%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/sensor_gyro_fifo__functions.c.o\x1b[0m\n'}
+[94.917170] (px4_msgs) StdoutLine: {'line': b'[  9%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/sensor_hygrometer__functions.c.o\x1b[0m\n'}
+[94.939633] (-) TimerEvent: {}
+[94.980422] (px4_msgs) StdoutLine: {'line': b'[  9%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/sensor_mag__functions.c.o\x1b[0m\n'}
+[95.028075] (px4_msgs) StdoutLine: {'line': b'[  9%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/sensor_optical_flow__functions.c.o\x1b[0m\n'}
+[95.038488] (px4_msgs) StdoutLine: {'line': b'[  9%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/sensor_preflight_mag__functions.c.o\x1b[0m\n'}
+[95.039734] (-) TimerEvent: {}
+[95.049764] (px4_msgs) StdoutLine: {'line': b'[  9%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/sensor_selection__functions.c.o\x1b[0m\n'}
+[95.051180] (px4_msgs) StdoutLine: {'line': b'[  9%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/sensor_uwb__functions.c.o\x1b[0m\n'}
+[95.106234] (px4_msgs) StdoutLine: {'line': b'[  9%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/sensors_status__functions.c.o\x1b[0m\n'}
+[95.120468] (px4_msgs) StdoutLine: {'line': b'[  9%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/sensors_status_imu__functions.c.o\x1b[0m\n'}
+[95.139902] (-) TimerEvent: {}
+[95.197549] (px4_msgs) StdoutLine: {'line': b'[  9%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/system_power__functions.c.o\x1b[0m\n'}
+[95.210617] (px4_msgs) StdoutLine: {'line': b'[  9%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/takeoff_status__functions.c.o\x1b[0m\n'}
+[95.240883] (-) TimerEvent: {}
+[95.286452] (px4_msgs) StdoutLine: {'line': b'[  9%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/task_stack_info__functions.c.o\x1b[0m\n'}
+[95.297911] (px4_msgs) StdoutLine: {'line': b'[ 10%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/tecs_status__functions.c.o\x1b[0m\n'}
+[95.305739] (px4_msgs) StdoutLine: {'line': b'[ 10%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/telemetry_status__functions.c.o\x1b[0m\n'}
+[95.338360] (px4_msgs) StdoutLine: {'line': b'[ 10%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/tiltrotor_extra_controls__functions.c.o\x1b[0m\n'}
+[95.341268] (-) TimerEvent: {}
+[95.367830] (px4_msgs) StdoutLine: {'line': b'[ 10%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/timesync_status__functions.c.o\x1b[0m\n'}
+[95.392147] (px4_msgs) StdoutLine: {'line': b'[ 10%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/trajectory_bezier__functions.c.o\x1b[0m\n'}
+[95.442829] (-) TimerEvent: {}
+[95.455274] (px4_msgs) StdoutLine: {'line': b'[ 10%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/trajectory_setpoint__functions.c.o\x1b[0m\n'}
+[95.476216] (px4_msgs) StdoutLine: {'line': b'[ 10%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/trajectory_waypoint__functions.c.o\x1b[0m\n'}
+[95.540227] (px4_msgs) StdoutLine: {'line': b'[ 10%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/transponder_report__functions.c.o\x1b[0m\n'}
+[95.545888] (-) TimerEvent: {}
+[95.582029] (px4_msgs) StdoutLine: {'line': b'[ 10%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/tune_control__functions.c.o\x1b[0m\n'}
+[95.601513] (px4_msgs) StdoutLine: {'line': b'[ 10%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/uavcan_parameter_request__functions.c.o\x1b[0m\n'}
+[95.601856] (px4_msgs) StdoutLine: {'line': b'[ 10%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/uavcan_parameter_value__functions.c.o\x1b[0m\n'}
+[95.612697] (px4_msgs) StdoutLine: {'line': b'[ 10%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/ulog_stream_ack__functions.c.o\x1b[0m\n'}
+[95.615610] (px4_msgs) StdoutLine: {'line': b'[ 10%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/ulog_stream__functions.c.o\x1b[0m\n'}
+[95.647290] (-) TimerEvent: {}
+[95.703302] (px4_msgs) StdoutLine: {'line': b'[ 10%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/vehicle_acceleration__functions.c.o\x1b[0m\n'}
+[95.718497] (px4_msgs) StdoutLine: {'line': b'[ 10%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/unregister_ext_component__functions.c.o\x1b[0m\n'}
+[95.750170] (-) TimerEvent: {}
+[95.829426] (px4_msgs) StdoutLine: {'line': b'[ 10%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/vehicle_attitude__functions.c.o\x1b[0m\n'}
+[95.831307] (px4_msgs) StdoutLine: {'line': b'[ 10%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/vehicle_angular_velocity__functions.c.o\x1b[0m\n'}
+[95.831857] (px4_msgs) StdoutLine: {'line': b'[ 10%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/vehicle_angular_acceleration_setpoint__functions.c.o\x1b[0m\n'}
+[95.837700] (px4_msgs) StdoutLine: {'line': b'[ 10%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/vehicle_air_data__functions.c.o\x1b[0m\n'}
+[95.851115] (-) TimerEvent: {}
+[95.874287] (px4_msgs) StdoutLine: {'line': b'[ 11%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/vehicle_attitude_setpoint__functions.c.o\x1b[0m\n'}
+[95.901299] (px4_msgs) StdoutLine: {'line': b'[ 11%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/vehicle_command__functions.c.o\x1b[0m\n'}
+[95.939743] (px4_msgs) StdoutLine: {'line': b'[ 11%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/vehicle_command_ack__functions.c.o\x1b[0m\n'}
+[95.951679] (-) TimerEvent: {}
+[96.004786] (px4_msgs) StdoutLine: {'line': b'[ 11%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/vehicle_constraints__functions.c.o\x1b[0m\n'}
+[96.054211] (-) TimerEvent: {}
+[96.070046] (px4_msgs) StdoutLine: {'line': b'[ 11%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/vehicle_control_mode__functions.c.o\x1b[0m\n'}
+[96.070532] (px4_msgs) StdoutLine: {'line': b'[ 11%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/vehicle_global_position__functions.c.o\x1b[0m\n'}
+[96.092285] (px4_msgs) StdoutLine: {'line': b'[ 11%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/vehicle_imu__functions.c.o\x1b[0m\n'}
+[96.101403] (px4_msgs) StdoutLine: {'line': b'[ 11%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/vehicle_imu_status__functions.c.o\x1b[0m\n'}
+[96.110980] (px4_msgs) StdoutLine: {'line': b'[ 11%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/vehicle_land_detected__functions.c.o\x1b[0m\n'}
+[96.154343] (-) TimerEvent: {}
+[96.199591] (px4_msgs) StdoutLine: {'line': b'[ 11%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/vehicle_local_position__functions.c.o\x1b[0m\n'}
+[96.211438] (px4_msgs) StdoutLine: {'line': b'[ 11%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/vehicle_local_position_setpoint__functions.c.o\x1b[0m\n'}
+[96.242104] (px4_msgs) StdoutLine: {'line': b'[ 11%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/vehicle_magnetometer__functions.c.o\x1b[0m\n'}
+[96.255142] (-) TimerEvent: {}
+[96.324352] (px4_msgs) StdoutLine: {'line': b'[ 11%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/vehicle_odometry__functions.c.o\x1b[0m\n'}
+[96.333539] (px4_msgs) StdoutLine: {'line': b'[ 11%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/vehicle_optical_flow__functions.c.o\x1b[0m\n'}
+[96.356293] (-) TimerEvent: {}
+[96.372671] (px4_msgs) StdoutLine: {'line': b'[ 11%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/vehicle_optical_flow_vel__functions.c.o\x1b[0m\n'}
+[96.392419] (px4_msgs) StdoutLine: {'line': b'[ 11%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/vehicle_rates_setpoint__functions.c.o\x1b[0m\n'}
+[96.396639] (px4_msgs) StdoutLine: {'line': b'[ 11%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/vehicle_roi__functions.c.o\x1b[0m\n'}
+[96.456488] (-) TimerEvent: {}
+[96.480641] (px4_msgs) StdoutLine: {'line': b'[ 11%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/vehicle_status__functions.c.o\x1b[0m\n'}
+[96.505346] (px4_msgs) StdoutLine: {'line': b'[ 12%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/vehicle_thrust_setpoint__functions.c.o\x1b[0m\n'}
+[96.515944] (px4_msgs) StdoutLine: {'line': b'[ 12%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/vehicle_torque_setpoint__functions.c.o\x1b[0m\n'}
+[96.557278] (-) TimerEvent: {}
+[96.594359] (px4_msgs) StdoutLine: {'line': b'[ 12%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/vehicle_trajectory_bezier__functions.c.o\x1b[0m\n'}
+[96.606282] (px4_msgs) StdoutLine: {'line': b'[ 12%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/vehicle_trajectory_waypoint__functions.c.o\x1b[0m\n'}
+[96.639287] (px4_msgs) StdoutLine: {'line': b'[ 12%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/velocity_limits__functions.c.o\x1b[0m\n'}
+[96.656359] (px4_msgs) StdoutLine: {'line': b'[ 12%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/vtol_vehicle_status__functions.c.o\x1b[0m\n'}
+[96.658709] (-) TimerEvent: {}
+[96.675790] (px4_msgs) StdoutLine: {'line': b'[ 12%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/wheel_encoders__functions.c.o\x1b[0m\n'}
+[96.732518] (px4_msgs) StdoutLine: {'line': b'[ 12%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/wind__functions.c.o\x1b[0m\n'}
+[96.753678] (px4_msgs) StdoutLine: {'line': b'[ 12%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/msg/detail/yaw_estimator_status__functions.c.o\x1b[0m\n'}
+[96.760207] (-) TimerEvent: {}
+[96.765292] (px4_msgs) StdoutLine: {'line': b'[ 12%] \x1b[32mBuilding C object CMakeFiles/px4_msgs__rosidl_generator_c.dir/rosidl_generator_c/px4_msgs/srv/detail/vehicle_command__functions.c.o\x1b[0m\n'}
+[96.860340] (-) TimerEvent: {}
+[96.960781] (-) TimerEvent: {}
+[96.993575] (px4_msgs) StdoutLine: {'line': b'[ 12%] \x1b[32m\x1b[1mLinking C shared library libpx4_msgs__rosidl_generator_c.so\x1b[0m\n'}
+[97.060944] (-) TimerEvent: {}
+[97.161353] (-) TimerEvent: {}
+[97.194683] (px4_msgs) StdoutLine: {'line': b'[ 12%] Built target px4_msgs__rosidl_generator_c\n'}
+[97.196455] (px4_msgs) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[97.200161] (px4_msgs) CommandEnded: {'returncode': 2}
+[97.261473] (-) TimerEvent: {}
+[97.361873] (-) TimerEvent: {}
+[97.462228] (-) TimerEvent: {}
+[97.562486] (-) TimerEvent: {}
+[97.662761] (-) TimerEvent: {}
+[97.763030] (-) TimerEvent: {}
+[97.863379] (-) TimerEvent: {}
+[97.963687] (-) TimerEvent: {}
+[98.063969] (-) TimerEvent: {}
+[98.164174] (-) TimerEvent: {}
+[98.264441] (-) TimerEvent: {}
+[98.364692] (-) TimerEvent: {}
+[98.464981] (-) TimerEvent: {}
+[98.565258] (-) TimerEvent: {}
+[98.665525] (-) TimerEvent: {}
+[98.765794] (-) TimerEvent: {}
+[98.866040] (-) TimerEvent: {}
+[98.966426] (-) TimerEvent: {}
+[99.066688] (-) TimerEvent: {}
+[99.166936] (-) TimerEvent: {}
+[99.267164] (-) TimerEvent: {}
+[99.367443] (-) TimerEvent: {}
+[99.467826] (-) TimerEvent: {}
+[99.568199] (-) TimerEvent: {}
+[99.668647] (-) TimerEvent: {}
+[99.768918] (-) TimerEvent: {}
+[99.869260] (-) TimerEvent: {}
+[99.969572] (-) TimerEvent: {}
+[100.070003] (-) TimerEvent: {}
+[100.170405] (-) TimerEvent: {}
+[100.270755] (-) TimerEvent: {}
+[100.370990] (-) TimerEvent: {}
+[100.471297] (-) TimerEvent: {}
+[100.571694] (-) TimerEvent: {}
+[100.671973] (-) TimerEvent: {}
+[100.772737] (-) TimerEvent: {}
+[100.873169] (-) TimerEvent: {}
+[100.973585] (-) TimerEvent: {}
+[101.073864] (-) TimerEvent: {}
+[101.174125] (-) TimerEvent: {}
+[101.274460] (-) TimerEvent: {}
+[101.374760] (-) TimerEvent: {}
+[101.475042] (-) TimerEvent: {}
+[101.575528] (-) TimerEvent: {}
+[101.675931] (-) TimerEvent: {}
+[101.776174] (-) TimerEvent: {}
+[101.876404] (-) TimerEvent: {}
+[101.976827] (-) TimerEvent: {}
+[102.077146] (-) TimerEvent: {}
+[102.177374] (-) TimerEvent: {}
+[102.277601] (-) TimerEvent: {}
+[102.377852] (-) TimerEvent: {}
+[102.478240] (-) TimerEvent: {}
+[102.578539] (-) TimerEvent: {}
+[102.678819] (-) TimerEvent: {}
+[102.779146] (-) TimerEvent: {}
+[102.879579] (-) TimerEvent: {}
+[102.979989] (-) TimerEvent: {}
+[103.080265] (-) TimerEvent: {}
+[103.180639] (-) TimerEvent: {}
+[103.281021] (-) TimerEvent: {}
+[103.381272] (-) TimerEvent: {}
+[103.481590] (-) TimerEvent: {}
+[103.581848] (-) TimerEvent: {}
+[103.682107] (-) TimerEvent: {}
+[103.782476] (-) TimerEvent: {}
+[103.882798] (-) TimerEvent: {}
+[103.983062] (-) TimerEvent: {}
+[104.083385] (-) TimerEvent: {}
+[104.171827] (px4_msgs) JobEnded: {'identifier': 'px4_msgs', 'rc': 2}
+[104.182139] (px4_ros_com) JobSkipped: {'identifier': 'px4_ros_com'}
+[104.182259] (-) EventReactorShutdown: {}
