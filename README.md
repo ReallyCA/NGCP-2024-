@@ -33,5 +33,9 @@ MicroXRCEAgent udp4 -p 8888
 **Ros 2 Telemetry**
 
 ``
+source install/local_setup.bash
+``
+
+``
 ros2 launch px4_ros_com sensor_combined_listener.launch.py
 ``
