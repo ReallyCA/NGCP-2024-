@@ -1,11 +1,23 @@
 hello ros 2 is not on this repo yet
 
+**FIRST STEPS**
+
+Installing Ros2
+
+``
+sudo apt install ros-humble-desktop
+``
+
+``
+sudo apt install ros-dev-tools
+``
 
 **PX4 Gazebo Fixed Wing**
 
 ``
 cd PX4-Autopilot
 ``
+
 ``
 make px4_sitl gz_rc_cessna
 ``
