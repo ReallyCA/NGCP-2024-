@@ -38,6 +38,11 @@ sudo apt install ros-humble-desktop
 sudo apt install ros-dev-tools
 ``
 
+
+**RUNNING THE PROGRAM**
+
+Run QGroundControl
+
 **PX4 Gazebo Fixed Wing**
 
 ``
