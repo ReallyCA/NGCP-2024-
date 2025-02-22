@@ -104,6 +104,24 @@ bool px4_msgs__msg__vehicle_global_position__convert_from_py(PyObject * _pymsg, 
     ros_message->alt_ellipsoid = (float)PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
+  {  // lat_lon_valid
+    PyObject * field = PyObject_GetAttrString(_pymsg, "lat_lon_valid");
+    if (!field) {
+      return false;
+    }
+    assert(PyBool_Check(field));
+    ros_message->lat_lon_valid = (Py_True == field);
+    Py_DECREF(field);
+  }
+  {  // alt_valid
+    PyObject * field = PyObject_GetAttrString(_pymsg, "alt_valid");
+    if (!field) {
+      return false;
+    }
+    assert(PyBool_Check(field));
+    ros_message->alt_valid = (Py_True == field);
+    Py_DECREF(field);
+  }
   {  // delta_alt
     PyObject * field = PyObject_GetAttrString(_pymsg, "delta_alt");
     if (!field) {
@@ -276,6 +294,28 @@ PyObject * px4_msgs__msg__vehicle_global_position__convert_to_py(void * raw_ros_
     field = PyFloat_FromDouble(ros_message->alt_ellipsoid);
     {
       int rc = PyObject_SetAttrString(_pymessage, "alt_ellipsoid", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // lat_lon_valid
+    PyObject * field = NULL;
+    field = PyBool_FromLong(ros_message->lat_lon_valid ? 1 : 0);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "lat_lon_valid", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // alt_valid
+    PyObject * field = NULL;
+    field = PyBool_FromLong(ros_message->alt_valid ? 1 : 0);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "alt_valid", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

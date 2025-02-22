@@ -58,20 +58,32 @@ class RoverAckermannStatus(metaclass=Metaclass_RoverAckermannStatus):
 
     __slots__ = [
         '_timestamp',
-        '_throttle_setpoint',
-        '_steering_setpoint',
-        '_actual_speed',
+        '_measured_forward_speed',
+        '_adjusted_forward_speed_setpoint',
+        '_steering_setpoint_normalized',
+        '_adjusted_steering_setpoint_normalized',
+        '_measured_lateral_acceleration',
+        '_pid_throttle_integral',
+        '_pid_lat_accel_integral',
     ]
 
     _fields_and_field_types = {
         'timestamp': 'uint64',
-        'throttle_setpoint': 'float',
-        'steering_setpoint': 'float',
-        'actual_speed': 'float',
+        'measured_forward_speed': 'float',
+        'adjusted_forward_speed_setpoint': 'float',
+        'steering_setpoint_normalized': 'float',
+        'adjusted_steering_setpoint_normalized': 'float',
+        'measured_lateral_acceleration': 'float',
+        'pid_throttle_integral': 'float',
+        'pid_lat_accel_integral': 'float',
     }
 
     SLOT_TYPES = (
         rosidl_parser.definition.BasicType('uint64'),  # noqa: E501
+        rosidl_parser.definition.BasicType('float'),  # noqa: E501
+        rosidl_parser.definition.BasicType('float'),  # noqa: E501
+        rosidl_parser.definition.BasicType('float'),  # noqa: E501
+        rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
@@ -82,9 +94,13 @@ class RoverAckermannStatus(metaclass=Metaclass_RoverAckermannStatus):
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
         self.timestamp = kwargs.get('timestamp', int())
-        self.throttle_setpoint = kwargs.get('throttle_setpoint', float())
-        self.steering_setpoint = kwargs.get('steering_setpoint', float())
-        self.actual_speed = kwargs.get('actual_speed', float())
+        self.measured_forward_speed = kwargs.get('measured_forward_speed', float())
+        self.adjusted_forward_speed_setpoint = kwargs.get('adjusted_forward_speed_setpoint', float())
+        self.steering_setpoint_normalized = kwargs.get('steering_setpoint_normalized', float())
+        self.adjusted_steering_setpoint_normalized = kwargs.get('adjusted_steering_setpoint_normalized', float())
+        self.measured_lateral_acceleration = kwargs.get('measured_lateral_acceleration', float())
+        self.pid_throttle_integral = kwargs.get('pid_throttle_integral', float())
+        self.pid_lat_accel_integral = kwargs.get('pid_lat_accel_integral', float())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -117,11 +133,19 @@ class RoverAckermannStatus(metaclass=Metaclass_RoverAckermannStatus):
             return False
         if self.timestamp != other.timestamp:
             return False
-        if self.throttle_setpoint != other.throttle_setpoint:
+        if self.measured_forward_speed != other.measured_forward_speed:
             return False
-        if self.steering_setpoint != other.steering_setpoint:
+        if self.adjusted_forward_speed_setpoint != other.adjusted_forward_speed_setpoint:
             return False
-        if self.actual_speed != other.actual_speed:
+        if self.steering_setpoint_normalized != other.steering_setpoint_normalized:
+            return False
+        if self.adjusted_steering_setpoint_normalized != other.adjusted_steering_setpoint_normalized:
+            return False
+        if self.measured_lateral_acceleration != other.measured_lateral_acceleration:
+            return False
+        if self.pid_throttle_integral != other.pid_throttle_integral:
+            return False
+        if self.pid_lat_accel_integral != other.pid_lat_accel_integral:
             return False
         return True
 
@@ -146,46 +170,106 @@ class RoverAckermannStatus(metaclass=Metaclass_RoverAckermannStatus):
         self._timestamp = value
 
     @builtins.property
-    def throttle_setpoint(self):
-        """Message field 'throttle_setpoint'."""
-        return self._throttle_setpoint
+    def measured_forward_speed(self):
+        """Message field 'measured_forward_speed'."""
+        return self._measured_forward_speed
 
-    @throttle_setpoint.setter
-    def throttle_setpoint(self, value):
+    @measured_forward_speed.setter
+    def measured_forward_speed(self, value):
         if __debug__:
             assert \
                 isinstance(value, float), \
-                "The 'throttle_setpoint' field must be of type 'float'"
+                "The 'measured_forward_speed' field must be of type 'float'"
             assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
-                "The 'throttle_setpoint' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
-        self._throttle_setpoint = value
+                "The 'measured_forward_speed' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
+        self._measured_forward_speed = value
 
     @builtins.property
-    def steering_setpoint(self):
-        """Message field 'steering_setpoint'."""
-        return self._steering_setpoint
+    def adjusted_forward_speed_setpoint(self):
+        """Message field 'adjusted_forward_speed_setpoint'."""
+        return self._adjusted_forward_speed_setpoint
 
-    @steering_setpoint.setter
-    def steering_setpoint(self, value):
+    @adjusted_forward_speed_setpoint.setter
+    def adjusted_forward_speed_setpoint(self, value):
         if __debug__:
             assert \
                 isinstance(value, float), \
-                "The 'steering_setpoint' field must be of type 'float'"
+                "The 'adjusted_forward_speed_setpoint' field must be of type 'float'"
             assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
-                "The 'steering_setpoint' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
-        self._steering_setpoint = value
+                "The 'adjusted_forward_speed_setpoint' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
+        self._adjusted_forward_speed_setpoint = value
 
     @builtins.property
-    def actual_speed(self):
-        """Message field 'actual_speed'."""
-        return self._actual_speed
+    def steering_setpoint_normalized(self):
+        """Message field 'steering_setpoint_normalized'."""
+        return self._steering_setpoint_normalized
 
-    @actual_speed.setter
-    def actual_speed(self, value):
+    @steering_setpoint_normalized.setter
+    def steering_setpoint_normalized(self, value):
         if __debug__:
             assert \
                 isinstance(value, float), \
-                "The 'actual_speed' field must be of type 'float'"
+                "The 'steering_setpoint_normalized' field must be of type 'float'"
             assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
-                "The 'actual_speed' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
-        self._actual_speed = value
+                "The 'steering_setpoint_normalized' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
+        self._steering_setpoint_normalized = value
+
+    @builtins.property
+    def adjusted_steering_setpoint_normalized(self):
+        """Message field 'adjusted_steering_setpoint_normalized'."""
+        return self._adjusted_steering_setpoint_normalized
+
+    @adjusted_steering_setpoint_normalized.setter
+    def adjusted_steering_setpoint_normalized(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, float), \
+                "The 'adjusted_steering_setpoint_normalized' field must be of type 'float'"
+            assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
+                "The 'adjusted_steering_setpoint_normalized' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
+        self._adjusted_steering_setpoint_normalized = value
+
+    @builtins.property
+    def measured_lateral_acceleration(self):
+        """Message field 'measured_lateral_acceleration'."""
+        return self._measured_lateral_acceleration
+
+    @measured_lateral_acceleration.setter
+    def measured_lateral_acceleration(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, float), \
+                "The 'measured_lateral_acceleration' field must be of type 'float'"
+            assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
+                "The 'measured_lateral_acceleration' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
+        self._measured_lateral_acceleration = value
+
+    @builtins.property
+    def pid_throttle_integral(self):
+        """Message field 'pid_throttle_integral'."""
+        return self._pid_throttle_integral
+
+    @pid_throttle_integral.setter
+    def pid_throttle_integral(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, float), \
+                "The 'pid_throttle_integral' field must be of type 'float'"
+            assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
+                "The 'pid_throttle_integral' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
+        self._pid_throttle_integral = value
+
+    @builtins.property
+    def pid_lat_accel_integral(self):
+        """Message field 'pid_lat_accel_integral'."""
+        return self._pid_lat_accel_integral
+
+    @pid_lat_accel_integral.setter
+    def pid_lat_accel_integral(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, float), \
+                "The 'pid_lat_accel_integral' field must be of type 'float'"
+            assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
+                "The 'pid_lat_accel_integral' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
+        self._pid_lat_accel_integral = value

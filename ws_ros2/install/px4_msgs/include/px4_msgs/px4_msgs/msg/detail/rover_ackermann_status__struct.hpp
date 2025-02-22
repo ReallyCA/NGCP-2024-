@@ -39,9 +39,13 @@ struct RoverAckermannStatus_
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
       this->timestamp = 0ull;
-      this->throttle_setpoint = 0.0f;
-      this->steering_setpoint = 0.0f;
-      this->actual_speed = 0.0f;
+      this->measured_forward_speed = 0.0f;
+      this->adjusted_forward_speed_setpoint = 0.0f;
+      this->steering_setpoint_normalized = 0.0f;
+      this->adjusted_steering_setpoint_normalized = 0.0f;
+      this->measured_lateral_acceleration = 0.0f;
+      this->pid_throttle_integral = 0.0f;
+      this->pid_lat_accel_integral = 0.0f;
     }
   }
 
@@ -52,9 +56,13 @@ struct RoverAckermannStatus_
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
       this->timestamp = 0ull;
-      this->throttle_setpoint = 0.0f;
-      this->steering_setpoint = 0.0f;
-      this->actual_speed = 0.0f;
+      this->measured_forward_speed = 0.0f;
+      this->adjusted_forward_speed_setpoint = 0.0f;
+      this->steering_setpoint_normalized = 0.0f;
+      this->adjusted_steering_setpoint_normalized = 0.0f;
+      this->measured_lateral_acceleration = 0.0f;
+      this->pid_throttle_integral = 0.0f;
+      this->pid_lat_accel_integral = 0.0f;
     }
   }
 
@@ -62,15 +70,27 @@ struct RoverAckermannStatus_
   using _timestamp_type =
     uint64_t;
   _timestamp_type timestamp;
-  using _throttle_setpoint_type =
+  using _measured_forward_speed_type =
     float;
-  _throttle_setpoint_type throttle_setpoint;
-  using _steering_setpoint_type =
+  _measured_forward_speed_type measured_forward_speed;
+  using _adjusted_forward_speed_setpoint_type =
     float;
-  _steering_setpoint_type steering_setpoint;
-  using _actual_speed_type =
+  _adjusted_forward_speed_setpoint_type adjusted_forward_speed_setpoint;
+  using _steering_setpoint_normalized_type =
     float;
-  _actual_speed_type actual_speed;
+  _steering_setpoint_normalized_type steering_setpoint_normalized;
+  using _adjusted_steering_setpoint_normalized_type =
+    float;
+  _adjusted_steering_setpoint_normalized_type adjusted_steering_setpoint_normalized;
+  using _measured_lateral_acceleration_type =
+    float;
+  _measured_lateral_acceleration_type measured_lateral_acceleration;
+  using _pid_throttle_integral_type =
+    float;
+  _pid_throttle_integral_type pid_throttle_integral;
+  using _pid_lat_accel_integral_type =
+    float;
+  _pid_lat_accel_integral_type pid_lat_accel_integral;
 
   // setters for named parameter idiom
   Type & set__timestamp(
@@ -79,22 +99,46 @@ struct RoverAckermannStatus_
     this->timestamp = _arg;
     return *this;
   }
-  Type & set__throttle_setpoint(
+  Type & set__measured_forward_speed(
     const float & _arg)
   {
-    this->throttle_setpoint = _arg;
+    this->measured_forward_speed = _arg;
     return *this;
   }
-  Type & set__steering_setpoint(
+  Type & set__adjusted_forward_speed_setpoint(
     const float & _arg)
   {
-    this->steering_setpoint = _arg;
+    this->adjusted_forward_speed_setpoint = _arg;
     return *this;
   }
-  Type & set__actual_speed(
+  Type & set__steering_setpoint_normalized(
     const float & _arg)
   {
-    this->actual_speed = _arg;
+    this->steering_setpoint_normalized = _arg;
+    return *this;
+  }
+  Type & set__adjusted_steering_setpoint_normalized(
+    const float & _arg)
+  {
+    this->adjusted_steering_setpoint_normalized = _arg;
+    return *this;
+  }
+  Type & set__measured_lateral_acceleration(
+    const float & _arg)
+  {
+    this->measured_lateral_acceleration = _arg;
+    return *this;
+  }
+  Type & set__pid_throttle_integral(
+    const float & _arg)
+  {
+    this->pid_throttle_integral = _arg;
+    return *this;
+  }
+  Type & set__pid_lat_accel_integral(
+    const float & _arg)
+  {
+    this->pid_lat_accel_integral = _arg;
     return *this;
   }
 
@@ -143,13 +187,25 @@ struct RoverAckermannStatus_
     if (this->timestamp != other.timestamp) {
       return false;
     }
-    if (this->throttle_setpoint != other.throttle_setpoint) {
+    if (this->measured_forward_speed != other.measured_forward_speed) {
       return false;
     }
-    if (this->steering_setpoint != other.steering_setpoint) {
+    if (this->adjusted_forward_speed_setpoint != other.adjusted_forward_speed_setpoint) {
       return false;
     }
-    if (this->actual_speed != other.actual_speed) {
+    if (this->steering_setpoint_normalized != other.steering_setpoint_normalized) {
+      return false;
+    }
+    if (this->adjusted_steering_setpoint_normalized != other.adjusted_steering_setpoint_normalized) {
+      return false;
+    }
+    if (this->measured_lateral_acceleration != other.measured_lateral_acceleration) {
+      return false;
+    }
+    if (this->pid_throttle_integral != other.pid_throttle_integral) {
+      return false;
+    }
+    if (this->pid_lat_accel_integral != other.pid_lat_accel_integral) {
       return false;
     }
     return true;

@@ -37,15 +37,15 @@ private:
   ::px4_msgs::msg::RoverDifferentialSetpoint msg_;
 };
 
-class Init_RoverDifferentialSetpoint_yaw_rate_setpoint_normalized
+class Init_RoverDifferentialSetpoint_speed_diff_setpoint_normalized
 {
 public:
-  explicit Init_RoverDifferentialSetpoint_yaw_rate_setpoint_normalized(::px4_msgs::msg::RoverDifferentialSetpoint & msg)
+  explicit Init_RoverDifferentialSetpoint_speed_diff_setpoint_normalized(::px4_msgs::msg::RoverDifferentialSetpoint & msg)
   : msg_(msg)
   {}
-  Init_RoverDifferentialSetpoint_yaw_setpoint yaw_rate_setpoint_normalized(::px4_msgs::msg::RoverDifferentialSetpoint::_yaw_rate_setpoint_normalized_type arg)
+  Init_RoverDifferentialSetpoint_yaw_setpoint speed_diff_setpoint_normalized(::px4_msgs::msg::RoverDifferentialSetpoint::_speed_diff_setpoint_normalized_type arg)
   {
-    msg_.yaw_rate_setpoint_normalized = std::move(arg);
+    msg_.speed_diff_setpoint_normalized = std::move(arg);
     return Init_RoverDifferentialSetpoint_yaw_setpoint(msg_);
   }
 
@@ -59,10 +59,10 @@ public:
   explicit Init_RoverDifferentialSetpoint_yaw_rate_setpoint(::px4_msgs::msg::RoverDifferentialSetpoint & msg)
   : msg_(msg)
   {}
-  Init_RoverDifferentialSetpoint_yaw_rate_setpoint_normalized yaw_rate_setpoint(::px4_msgs::msg::RoverDifferentialSetpoint::_yaw_rate_setpoint_type arg)
+  Init_RoverDifferentialSetpoint_speed_diff_setpoint_normalized yaw_rate_setpoint(::px4_msgs::msg::RoverDifferentialSetpoint::_yaw_rate_setpoint_type arg)
   {
     msg_.yaw_rate_setpoint = std::move(arg);
-    return Init_RoverDifferentialSetpoint_yaw_rate_setpoint_normalized(msg_);
+    return Init_RoverDifferentialSetpoint_speed_diff_setpoint_normalized(msg_);
   }
 
 private:

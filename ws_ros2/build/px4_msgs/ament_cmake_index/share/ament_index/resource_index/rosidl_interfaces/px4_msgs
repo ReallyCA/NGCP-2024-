@@ -46,8 +46,6 @@ msg/CellularStatus.idl
 msg/CellularStatus.msg
 msg/CollisionConstraints.idl
 msg/CollisionConstraints.msg
-msg/CollisionReport.idl
-msg/CollisionReport.msg
 msg/ConfigOverrides.idl
 msg/ConfigOverrides.msg
 msg/ControlAllocatorStatus.idl
@@ -294,6 +292,8 @@ msg/RegisterExtComponentRequest.idl
 msg/RegisterExtComponentRequest.msg
 msg/RoverAckermannGuidanceStatus.idl
 msg/RoverAckermannGuidanceStatus.msg
+msg/RoverAckermannSetpoint.idl
+msg/RoverAckermannSetpoint.msg
 msg/RoverAckermannStatus.idl
 msg/RoverAckermannStatus.msg
 msg/RoverDifferentialGuidanceStatus.idl

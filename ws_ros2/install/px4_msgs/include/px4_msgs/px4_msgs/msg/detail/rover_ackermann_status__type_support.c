@@ -31,7 +31,7 @@ void px4_msgs__msg__RoverAckermannStatus__rosidl_typesupport_introspection_c__Ro
   px4_msgs__msg__RoverAckermannStatus__fini(message_memory);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember px4_msgs__msg__RoverAckermannStatus__rosidl_typesupport_introspection_c__RoverAckermannStatus_message_member_array[4] = {
+static rosidl_typesupport_introspection_c__MessageMember px4_msgs__msg__RoverAckermannStatus__rosidl_typesupport_introspection_c__RoverAckermannStatus_message_member_array[8] = {
   {
     "timestamp",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_UINT64,  // type
@@ -50,14 +50,14 @@ static rosidl_typesupport_introspection_c__MessageMember px4_msgs__msg__RoverAck
     NULL  // resize(index) function pointer
   },
   {
-    "throttle_setpoint",  // name
+    "measured_forward_speed",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_FLOAT,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(px4_msgs__msg__RoverAckermannStatus, throttle_setpoint),  // bytes offset in struct
+    offsetof(px4_msgs__msg__RoverAckermannStatus, measured_forward_speed),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
@@ -67,14 +67,14 @@ static rosidl_typesupport_introspection_c__MessageMember px4_msgs__msg__RoverAck
     NULL  // resize(index) function pointer
   },
   {
-    "steering_setpoint",  // name
+    "adjusted_forward_speed_setpoint",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_FLOAT,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(px4_msgs__msg__RoverAckermannStatus, steering_setpoint),  // bytes offset in struct
+    offsetof(px4_msgs__msg__RoverAckermannStatus, adjusted_forward_speed_setpoint),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
@@ -84,14 +84,82 @@ static rosidl_typesupport_introspection_c__MessageMember px4_msgs__msg__RoverAck
     NULL  // resize(index) function pointer
   },
   {
-    "actual_speed",  // name
+    "steering_setpoint_normalized",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_FLOAT,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(px4_msgs__msg__RoverAckermannStatus, actual_speed),  // bytes offset in struct
+    offsetof(px4_msgs__msg__RoverAckermannStatus, steering_setpoint_normalized),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
+    NULL  // resize(index) function pointer
+  },
+  {
+    "adjusted_steering_setpoint_normalized",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_FLOAT,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(px4_msgs__msg__RoverAckermannStatus, adjusted_steering_setpoint_normalized),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
+    NULL  // resize(index) function pointer
+  },
+  {
+    "measured_lateral_acceleration",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_FLOAT,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(px4_msgs__msg__RoverAckermannStatus, measured_lateral_acceleration),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
+    NULL  // resize(index) function pointer
+  },
+  {
+    "pid_throttle_integral",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_FLOAT,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(px4_msgs__msg__RoverAckermannStatus, pid_throttle_integral),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
+    NULL  // resize(index) function pointer
+  },
+  {
+    "pid_lat_accel_integral",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_FLOAT,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(px4_msgs__msg__RoverAckermannStatus, pid_lat_accel_integral),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
@@ -105,7 +173,7 @@ static rosidl_typesupport_introspection_c__MessageMember px4_msgs__msg__RoverAck
 static const rosidl_typesupport_introspection_c__MessageMembers px4_msgs__msg__RoverAckermannStatus__rosidl_typesupport_introspection_c__RoverAckermannStatus_message_members = {
   "px4_msgs__msg",  // message namespace
   "RoverAckermannStatus",  // message name
-  4,  // number of fields
+  8,  // number of fields
   sizeof(px4_msgs__msg__RoverAckermannStatus),
   px4_msgs__msg__RoverAckermannStatus__rosidl_typesupport_introspection_c__RoverAckermannStatus_message_member_array,  // message members
   px4_msgs__msg__RoverAckermannStatus__rosidl_typesupport_introspection_c__RoverAckermannStatus_init_function,  // function to initialize message memory (memory has to be allocated)

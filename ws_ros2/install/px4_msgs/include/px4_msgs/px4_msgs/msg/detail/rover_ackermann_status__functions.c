@@ -18,9 +18,13 @@ px4_msgs__msg__RoverAckermannStatus__init(px4_msgs__msg__RoverAckermannStatus * 
     return false;
   }
   // timestamp
-  // throttle_setpoint
-  // steering_setpoint
-  // actual_speed
+  // measured_forward_speed
+  // adjusted_forward_speed_setpoint
+  // steering_setpoint_normalized
+  // adjusted_steering_setpoint_normalized
+  // measured_lateral_acceleration
+  // pid_throttle_integral
+  // pid_lat_accel_integral
   return true;
 }
 
@@ -31,9 +35,13 @@ px4_msgs__msg__RoverAckermannStatus__fini(px4_msgs__msg__RoverAckermannStatus * 
     return;
   }
   // timestamp
-  // throttle_setpoint
-  // steering_setpoint
-  // actual_speed
+  // measured_forward_speed
+  // adjusted_forward_speed_setpoint
+  // steering_setpoint_normalized
+  // adjusted_steering_setpoint_normalized
+  // measured_lateral_acceleration
+  // pid_throttle_integral
+  // pid_lat_accel_integral
 }
 
 bool
@@ -46,16 +54,32 @@ px4_msgs__msg__RoverAckermannStatus__are_equal(const px4_msgs__msg__RoverAckerma
   if (lhs->timestamp != rhs->timestamp) {
     return false;
   }
-  // throttle_setpoint
-  if (lhs->throttle_setpoint != rhs->throttle_setpoint) {
+  // measured_forward_speed
+  if (lhs->measured_forward_speed != rhs->measured_forward_speed) {
     return false;
   }
-  // steering_setpoint
-  if (lhs->steering_setpoint != rhs->steering_setpoint) {
+  // adjusted_forward_speed_setpoint
+  if (lhs->adjusted_forward_speed_setpoint != rhs->adjusted_forward_speed_setpoint) {
     return false;
   }
-  // actual_speed
-  if (lhs->actual_speed != rhs->actual_speed) {
+  // steering_setpoint_normalized
+  if (lhs->steering_setpoint_normalized != rhs->steering_setpoint_normalized) {
+    return false;
+  }
+  // adjusted_steering_setpoint_normalized
+  if (lhs->adjusted_steering_setpoint_normalized != rhs->adjusted_steering_setpoint_normalized) {
+    return false;
+  }
+  // measured_lateral_acceleration
+  if (lhs->measured_lateral_acceleration != rhs->measured_lateral_acceleration) {
+    return false;
+  }
+  // pid_throttle_integral
+  if (lhs->pid_throttle_integral != rhs->pid_throttle_integral) {
+    return false;
+  }
+  // pid_lat_accel_integral
+  if (lhs->pid_lat_accel_integral != rhs->pid_lat_accel_integral) {
     return false;
   }
   return true;
@@ -71,12 +95,20 @@ px4_msgs__msg__RoverAckermannStatus__copy(
   }
   // timestamp
   output->timestamp = input->timestamp;
-  // throttle_setpoint
-  output->throttle_setpoint = input->throttle_setpoint;
-  // steering_setpoint
-  output->steering_setpoint = input->steering_setpoint;
-  // actual_speed
-  output->actual_speed = input->actual_speed;
+  // measured_forward_speed
+  output->measured_forward_speed = input->measured_forward_speed;
+  // adjusted_forward_speed_setpoint
+  output->adjusted_forward_speed_setpoint = input->adjusted_forward_speed_setpoint;
+  // steering_setpoint_normalized
+  output->steering_setpoint_normalized = input->steering_setpoint_normalized;
+  // adjusted_steering_setpoint_normalized
+  output->adjusted_steering_setpoint_normalized = input->adjusted_steering_setpoint_normalized;
+  // measured_lateral_acceleration
+  output->measured_lateral_acceleration = input->measured_lateral_acceleration;
+  // pid_throttle_integral
+  output->pid_throttle_integral = input->pid_throttle_integral;
+  // pid_lat_accel_integral
+  output->pid_lat_accel_integral = input->pid_lat_accel_integral;
   return true;
 }
 

@@ -32,13 +32,6 @@ inline void to_flow_style_yaml(
     out << ", ";
   }
 
-  // member: desired_speed
-  {
-    out << "desired_speed: ";
-    rosidl_generator_traits::value_to_yaml(msg.desired_speed, out);
-    out << ", ";
-  }
-
   // member: lookahead_distance
   {
     out << "lookahead_distance: ";
@@ -50,13 +43,6 @@ inline void to_flow_style_yaml(
   {
     out << "heading_error: ";
     rosidl_generator_traits::value_to_yaml(msg.heading_error, out);
-    out << ", ";
-  }
-
-  // member: pid_throttle_integral
-  {
-    out << "pid_throttle_integral: ";
-    rosidl_generator_traits::value_to_yaml(msg.pid_throttle_integral, out);
   }
   out << "}";
 }  // NOLINT(readability/fn_size)
@@ -75,16 +61,6 @@ inline void to_block_style_yaml(
     out << "\n";
   }
 
-  // member: desired_speed
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    out << "desired_speed: ";
-    rosidl_generator_traits::value_to_yaml(msg.desired_speed, out);
-    out << "\n";
-  }
-
   // member: lookahead_distance
   {
     if (indentation > 0) {
@@ -102,16 +78,6 @@ inline void to_block_style_yaml(
     }
     out << "heading_error: ";
     rosidl_generator_traits::value_to_yaml(msg.heading_error, out);
-    out << "\n";
-  }
-
-  // member: pid_throttle_integral
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    out << "pid_throttle_integral: ";
-    rosidl_generator_traits::value_to_yaml(msg.pid_throttle_integral, out);
     out << "\n";
   }
 }  // NOLINT(readability/fn_size)

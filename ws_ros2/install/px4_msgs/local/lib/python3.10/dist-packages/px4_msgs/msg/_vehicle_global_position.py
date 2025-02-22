@@ -63,6 +63,8 @@ class VehicleGlobalPosition(metaclass=Metaclass_VehicleGlobalPosition):
         '_lon',
         '_alt',
         '_alt_ellipsoid',
+        '_lat_lon_valid',
+        '_alt_valid',
         '_delta_alt',
         '_delta_terrain',
         '_lat_lon_reset_counter',
@@ -82,6 +84,8 @@ class VehicleGlobalPosition(metaclass=Metaclass_VehicleGlobalPosition):
         'lon': 'double',
         'alt': 'float',
         'alt_ellipsoid': 'float',
+        'lat_lon_valid': 'boolean',
+        'alt_valid': 'boolean',
         'delta_alt': 'float',
         'delta_terrain': 'float',
         'lat_lon_reset_counter': 'uint8',
@@ -101,6 +105,8 @@ class VehicleGlobalPosition(metaclass=Metaclass_VehicleGlobalPosition):
         rosidl_parser.definition.BasicType('double'),  # noqa: E501
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
+        rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
+        rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.BasicType('uint8'),  # noqa: E501
@@ -123,6 +129,8 @@ class VehicleGlobalPosition(metaclass=Metaclass_VehicleGlobalPosition):
         self.lon = kwargs.get('lon', float())
         self.alt = kwargs.get('alt', float())
         self.alt_ellipsoid = kwargs.get('alt_ellipsoid', float())
+        self.lat_lon_valid = kwargs.get('lat_lon_valid', bool())
+        self.alt_valid = kwargs.get('alt_valid', bool())
         self.delta_alt = kwargs.get('delta_alt', float())
         self.delta_terrain = kwargs.get('delta_terrain', float())
         self.lat_lon_reset_counter = kwargs.get('lat_lon_reset_counter', int())
@@ -174,6 +182,10 @@ class VehicleGlobalPosition(metaclass=Metaclass_VehicleGlobalPosition):
         if self.alt != other.alt:
             return False
         if self.alt_ellipsoid != other.alt_ellipsoid:
+            return False
+        if self.lat_lon_valid != other.lat_lon_valid:
+            return False
+        if self.alt_valid != other.alt_valid:
             return False
         if self.delta_alt != other.delta_alt:
             return False
@@ -291,6 +303,32 @@ class VehicleGlobalPosition(metaclass=Metaclass_VehicleGlobalPosition):
             assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
                 "The 'alt_ellipsoid' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
         self._alt_ellipsoid = value
+
+    @builtins.property
+    def lat_lon_valid(self):
+        """Message field 'lat_lon_valid'."""
+        return self._lat_lon_valid
+
+    @lat_lon_valid.setter
+    def lat_lon_valid(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, bool), \
+                "The 'lat_lon_valid' field must be of type 'bool'"
+        self._lat_lon_valid = value
+
+    @builtins.property
+    def alt_valid(self):
+        """Message field 'alt_valid'."""
+        return self._alt_valid
+
+    @alt_valid.setter
+    def alt_valid(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, bool), \
+                "The 'alt_valid' field must be of type 'bool'"
+        self._alt_valid = value
 
     @builtins.property
     def delta_alt(self):

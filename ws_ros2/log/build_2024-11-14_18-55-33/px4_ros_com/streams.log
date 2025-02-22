@@ -1,0 +1,147 @@
+[0.007s] Invoking command in '/home/fidelis/ws_offboard_control/build/px4_ros_com': AMENT_PREFIX_PATH=/home/fidelis/ws_offboard_control/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/fidelis/ws_offboard_control/install/px4_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/fidelis/ws_offboard_control/install/px4_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/fidelis/ws_offboard_control/install/px4_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/fidelis/ws_offboard_control/src/px4_ros_com -DCMAKE_INSTALL_PREFIX=/home/fidelis/ws_offboard_control/install/px4_ros_com
+[0.061s] -- The C compiler identification is GNU 11.4.0
+[0.117s] -- The CXX compiler identification is GNU 11.4.0
+[0.126s] -- Detecting C compiler ABI info
+[0.186s] -- Detecting C compiler ABI info - done
+[0.191s] -- Check for working C compiler: /usr/lib/ccache/cc - skipped
+[0.191s] -- Detecting C compile features
+[0.192s] -- Detecting C compile features - done
+[0.194s] -- Detecting CXX compiler ABI info
+[0.262s] -- Detecting CXX compiler ABI info - done
+[0.268s] -- Check for working CXX compiler: /usr/lib/ccache/c++ - skipped
+[0.268s] -- Detecting CXX compile features
+[0.268s] -- Detecting CXX compile features - done
+[0.270s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.562s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.630s] -- Found builtin_interfaces: 1.2.1 (/opt/ros/humble/share/builtin_interfaces/cmake)
+[0.653s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.656s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.662s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.669s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.680s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.691s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[0.699s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[0.700s] -- Found geometry_msgs: 4.2.4 (/opt/ros/humble/share/geometry_msgs/cmake)
+[0.723s] -- Found px4_msgs: 2.0.1 (/home/fidelis/ws_offboard_control/install/px4_msgs/share/px4_msgs/cmake)
+[0.732s] -- Found rclcpp: 16.0.10 (/opt/ros/humble/share/rclcpp/cmake)
+[0.764s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.766s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.852s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[0.880s] -- Found FastRTPS: /opt/ros/humble/include  
+[0.920s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.929s] -- Looking for pthread.h
+[1.018s] -- Looking for pthread.h - found
+[1.019s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.109s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[1.110s] -- Found Threads: TRUE  
+[1.146s] -- Found sensor_msgs: 4.2.4 (/opt/ros/humble/share/sensor_msgs/cmake)
+[1.160s] -- Found rclpy: 3.3.14 (/opt/ros/humble/share/rclpy/cmake)
+[1.166s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.253s] -- Added test 'copyright' to check source files copyright and LICENSE
+[1.257s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.258s] -- Configured cppcheck include dirs: /home/fidelis/ws_offboard_control/src/px4_ros_com/include;$<BUILD_INTERFACE:/home/fidelis/ws_offboard_control/src/px4_ros_com/include/px4_ros_com>
+[1.258s] -- Configured cppcheck exclude dirs and/or files: 
+[1.262s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[1.262s] -- Configured cpplint exclude dirs and/or files: 
+[1.263s] -- Added test 'flake8' to check Python code syntax and style conventions
+[1.264s] -- Added test 'lint_cmake' to check CMake code style
+[1.265s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[1.269s] -- Added test 'uncrustify' to check C / C++ code style
+[1.269s] -- Configured uncrustify additional arguments: 
+[1.269s] -- Added test 'xmllint' to check XML markup files
+[1.271s] -- Configuring done
+[1.291s] -- Generating done
+[1.293s] -- Build files have been written to: /home/fidelis/ws_offboard_control/build/px4_ros_com
+[1.309s] Invoked command in '/home/fidelis/ws_offboard_control/build/px4_ros_com' returned '0': AMENT_PREFIX_PATH=/home/fidelis/ws_offboard_control/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/fidelis/ws_offboard_control/install/px4_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/fidelis/ws_offboard_control/install/px4_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/fidelis/ws_offboard_control/install/px4_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/fidelis/ws_offboard_control/src/px4_ros_com -DCMAKE_INSTALL_PREFIX=/home/fidelis/ws_offboard_control/install/px4_ros_com
+[1.311s] Invoking command in '/home/fidelis/ws_offboard_control/build/px4_ros_com': AMENT_PREFIX_PATH=/home/fidelis/ws_offboard_control/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/fidelis/ws_offboard_control/install/px4_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/fidelis/ws_offboard_control/install/px4_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/fidelis/ws_offboard_control/install/px4_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/fidelis/ws_offboard_control/build/px4_ros_com -- -j16 -l16
+[1.367s] [ 50%] [32mBuilding CXX object CMakeFiles/offboard_control.dir/src/examples/offboard/offboard_control.cpp.o[0m
+[1.367s] [ 50%] [32mBuilding CXX object CMakeFiles/frame_transforms.dir/src/lib/frame_transforms.cpp.o[0m
+[1.367s] [ 50%] [32mBuilding CXX object CMakeFiles/offboard_control_srv.dir/src/examples/offboard/offboard_control_srv.cpp.o[0m
+[1.367s] [ 50%] [32mBuilding CXX object CMakeFiles/debug_vect_advertiser.dir/src/examples/advertisers/debug_vect_advertiser.cpp.o[0m
+[1.367s] [ 50%] [32mBuilding CXX object CMakeFiles/vehicle_gps_position_listener.dir/src/examples/listeners/vehicle_gps_position_listener.cpp.o[0m
+[1.367s] [ 50%] [32mBuilding CXX object CMakeFiles/sensor_combined_listener.dir/src/examples/listeners/sensor_combined_listener.cpp.o[0m
+[1.380s] [ 50%] Built target ament_cmake_python_copy_px4_ros_com
+[1.546s] running egg_info
+[1.547s] creating px4_ros_com.egg-info
+[1.558s] writing px4_ros_com.egg-info/PKG-INFO
+[1.558s] writing dependency_links to px4_ros_com.egg-info/dependency_links.txt
+[1.558s] writing top-level names to px4_ros_com.egg-info/top_level.txt
+[1.558s] writing manifest file 'px4_ros_com.egg-info/SOURCES.txt'
+[1.600s] reading manifest file 'px4_ros_com.egg-info/SOURCES.txt'
+[1.600s] writing manifest file 'px4_ros_com.egg-info/SOURCES.txt'
+[1.663s] [ 50%] Built target ament_cmake_python_build_px4_ros_com_egg
+[6.575s] [ 58%] [32m[1mLinking CXX executable debug_vect_advertiser[0m
+[6.826s] [ 58%] Built target debug_vect_advertiser
+[7.454s] [ 66%] [32m[1mLinking CXX executable offboard_control[0m
+[7.695s] [ 66%] Built target offboard_control
+[9.978s] [ 75%] [32m[1mLinking CXX executable offboard_control_srv[0m
+[10.238s] [ 75%] Built target offboard_control_srv
+[10.764s] [ 83%] [32m[1mLinking CXX shared library libframe_transforms.so[0m
+[11.040s] [ 83%] Built target frame_transforms
+[11.727s] [ 91%] [32m[1mLinking CXX executable sensor_combined_listener[0m
+[12.103s] [ 91%] Built target sensor_combined_listener
+[12.243s] [100%] [32m[1mLinking CXX executable vehicle_gps_position_listener[0m
+[12.580s] [100%] Built target vehicle_gps_position_listener
+[12.593s] Invoked command in '/home/fidelis/ws_offboard_control/build/px4_ros_com' returned '0': AMENT_PREFIX_PATH=/home/fidelis/ws_offboard_control/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/fidelis/ws_offboard_control/install/px4_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/fidelis/ws_offboard_control/install/px4_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/fidelis/ws_offboard_control/install/px4_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/fidelis/ws_offboard_control/build/px4_ros_com -- -j16 -l16
+[12.634s] Invoking command in '/home/fidelis/ws_offboard_control/build/px4_ros_com': AMENT_PREFIX_PATH=/home/fidelis/ws_offboard_control/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/fidelis/ws_offboard_control/install/px4_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/fidelis/ws_offboard_control/install/px4_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/fidelis/ws_offboard_control/install/px4_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/fidelis/ws_offboard_control/build/px4_ros_com
+[12.643s] -- Install configuration: ""
+[12.643s] -- Installing: /home/fidelis/ws_offboard_control/install/px4_ros_com/lib/px4_ros_com/sensor_combined_listener
+[12.647s] -- Set runtime path of "/home/fidelis/ws_offboard_control/install/px4_ros_com/lib/px4_ros_com/sensor_combined_listener" to ""
+[12.647s] -- Installing: /home/fidelis/ws_offboard_control/install/px4_ros_com/lib/px4_ros_com/vehicle_gps_position_listener
+[12.651s] -- Set runtime path of "/home/fidelis/ws_offboard_control/install/px4_ros_com/lib/px4_ros_com/vehicle_gps_position_listener" to ""
+[12.651s] -- Installing: /home/fidelis/ws_offboard_control/install/px4_ros_com/lib/px4_ros_com/debug_vect_advertiser
+[12.652s] -- Set runtime path of "/home/fidelis/ws_offboard_control/install/px4_ros_com/lib/px4_ros_com/debug_vect_advertiser" to ""
+[12.652s] -- Installing: /home/fidelis/ws_offboard_control/install/px4_ros_com/lib/px4_ros_com/offboard_control
+[12.653s] -- Set runtime path of "/home/fidelis/ws_offboard_control/install/px4_ros_com/lib/px4_ros_com/offboard_control" to ""
+[12.653s] -- Installing: /home/fidelis/ws_offboard_control/install/px4_ros_com/lib/px4_ros_com/offboard_control_srv
+[12.656s] -- Set runtime path of "/home/fidelis/ws_offboard_control/install/px4_ros_com/lib/px4_ros_com/offboard_control_srv" to ""
+[12.656s] -- Installing: /home/fidelis/ws_offboard_control/install/px4_ros_com/share/px4_ros_com/environment/library_path.sh
+[12.656s] -- Installing: /home/fidelis/ws_offboard_control/install/px4_ros_com/share/px4_ros_com/environment/library_path.dsv
+[12.656s] -- Installing: /home/fidelis/ws_offboard_control/install/px4_ros_com/include/px4_ros_com
+[12.656s] -- Installing: /home/fidelis/ws_offboard_control/install/px4_ros_com/include/px4_ros_com/frame_transforms.h
+[12.656s] -- Installing: /home/fidelis/ws_offboard_control/install/px4_ros_com/lib/libframe_transforms.so
+[12.660s] -- Set runtime path of "/home/fidelis/ws_offboard_control/install/px4_ros_com/lib/libframe_transforms.so" to ""
+[12.660s] -- Installing: /home/fidelis/ws_offboard_control/install/px4_ros_com/share/px4_ros_com//launch
+[12.660s] -- Installing: /home/fidelis/ws_offboard_control/install/px4_ros_com/share/px4_ros_com//launch/offboard_control_launch.yaml
+[12.660s] -- Installing: /home/fidelis/ws_offboard_control/install/px4_ros_com/share/px4_ros_com//launch/sensor_combined_listener.launch.py
+[12.661s] -- Installing: /home/fidelis/ws_offboard_control/install/px4_ros_com/share/px4_ros_com//test
+[12.661s] -- Installing: /home/fidelis/ws_offboard_control/install/px4_ros_com/share/px4_ros_com//test/test_output.py
+[12.661s] -- Installing: /home/fidelis/ws_offboard_control/install/px4_ros_com/share/px4_ros_com//test/pipeline_io_test.py
+[12.661s] -- Installing: /home/fidelis/ws_offboard_control/install/px4_ros_com/share/px4_ros_com//test/test_input.py
+[12.661s] -- Installing: /home/fidelis/ws_offboard_control/install/px4_ros_com/share/px4_ros_com//test/__init__.py
+[12.661s] -- Installing: /home/fidelis/ws_offboard_control/install/px4_ros_com/share/px4_ros_com/environment/pythonpath.sh
+[12.661s] -- Installing: /home/fidelis/ws_offboard_control/install/px4_ros_com/share/px4_ros_com/environment/pythonpath.dsv
+[12.661s] -- Installing: /home/fidelis/ws_offboard_control/install/px4_ros_com/local/lib/python3.10/dist-packages/px4_ros_com-0.1.0-py3.10.egg-info
+[12.661s] -- Installing: /home/fidelis/ws_offboard_control/install/px4_ros_com/local/lib/python3.10/dist-packages/px4_ros_com-0.1.0-py3.10.egg-info/PKG-INFO
+[12.661s] -- Installing: /home/fidelis/ws_offboard_control/install/px4_ros_com/local/lib/python3.10/dist-packages/px4_ros_com-0.1.0-py3.10.egg-info/dependency_links.txt
+[12.661s] -- Installing: /home/fidelis/ws_offboard_control/install/px4_ros_com/local/lib/python3.10/dist-packages/px4_ros_com-0.1.0-py3.10.egg-info/top_level.txt
+[12.661s] -- Installing: /home/fidelis/ws_offboard_control/install/px4_ros_com/local/lib/python3.10/dist-packages/px4_ros_com-0.1.0-py3.10.egg-info/SOURCES.txt
+[12.662s] -- Installing: /home/fidelis/ws_offboard_control/install/px4_ros_com/local/lib/python3.10/dist-packages/px4_ros_com
+[12.662s] -- Installing: /home/fidelis/ws_offboard_control/install/px4_ros_com/local/lib/python3.10/dist-packages/px4_ros_com/module_to_import.py
+[12.662s] -- Installing: /home/fidelis/ws_offboard_control/install/px4_ros_com/local/lib/python3.10/dist-packages/px4_ros_com/__init__.py
+[12.689s] Listing '/home/fidelis/ws_offboard_control/install/px4_ros_com/local/lib/python3.10/dist-packages/px4_ros_com'...
+[12.689s] Compiling '/home/fidelis/ws_offboard_control/install/px4_ros_com/local/lib/python3.10/dist-packages/px4_ros_com/__init__.py'...
+[12.689s] Compiling '/home/fidelis/ws_offboard_control/install/px4_ros_com/local/lib/python3.10/dist-packages/px4_ros_com/module_to_import.py'...
+[12.694s] -- Installing: /home/fidelis/ws_offboard_control/install/px4_ros_com/lib/px4_ros_com/offboard_control.py
+[12.695s] -- Installing: /home/fidelis/ws_offboard_control/install/px4_ros_com/share/ament_index/resource_index/package_run_dependencies/px4_ros_com
+[12.695s] -- Installing: /home/fidelis/ws_offboard_control/install/px4_ros_com/share/ament_index/resource_index/parent_prefix_path/px4_ros_com
+[12.695s] -- Installing: /home/fidelis/ws_offboard_control/install/px4_ros_com/share/px4_ros_com/environment/ament_prefix_path.sh
+[12.695s] -- Installing: /home/fidelis/ws_offboard_control/install/px4_ros_com/share/px4_ros_com/environment/ament_prefix_path.dsv
+[12.696s] -- Installing: /home/fidelis/ws_offboard_control/install/px4_ros_com/share/px4_ros_com/environment/path.sh
+[12.696s] -- Installing: /home/fidelis/ws_offboard_control/install/px4_ros_com/share/px4_ros_com/environment/path.dsv
+[12.696s] -- Installing: /home/fidelis/ws_offboard_control/install/px4_ros_com/share/px4_ros_com/local_setup.bash
+[12.696s] -- Installing: /home/fidelis/ws_offboard_control/install/px4_ros_com/share/px4_ros_com/local_setup.sh
+[12.696s] -- Installing: /home/fidelis/ws_offboard_control/install/px4_ros_com/share/px4_ros_com/local_setup.zsh
+[12.696s] -- Installing: /home/fidelis/ws_offboard_control/install/px4_ros_com/share/px4_ros_com/local_setup.dsv
+[12.696s] -- Installing: /home/fidelis/ws_offboard_control/install/px4_ros_com/share/px4_ros_com/package.dsv
+[12.696s] -- Installing: /home/fidelis/ws_offboard_control/install/px4_ros_com/share/ament_index/resource_index/packages/px4_ros_com
+[12.697s] -- Installing: /home/fidelis/ws_offboard_control/install/px4_ros_com/share/px4_ros_com/cmake/export_frame_transformsExport.cmake
+[12.697s] -- Installing: /home/fidelis/ws_offboard_control/install/px4_ros_com/share/px4_ros_com/cmake/export_frame_transformsExport-noconfig.cmake
+[12.697s] -- Installing: /home/fidelis/ws_offboard_control/install/px4_ros_com/share/px4_ros_com/cmake/ament_cmake_export_dependencies-extras.cmake
+[12.697s] -- Installing: /home/fidelis/ws_offboard_control/install/px4_ros_com/share/px4_ros_com/cmake/ament_cmake_export_targets-extras.cmake
+[12.697s] -- Installing: /home/fidelis/ws_offboard_control/install/px4_ros_com/share/px4_ros_com/cmake/ament_cmake_export_include_directories-extras.cmake
+[12.697s] -- Installing: /home/fidelis/ws_offboard_control/install/px4_ros_com/share/px4_ros_com/cmake/ament_cmake_export_libraries-extras.cmake
+[12.698s] -- Installing: /home/fidelis/ws_offboard_control/install/px4_ros_com/share/px4_ros_com/cmake/px4_ros_comConfig.cmake
+[12.698s] -- Installing: /home/fidelis/ws_offboard_control/install/px4_ros_com/share/px4_ros_com/cmake/px4_ros_comConfig-version.cmake
+[12.698s] -- Installing: /home/fidelis/ws_offboard_control/install/px4_ros_com/share/px4_ros_com/package.xml
+[12.701s] Invoked command in '/home/fidelis/ws_offboard_control/build/px4_ros_com' returned '0': AMENT_PREFIX_PATH=/home/fidelis/ws_offboard_control/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/fidelis/ws_offboard_control/install/px4_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/fidelis/ws_offboard_control/install/px4_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/fidelis/ws_offboard_control/install/px4_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/fidelis/ws_offboard_control/build/px4_ros_com

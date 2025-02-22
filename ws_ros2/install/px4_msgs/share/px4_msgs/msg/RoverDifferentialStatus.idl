@@ -11,32 +11,39 @@ module px4_msgs {
       uint64 timestamp;
 
       @verbatim (language="comment", text=
-        "Actual forward speed of the rover")
+        "Measured speed in body x direction. Forwards: positiv, Backwards: negativ")
       @unit (value="m/s")
-      float actual_speed;
+      float measured_forward_speed;
 
       @verbatim (language="comment", text=
-        "Actual yaw of the rover")
+        "Speed setpoint after applying slew rate")
+      @unit (value="m/s")
+      float adjusted_forward_speed_setpoint;
+
+      @verbatim (language="comment", text=
+        "Measured yaw")
       @unit (value="rad")
-      float actual_yaw;
+      float measured_yaw;
 
       @verbatim (language="comment", text=
-        "Actual yaw rate of the rover")
+        "Yaw setpoint after applying slew rate")
+      @unit (value="rad")
+      float adjusted_yaw_setpoint;
+
+      @verbatim (language="comment", text=
+        "Yaw rate setpoint output by the closed loop yaw controller")
       @unit (value="rad/s")
-      float actual_yaw_rate;
+      float clyaw_yaw_rate_setpoint;
 
       @verbatim (language="comment", text=
-        "Yaw rate setpoint for the closed loop yaw rate controller")
+        "Measured yaw rate")
       @unit (value="rad/s")
-      float desired_yaw_rate;
+      float measured_yaw_rate;
 
       @verbatim (language="comment", text=
-        "[-1, 1] Normalized forward speed setpoint")
-      float forward_speed_normalized;
-
-      @verbatim (language="comment", text=
-        "[-1, 1] Normalized speed difference setpoint between the left and right motor")
-      float speed_diff_normalized;
+        "Yaw rate setpoint from the closed loop yaw controller")
+      @unit (value="rad/s")
+      float adjusted_yaw_rate_setpoint;
 
       @verbatim (language="comment", text=
         "Integral of the PID for the closed loop yaw controller")

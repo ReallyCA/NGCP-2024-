@@ -36,6 +36,10 @@ module px4_msgs {
         "Altitude above ellipsoid, (meters)")
       float alt_ellipsoid;
 
+      boolean lat_lon_valid;
+
+      boolean alt_valid;
+
       @verbatim (language="comment", text=
         "Reset delta for altitude")
       float delta_alt;

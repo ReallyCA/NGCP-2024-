@@ -44,6 +44,8 @@ struct VehicleGlobalPosition_
       this->lon = 0.0;
       this->alt = 0.0f;
       this->alt_ellipsoid = 0.0f;
+      this->lat_lon_valid = false;
+      this->alt_valid = false;
       this->delta_alt = 0.0f;
       this->delta_terrain = 0.0f;
       this->lat_lon_reset_counter = 0;
@@ -69,6 +71,8 @@ struct VehicleGlobalPosition_
       this->lon = 0.0;
       this->alt = 0.0f;
       this->alt_ellipsoid = 0.0f;
+      this->lat_lon_valid = false;
+      this->alt_valid = false;
       this->delta_alt = 0.0f;
       this->delta_terrain = 0.0f;
       this->lat_lon_reset_counter = 0;
@@ -101,6 +105,12 @@ struct VehicleGlobalPosition_
   using _alt_ellipsoid_type =
     float;
   _alt_ellipsoid_type alt_ellipsoid;
+  using _lat_lon_valid_type =
+    bool;
+  _lat_lon_valid_type lat_lon_valid;
+  using _alt_valid_type =
+    bool;
+  _alt_valid_type alt_valid;
   using _delta_alt_type =
     float;
   _delta_alt_type delta_alt;
@@ -167,6 +177,18 @@ struct VehicleGlobalPosition_
     const float & _arg)
   {
     this->alt_ellipsoid = _arg;
+    return *this;
+  }
+  Type & set__lat_lon_valid(
+    const bool & _arg)
+  {
+    this->lat_lon_valid = _arg;
+    return *this;
+  }
+  Type & set__alt_valid(
+    const bool & _arg)
+  {
+    this->alt_valid = _arg;
     return *this;
   }
   Type & set__delta_alt(
@@ -288,6 +310,12 @@ struct VehicleGlobalPosition_
       return false;
     }
     if (this->alt_ellipsoid != other.alt_ellipsoid) {
+      return false;
+    }
+    if (this->lat_lon_valid != other.lat_lon_valid) {
+      return false;
+    }
+    if (this->alt_valid != other.alt_valid) {
       return false;
     }
     if (this->delta_alt != other.delta_alt) {

@@ -22,14 +22,10 @@ typedef struct px4_msgs__msg__RoverAckermannGuidanceStatus
 {
   /// time since system start (microseconds)
   uint64_t timestamp;
-  /// Rover desired ground speed
-  float desired_speed;
   /// Lookahead distance of pure the pursuit controller
   float lookahead_distance;
   /// Heading error of the pure pursuit controller
   float heading_error;
-  /// [-1, 1] Integral of the PID for the normalized throttle to control the rover speed during missions
-  float pid_throttle_integral;
 } px4_msgs__msg__RoverAckermannGuidanceStatus;
 
 // Struct for a sequence of px4_msgs__msg__RoverAckermannGuidanceStatus.

@@ -39,6 +39,8 @@ typedef struct px4_msgs__msg__VehicleGlobalPosition
   float alt;
   /// Altitude above ellipsoid, (meters)
   float alt_ellipsoid;
+  bool lat_lon_valid;
+  bool alt_valid;
   /// Reset delta for altitude
   float delta_alt;
   /// Reset delta for terrain

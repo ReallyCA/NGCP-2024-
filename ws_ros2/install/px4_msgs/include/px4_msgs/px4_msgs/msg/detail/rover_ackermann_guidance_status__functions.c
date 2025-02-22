@@ -18,10 +18,8 @@ px4_msgs__msg__RoverAckermannGuidanceStatus__init(px4_msgs__msg__RoverAckermannG
     return false;
   }
   // timestamp
-  // desired_speed
   // lookahead_distance
   // heading_error
-  // pid_throttle_integral
   return true;
 }
 
@@ -32,10 +30,8 @@ px4_msgs__msg__RoverAckermannGuidanceStatus__fini(px4_msgs__msg__RoverAckermannG
     return;
   }
   // timestamp
-  // desired_speed
   // lookahead_distance
   // heading_error
-  // pid_throttle_integral
 }
 
 bool
@@ -48,20 +44,12 @@ px4_msgs__msg__RoverAckermannGuidanceStatus__are_equal(const px4_msgs__msg__Rove
   if (lhs->timestamp != rhs->timestamp) {
     return false;
   }
-  // desired_speed
-  if (lhs->desired_speed != rhs->desired_speed) {
-    return false;
-  }
   // lookahead_distance
   if (lhs->lookahead_distance != rhs->lookahead_distance) {
     return false;
   }
   // heading_error
   if (lhs->heading_error != rhs->heading_error) {
-    return false;
-  }
-  // pid_throttle_integral
-  if (lhs->pid_throttle_integral != rhs->pid_throttle_integral) {
     return false;
   }
   return true;
@@ -77,14 +65,10 @@ px4_msgs__msg__RoverAckermannGuidanceStatus__copy(
   }
   // timestamp
   output->timestamp = input->timestamp;
-  // desired_speed
-  output->desired_speed = input->desired_speed;
   // lookahead_distance
   output->lookahead_distance = input->lookahead_distance;
   // heading_error
   output->heading_error = input->heading_error;
-  // pid_throttle_integral
-  output->pid_throttle_integral = input->pid_throttle_integral;
   return true;
 }
 

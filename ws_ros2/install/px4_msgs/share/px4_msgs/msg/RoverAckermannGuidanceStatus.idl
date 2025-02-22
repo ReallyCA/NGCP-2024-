@@ -11,11 +11,6 @@ module px4_msgs {
       uint64 timestamp;
 
       @verbatim (language="comment", text=
-        "Rover desired ground speed")
-      @unit (value="m/s")
-      float desired_speed;
-
-      @verbatim (language="comment", text=
         "Lookahead distance of pure the pursuit controller")
       @unit (value="m")
       float lookahead_distance;
@@ -24,10 +19,6 @@ module px4_msgs {
         "Heading error of the pure pursuit controller")
       @unit (value="deg")
       float heading_error;
-
-      @verbatim (language="comment", text=
-        "[-1, 1] Integral of the PID for the normalized throttle to control the rover speed during missions")
-      float pid_throttle_integral;
     };
   };
 };

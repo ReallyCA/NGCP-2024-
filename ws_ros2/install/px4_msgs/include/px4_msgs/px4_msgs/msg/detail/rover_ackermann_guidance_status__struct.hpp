@@ -39,10 +39,8 @@ struct RoverAckermannGuidanceStatus_
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
       this->timestamp = 0ull;
-      this->desired_speed = 0.0f;
       this->lookahead_distance = 0.0f;
       this->heading_error = 0.0f;
-      this->pid_throttle_integral = 0.0f;
     }
   }
 
@@ -53,10 +51,8 @@ struct RoverAckermannGuidanceStatus_
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
       this->timestamp = 0ull;
-      this->desired_speed = 0.0f;
       this->lookahead_distance = 0.0f;
       this->heading_error = 0.0f;
-      this->pid_throttle_integral = 0.0f;
     }
   }
 
@@ -64,30 +60,18 @@ struct RoverAckermannGuidanceStatus_
   using _timestamp_type =
     uint64_t;
   _timestamp_type timestamp;
-  using _desired_speed_type =
-    float;
-  _desired_speed_type desired_speed;
   using _lookahead_distance_type =
     float;
   _lookahead_distance_type lookahead_distance;
   using _heading_error_type =
     float;
   _heading_error_type heading_error;
-  using _pid_throttle_integral_type =
-    float;
-  _pid_throttle_integral_type pid_throttle_integral;
 
   // setters for named parameter idiom
   Type & set__timestamp(
     const uint64_t & _arg)
   {
     this->timestamp = _arg;
-    return *this;
-  }
-  Type & set__desired_speed(
-    const float & _arg)
-  {
-    this->desired_speed = _arg;
     return *this;
   }
   Type & set__lookahead_distance(
@@ -100,12 +84,6 @@ struct RoverAckermannGuidanceStatus_
     const float & _arg)
   {
     this->heading_error = _arg;
-    return *this;
-  }
-  Type & set__pid_throttle_integral(
-    const float & _arg)
-  {
-    this->pid_throttle_integral = _arg;
     return *this;
   }
 
@@ -154,16 +132,10 @@ struct RoverAckermannGuidanceStatus_
     if (this->timestamp != other.timestamp) {
       return false;
     }
-    if (this->desired_speed != other.desired_speed) {
-      return false;
-    }
     if (this->lookahead_distance != other.lookahead_distance) {
       return false;
     }
     if (this->heading_error != other.heading_error) {
-      return false;
-    }
-    if (this->pid_throttle_integral != other.pid_throttle_integral) {
       return false;
     }
     return true;

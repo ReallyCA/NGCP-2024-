@@ -31,7 +31,7 @@ void px4_msgs__msg__RoverAckermannGuidanceStatus__rosidl_typesupport_introspecti
   px4_msgs__msg__RoverAckermannGuidanceStatus__fini(message_memory);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember px4_msgs__msg__RoverAckermannGuidanceStatus__rosidl_typesupport_introspection_c__RoverAckermannGuidanceStatus_message_member_array[5] = {
+static rosidl_typesupport_introspection_c__MessageMember px4_msgs__msg__RoverAckermannGuidanceStatus__rosidl_typesupport_introspection_c__RoverAckermannGuidanceStatus_message_member_array[3] = {
   {
     "timestamp",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_UINT64,  // type
@@ -41,23 +41,6 @@ static rosidl_typesupport_introspection_c__MessageMember px4_msgs__msg__RoverAck
     0,  // array size
     false,  // is upper bound
     offsetof(px4_msgs__msg__RoverAckermannGuidanceStatus, timestamp),  // bytes offset in struct
-    NULL,  // default value
-    NULL,  // size() function pointer
-    NULL,  // get_const(index) function pointer
-    NULL,  // get(index) function pointer
-    NULL,  // fetch(index, &value) function pointer
-    NULL,  // assign(index, value) function pointer
-    NULL  // resize(index) function pointer
-  },
-  {
-    "desired_speed",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_FLOAT,  // type
-    0,  // upper bound of string
-    NULL,  // members of sub message
-    false,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(px4_msgs__msg__RoverAckermannGuidanceStatus, desired_speed),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
@@ -99,30 +82,13 @@ static rosidl_typesupport_introspection_c__MessageMember px4_msgs__msg__RoverAck
     NULL,  // fetch(index, &value) function pointer
     NULL,  // assign(index, value) function pointer
     NULL  // resize(index) function pointer
-  },
-  {
-    "pid_throttle_integral",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_FLOAT,  // type
-    0,  // upper bound of string
-    NULL,  // members of sub message
-    false,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(px4_msgs__msg__RoverAckermannGuidanceStatus, pid_throttle_integral),  // bytes offset in struct
-    NULL,  // default value
-    NULL,  // size() function pointer
-    NULL,  // get_const(index) function pointer
-    NULL,  // get(index) function pointer
-    NULL,  // fetch(index, &value) function pointer
-    NULL,  // assign(index, value) function pointer
-    NULL  // resize(index) function pointer
   }
 };
 
 static const rosidl_typesupport_introspection_c__MessageMembers px4_msgs__msg__RoverAckermannGuidanceStatus__rosidl_typesupport_introspection_c__RoverAckermannGuidanceStatus_message_members = {
   "px4_msgs__msg",  // message namespace
   "RoverAckermannGuidanceStatus",  // message name
-  5,  // number of fields
+  3,  // number of fields
   sizeof(px4_msgs__msg__RoverAckermannGuidanceStatus),
   px4_msgs__msg__RoverAckermannGuidanceStatus__rosidl_typesupport_introspection_c__RoverAckermannGuidanceStatus_message_member_array,  // message members
   px4_msgs__msg__RoverAckermannGuidanceStatus__rosidl_typesupport_introspection_c__RoverAckermannGuidanceStatus_init_function,  // function to initialize message memory (memory has to be allocated)

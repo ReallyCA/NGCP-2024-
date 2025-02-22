@@ -58,24 +58,18 @@ class RoverAckermannGuidanceStatus(metaclass=Metaclass_RoverAckermannGuidanceSta
 
     __slots__ = [
         '_timestamp',
-        '_desired_speed',
         '_lookahead_distance',
         '_heading_error',
-        '_pid_throttle_integral',
     ]
 
     _fields_and_field_types = {
         'timestamp': 'uint64',
-        'desired_speed': 'float',
         'lookahead_distance': 'float',
         'heading_error': 'float',
-        'pid_throttle_integral': 'float',
     }
 
     SLOT_TYPES = (
         rosidl_parser.definition.BasicType('uint64'),  # noqa: E501
-        rosidl_parser.definition.BasicType('float'),  # noqa: E501
-        rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
     )
@@ -85,10 +79,8 @@ class RoverAckermannGuidanceStatus(metaclass=Metaclass_RoverAckermannGuidanceSta
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
         self.timestamp = kwargs.get('timestamp', int())
-        self.desired_speed = kwargs.get('desired_speed', float())
         self.lookahead_distance = kwargs.get('lookahead_distance', float())
         self.heading_error = kwargs.get('heading_error', float())
-        self.pid_throttle_integral = kwargs.get('pid_throttle_integral', float())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -121,13 +113,9 @@ class RoverAckermannGuidanceStatus(metaclass=Metaclass_RoverAckermannGuidanceSta
             return False
         if self.timestamp != other.timestamp:
             return False
-        if self.desired_speed != other.desired_speed:
-            return False
         if self.lookahead_distance != other.lookahead_distance:
             return False
         if self.heading_error != other.heading_error:
-            return False
-        if self.pid_throttle_integral != other.pid_throttle_integral:
             return False
         return True
 
@@ -150,21 +138,6 @@ class RoverAckermannGuidanceStatus(metaclass=Metaclass_RoverAckermannGuidanceSta
             assert value >= 0 and value < 18446744073709551616, \
                 "The 'timestamp' field must be an unsigned integer in [0, 18446744073709551615]"
         self._timestamp = value
-
-    @builtins.property
-    def desired_speed(self):
-        """Message field 'desired_speed'."""
-        return self._desired_speed
-
-    @desired_speed.setter
-    def desired_speed(self, value):
-        if __debug__:
-            assert \
-                isinstance(value, float), \
-                "The 'desired_speed' field must be of type 'float'"
-            assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
-                "The 'desired_speed' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
-        self._desired_speed = value
 
     @builtins.property
     def lookahead_distance(self):
@@ -195,18 +168,3 @@ class RoverAckermannGuidanceStatus(metaclass=Metaclass_RoverAckermannGuidanceSta
             assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
                 "The 'heading_error' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
         self._heading_error = value
-
-    @builtins.property
-    def pid_throttle_integral(self):
-        """Message field 'pid_throttle_integral'."""
-        return self._pid_throttle_integral
-
-    @pid_throttle_integral.setter
-    def pid_throttle_integral(self, value):
-        if __debug__:
-            assert \
-                isinstance(value, float), \
-                "The 'pid_throttle_integral' field must be of type 'float'"
-            assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
-                "The 'pid_throttle_integral' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
-        self._pid_throttle_integral = value

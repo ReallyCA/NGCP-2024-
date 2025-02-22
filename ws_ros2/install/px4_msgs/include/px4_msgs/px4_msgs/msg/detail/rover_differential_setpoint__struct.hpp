@@ -42,7 +42,7 @@ struct RoverDifferentialSetpoint_
       this->forward_speed_setpoint = 0.0f;
       this->forward_speed_setpoint_normalized = 0.0f;
       this->yaw_rate_setpoint = 0.0f;
-      this->yaw_rate_setpoint_normalized = 0.0f;
+      this->speed_diff_setpoint_normalized = 0.0f;
       this->yaw_setpoint = 0.0f;
     }
   }
@@ -57,7 +57,7 @@ struct RoverDifferentialSetpoint_
       this->forward_speed_setpoint = 0.0f;
       this->forward_speed_setpoint_normalized = 0.0f;
       this->yaw_rate_setpoint = 0.0f;
-      this->yaw_rate_setpoint_normalized = 0.0f;
+      this->speed_diff_setpoint_normalized = 0.0f;
       this->yaw_setpoint = 0.0f;
     }
   }
@@ -75,9 +75,9 @@ struct RoverDifferentialSetpoint_
   using _yaw_rate_setpoint_type =
     float;
   _yaw_rate_setpoint_type yaw_rate_setpoint;
-  using _yaw_rate_setpoint_normalized_type =
+  using _speed_diff_setpoint_normalized_type =
     float;
-  _yaw_rate_setpoint_normalized_type yaw_rate_setpoint_normalized;
+  _speed_diff_setpoint_normalized_type speed_diff_setpoint_normalized;
   using _yaw_setpoint_type =
     float;
   _yaw_setpoint_type yaw_setpoint;
@@ -107,10 +107,10 @@ struct RoverDifferentialSetpoint_
     this->yaw_rate_setpoint = _arg;
     return *this;
   }
-  Type & set__yaw_rate_setpoint_normalized(
+  Type & set__speed_diff_setpoint_normalized(
     const float & _arg)
   {
-    this->yaw_rate_setpoint_normalized = _arg;
+    this->speed_diff_setpoint_normalized = _arg;
     return *this;
   }
   Type & set__yaw_setpoint(
@@ -174,7 +174,7 @@ struct RoverDifferentialSetpoint_
     if (this->yaw_rate_setpoint != other.yaw_rate_setpoint) {
       return false;
     }
-    if (this->yaw_rate_setpoint_normalized != other.yaw_rate_setpoint_normalized) {
+    if (this->speed_diff_setpoint_normalized != other.speed_diff_setpoint_normalized) {
       return false;
     }
     if (this->yaw_setpoint != other.yaw_setpoint) {

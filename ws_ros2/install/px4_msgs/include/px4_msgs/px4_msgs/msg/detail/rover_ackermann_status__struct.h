@@ -22,12 +22,20 @@ typedef struct px4_msgs__msg__RoverAckermannStatus
 {
   /// time since system start (microseconds)
   uint64_t timestamp;
-  /// [-1, 1] Normalized throttle setpoint
-  float throttle_setpoint;
+  /// Measured speed in body x direction. Forwards: positiv, Backwards: negativ
+  float measured_forward_speed;
+  /// Speed setpoint after applying slew rate
+  float adjusted_forward_speed_setpoint;
   /// [-1, 1] Normalized steering setpoint
-  float steering_setpoint;
-  /// Rover ground speed
-  float actual_speed;
+  float steering_setpoint_normalized;
+  /// [-1, 1] Normalized steering setpoint after applying slew rate
+  float adjusted_steering_setpoint_normalized;
+  /// Measured acceleration in body y direction. Positiv: right, Negativ: left.
+  float measured_lateral_acceleration;
+  /// Integral of the PID for the closed loop speed controller
+  float pid_throttle_integral;
+  /// Integral of the PID for the closed loop lateral acceleration controller
+  float pid_lat_accel_integral;
 } px4_msgs__msg__RoverAckermannStatus;
 
 // Struct for a sequence of px4_msgs__msg__RoverAckermannStatus.

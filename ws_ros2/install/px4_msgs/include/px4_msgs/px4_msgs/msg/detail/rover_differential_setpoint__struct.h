@@ -28,8 +28,8 @@ typedef struct px4_msgs__msg__RoverDifferentialSetpoint
   float forward_speed_setpoint_normalized;
   /// Desired yaw rate for the rover (Overriden by yaw controller if yaw_setpoint is used)
   float yaw_rate_setpoint;
-  /// [-1, 1] Normalized yaw rate for the rover
-  float yaw_rate_setpoint_normalized;
+  /// [-1, 1] Normalized speed difference between the left and right wheels
+  float speed_diff_setpoint_normalized;
   /// Desired yaw (heading) for the rover
   float yaw_setpoint;
 } px4_msgs__msg__RoverDifferentialSetpoint;

@@ -31,7 +31,7 @@ void px4_msgs__msg__RoverDifferentialStatus__rosidl_typesupport_introspection_c_
   px4_msgs__msg__RoverDifferentialStatus__fini(message_memory);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember px4_msgs__msg__RoverDifferentialStatus__rosidl_typesupport_introspection_c__RoverDifferentialStatus_message_member_array[10] = {
+static rosidl_typesupport_introspection_c__MessageMember px4_msgs__msg__RoverDifferentialStatus__rosidl_typesupport_introspection_c__RoverDifferentialStatus_message_member_array[11] = {
   {
     "timestamp",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_UINT64,  // type
@@ -50,14 +50,14 @@ static rosidl_typesupport_introspection_c__MessageMember px4_msgs__msg__RoverDif
     NULL  // resize(index) function pointer
   },
   {
-    "actual_speed",  // name
+    "measured_forward_speed",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_FLOAT,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(px4_msgs__msg__RoverDifferentialStatus, actual_speed),  // bytes offset in struct
+    offsetof(px4_msgs__msg__RoverDifferentialStatus, measured_forward_speed),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
@@ -67,14 +67,14 @@ static rosidl_typesupport_introspection_c__MessageMember px4_msgs__msg__RoverDif
     NULL  // resize(index) function pointer
   },
   {
-    "actual_yaw",  // name
+    "adjusted_forward_speed_setpoint",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_FLOAT,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(px4_msgs__msg__RoverDifferentialStatus, actual_yaw),  // bytes offset in struct
+    offsetof(px4_msgs__msg__RoverDifferentialStatus, adjusted_forward_speed_setpoint),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
@@ -84,14 +84,14 @@ static rosidl_typesupport_introspection_c__MessageMember px4_msgs__msg__RoverDif
     NULL  // resize(index) function pointer
   },
   {
-    "actual_yaw_rate",  // name
+    "measured_yaw",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_FLOAT,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(px4_msgs__msg__RoverDifferentialStatus, actual_yaw_rate),  // bytes offset in struct
+    offsetof(px4_msgs__msg__RoverDifferentialStatus, measured_yaw),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
@@ -101,14 +101,14 @@ static rosidl_typesupport_introspection_c__MessageMember px4_msgs__msg__RoverDif
     NULL  // resize(index) function pointer
   },
   {
-    "desired_yaw_rate",  // name
+    "adjusted_yaw_setpoint",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_FLOAT,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(px4_msgs__msg__RoverDifferentialStatus, desired_yaw_rate),  // bytes offset in struct
+    offsetof(px4_msgs__msg__RoverDifferentialStatus, adjusted_yaw_setpoint),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
@@ -118,14 +118,14 @@ static rosidl_typesupport_introspection_c__MessageMember px4_msgs__msg__RoverDif
     NULL  // resize(index) function pointer
   },
   {
-    "forward_speed_normalized",  // name
+    "clyaw_yaw_rate_setpoint",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_FLOAT,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(px4_msgs__msg__RoverDifferentialStatus, forward_speed_normalized),  // bytes offset in struct
+    offsetof(px4_msgs__msg__RoverDifferentialStatus, clyaw_yaw_rate_setpoint),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
@@ -135,14 +135,31 @@ static rosidl_typesupport_introspection_c__MessageMember px4_msgs__msg__RoverDif
     NULL  // resize(index) function pointer
   },
   {
-    "speed_diff_normalized",  // name
+    "measured_yaw_rate",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_FLOAT,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(px4_msgs__msg__RoverDifferentialStatus, speed_diff_normalized),  // bytes offset in struct
+    offsetof(px4_msgs__msg__RoverDifferentialStatus, measured_yaw_rate),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
+    NULL  // resize(index) function pointer
+  },
+  {
+    "adjusted_yaw_rate_setpoint",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_FLOAT,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(px4_msgs__msg__RoverDifferentialStatus, adjusted_yaw_rate_setpoint),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
@@ -207,7 +224,7 @@ static rosidl_typesupport_introspection_c__MessageMember px4_msgs__msg__RoverDif
 static const rosidl_typesupport_introspection_c__MessageMembers px4_msgs__msg__RoverDifferentialStatus__rosidl_typesupport_introspection_c__RoverDifferentialStatus_message_members = {
   "px4_msgs__msg",  // message namespace
   "RoverDifferentialStatus",  // message name
-  10,  // number of fields
+  11,  // number of fields
   sizeof(px4_msgs__msg__RoverDifferentialStatus),
   px4_msgs__msg__RoverDifferentialStatus__rosidl_typesupport_introspection_c__RoverDifferentialStatus_message_member_array,  // message members
   px4_msgs__msg__RoverDifferentialStatus__rosidl_typesupport_introspection_c__RoverDifferentialStatus_init_function,  // function to initialize message memory (memory has to be allocated)

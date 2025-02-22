@@ -39,12 +39,13 @@ struct RoverDifferentialStatus_
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
       this->timestamp = 0ull;
-      this->actual_speed = 0.0f;
-      this->actual_yaw = 0.0f;
-      this->actual_yaw_rate = 0.0f;
-      this->desired_yaw_rate = 0.0f;
-      this->forward_speed_normalized = 0.0f;
-      this->speed_diff_normalized = 0.0f;
+      this->measured_forward_speed = 0.0f;
+      this->adjusted_forward_speed_setpoint = 0.0f;
+      this->measured_yaw = 0.0f;
+      this->adjusted_yaw_setpoint = 0.0f;
+      this->clyaw_yaw_rate_setpoint = 0.0f;
+      this->measured_yaw_rate = 0.0f;
+      this->adjusted_yaw_rate_setpoint = 0.0f;
       this->pid_yaw_integral = 0.0f;
       this->pid_yaw_rate_integral = 0.0f;
       this->pid_throttle_integral = 0.0f;
@@ -58,12 +59,13 @@ struct RoverDifferentialStatus_
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
       this->timestamp = 0ull;
-      this->actual_speed = 0.0f;
-      this->actual_yaw = 0.0f;
-      this->actual_yaw_rate = 0.0f;
-      this->desired_yaw_rate = 0.0f;
-      this->forward_speed_normalized = 0.0f;
-      this->speed_diff_normalized = 0.0f;
+      this->measured_forward_speed = 0.0f;
+      this->adjusted_forward_speed_setpoint = 0.0f;
+      this->measured_yaw = 0.0f;
+      this->adjusted_yaw_setpoint = 0.0f;
+      this->clyaw_yaw_rate_setpoint = 0.0f;
+      this->measured_yaw_rate = 0.0f;
+      this->adjusted_yaw_rate_setpoint = 0.0f;
       this->pid_yaw_integral = 0.0f;
       this->pid_yaw_rate_integral = 0.0f;
       this->pid_throttle_integral = 0.0f;
@@ -74,24 +76,27 @@ struct RoverDifferentialStatus_
   using _timestamp_type =
     uint64_t;
   _timestamp_type timestamp;
-  using _actual_speed_type =
+  using _measured_forward_speed_type =
     float;
-  _actual_speed_type actual_speed;
-  using _actual_yaw_type =
+  _measured_forward_speed_type measured_forward_speed;
+  using _adjusted_forward_speed_setpoint_type =
     float;
-  _actual_yaw_type actual_yaw;
-  using _actual_yaw_rate_type =
+  _adjusted_forward_speed_setpoint_type adjusted_forward_speed_setpoint;
+  using _measured_yaw_type =
     float;
-  _actual_yaw_rate_type actual_yaw_rate;
-  using _desired_yaw_rate_type =
+  _measured_yaw_type measured_yaw;
+  using _adjusted_yaw_setpoint_type =
     float;
-  _desired_yaw_rate_type desired_yaw_rate;
-  using _forward_speed_normalized_type =
+  _adjusted_yaw_setpoint_type adjusted_yaw_setpoint;
+  using _clyaw_yaw_rate_setpoint_type =
     float;
-  _forward_speed_normalized_type forward_speed_normalized;
-  using _speed_diff_normalized_type =
+  _clyaw_yaw_rate_setpoint_type clyaw_yaw_rate_setpoint;
+  using _measured_yaw_rate_type =
     float;
-  _speed_diff_normalized_type speed_diff_normalized;
+  _measured_yaw_rate_type measured_yaw_rate;
+  using _adjusted_yaw_rate_setpoint_type =
+    float;
+  _adjusted_yaw_rate_setpoint_type adjusted_yaw_rate_setpoint;
   using _pid_yaw_integral_type =
     float;
   _pid_yaw_integral_type pid_yaw_integral;
@@ -109,40 +114,46 @@ struct RoverDifferentialStatus_
     this->timestamp = _arg;
     return *this;
   }
-  Type & set__actual_speed(
+  Type & set__measured_forward_speed(
     const float & _arg)
   {
-    this->actual_speed = _arg;
+    this->measured_forward_speed = _arg;
     return *this;
   }
-  Type & set__actual_yaw(
+  Type & set__adjusted_forward_speed_setpoint(
     const float & _arg)
   {
-    this->actual_yaw = _arg;
+    this->adjusted_forward_speed_setpoint = _arg;
     return *this;
   }
-  Type & set__actual_yaw_rate(
+  Type & set__measured_yaw(
     const float & _arg)
   {
-    this->actual_yaw_rate = _arg;
+    this->measured_yaw = _arg;
     return *this;
   }
-  Type & set__desired_yaw_rate(
+  Type & set__adjusted_yaw_setpoint(
     const float & _arg)
   {
-    this->desired_yaw_rate = _arg;
+    this->adjusted_yaw_setpoint = _arg;
     return *this;
   }
-  Type & set__forward_speed_normalized(
+  Type & set__clyaw_yaw_rate_setpoint(
     const float & _arg)
   {
-    this->forward_speed_normalized = _arg;
+    this->clyaw_yaw_rate_setpoint = _arg;
     return *this;
   }
-  Type & set__speed_diff_normalized(
+  Type & set__measured_yaw_rate(
     const float & _arg)
   {
-    this->speed_diff_normalized = _arg;
+    this->measured_yaw_rate = _arg;
+    return *this;
+  }
+  Type & set__adjusted_yaw_rate_setpoint(
+    const float & _arg)
+  {
+    this->adjusted_yaw_rate_setpoint = _arg;
     return *this;
   }
   Type & set__pid_yaw_integral(
@@ -209,22 +220,25 @@ struct RoverDifferentialStatus_
     if (this->timestamp != other.timestamp) {
       return false;
     }
-    if (this->actual_speed != other.actual_speed) {
+    if (this->measured_forward_speed != other.measured_forward_speed) {
       return false;
     }
-    if (this->actual_yaw != other.actual_yaw) {
+    if (this->adjusted_forward_speed_setpoint != other.adjusted_forward_speed_setpoint) {
       return false;
     }
-    if (this->actual_yaw_rate != other.actual_yaw_rate) {
+    if (this->measured_yaw != other.measured_yaw) {
       return false;
     }
-    if (this->desired_yaw_rate != other.desired_yaw_rate) {
+    if (this->adjusted_yaw_setpoint != other.adjusted_yaw_setpoint) {
       return false;
     }
-    if (this->forward_speed_normalized != other.forward_speed_normalized) {
+    if (this->clyaw_yaw_rate_setpoint != other.clyaw_yaw_rate_setpoint) {
       return false;
     }
-    if (this->speed_diff_normalized != other.speed_diff_normalized) {
+    if (this->measured_yaw_rate != other.measured_yaw_rate) {
+      return false;
+    }
+    if (this->adjusted_yaw_rate_setpoint != other.adjusted_yaw_rate_setpoint) {
       return false;
     }
     if (this->pid_yaw_integral != other.pid_yaw_integral) {

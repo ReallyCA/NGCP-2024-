@@ -67,6 +67,20 @@ inline void to_flow_style_yaml(
     out << ", ";
   }
 
+  // member: lat_lon_valid
+  {
+    out << "lat_lon_valid: ";
+    rosidl_generator_traits::value_to_yaml(msg.lat_lon_valid, out);
+    out << ", ";
+  }
+
+  // member: alt_valid
+  {
+    out << "alt_valid: ";
+    rosidl_generator_traits::value_to_yaml(msg.alt_valid, out);
+    out << ", ";
+  }
+
   // member: delta_alt
   {
     out << "delta_alt: ";
@@ -199,6 +213,26 @@ inline void to_block_style_yaml(
     }
     out << "alt_ellipsoid: ";
     rosidl_generator_traits::value_to_yaml(msg.alt_ellipsoid, out);
+    out << "\n";
+  }
+
+  // member: lat_lon_valid
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "lat_lon_valid: ";
+    rosidl_generator_traits::value_to_yaml(msg.lat_lon_valid, out);
+    out << "\n";
+  }
+
+  // member: alt_valid
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "alt_valid: ";
+    rosidl_generator_traits::value_to_yaml(msg.alt_valid, out);
     out << "\n";
   }
 

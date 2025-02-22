@@ -1,0 +1,11 @@
+[01m[K/home/fidelis/ws_offboard_control/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:[m[K In member function ‘[01m[Kvoid OffboardPlane::run()[m[K’:
+[01m[K/home/fidelis/ws_offboard_control/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:84:49:[m[K [01;35m[Kwarning: [m[Kconversion from ‘[01m[Kunsigned int[m[K’ to ‘[01m[Kuint16_t[m[K’ {aka ‘[01m[Kshort unsigned int[m[K’} changes value from ‘[01m[K100000[m[K’ to ‘[01m[K34464[m[K’ [[01;35m[K-Woverflow[m[K]
+   84 |   this->publish_vehicle_command([01;35m[KVehicleCommand::VEHICLE_CMD_SET_GPS_GLOBAL_ORIGIN[m[K, 0.0, 0.0);
+      |                                 [01;35m[K~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/fidelis/ws_offboard_control/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:114:72:[m[K [01;31m[Kerror: [m[K‘[01m[Kzz[m[K’ was not declared in this scope; did you mean ‘[01m[Kdz[m[K’?
+  114 |     if(dx >= local_waypoints_[0][0] && dy >= local_waypoints_[0][1] && [01;31m[Kzz[m[K <= local_waypoints_[0][1]) {
+      |                                                                        [01;31m[K^~[m[K
+      |                                                                        [32m[Kdz[m[K
+gmake[2]: *** [CMakeFiles/offboard_control.dir/build.make:76: CMakeFiles/offboard_control.dir/src/examples/offboard/offboard_control.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:254: CMakeFiles/offboard_control.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

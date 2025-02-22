@@ -21,32 +21,16 @@ namespace msg
 namespace builder
 {
 
-class Init_RoverAckermannGuidanceStatus_pid_throttle_integral
-{
-public:
-  explicit Init_RoverAckermannGuidanceStatus_pid_throttle_integral(::px4_msgs::msg::RoverAckermannGuidanceStatus & msg)
-  : msg_(msg)
-  {}
-  ::px4_msgs::msg::RoverAckermannGuidanceStatus pid_throttle_integral(::px4_msgs::msg::RoverAckermannGuidanceStatus::_pid_throttle_integral_type arg)
-  {
-    msg_.pid_throttle_integral = std::move(arg);
-    return std::move(msg_);
-  }
-
-private:
-  ::px4_msgs::msg::RoverAckermannGuidanceStatus msg_;
-};
-
 class Init_RoverAckermannGuidanceStatus_heading_error
 {
 public:
   explicit Init_RoverAckermannGuidanceStatus_heading_error(::px4_msgs::msg::RoverAckermannGuidanceStatus & msg)
   : msg_(msg)
   {}
-  Init_RoverAckermannGuidanceStatus_pid_throttle_integral heading_error(::px4_msgs::msg::RoverAckermannGuidanceStatus::_heading_error_type arg)
+  ::px4_msgs::msg::RoverAckermannGuidanceStatus heading_error(::px4_msgs::msg::RoverAckermannGuidanceStatus::_heading_error_type arg)
   {
     msg_.heading_error = std::move(arg);
-    return Init_RoverAckermannGuidanceStatus_pid_throttle_integral(msg_);
+    return std::move(msg_);
   }
 
 private:
@@ -69,32 +53,16 @@ private:
   ::px4_msgs::msg::RoverAckermannGuidanceStatus msg_;
 };
 
-class Init_RoverAckermannGuidanceStatus_desired_speed
-{
-public:
-  explicit Init_RoverAckermannGuidanceStatus_desired_speed(::px4_msgs::msg::RoverAckermannGuidanceStatus & msg)
-  : msg_(msg)
-  {}
-  Init_RoverAckermannGuidanceStatus_lookahead_distance desired_speed(::px4_msgs::msg::RoverAckermannGuidanceStatus::_desired_speed_type arg)
-  {
-    msg_.desired_speed = std::move(arg);
-    return Init_RoverAckermannGuidanceStatus_lookahead_distance(msg_);
-  }
-
-private:
-  ::px4_msgs::msg::RoverAckermannGuidanceStatus msg_;
-};
-
 class Init_RoverAckermannGuidanceStatus_timestamp
 {
 public:
   Init_RoverAckermannGuidanceStatus_timestamp()
   : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
   {}
-  Init_RoverAckermannGuidanceStatus_desired_speed timestamp(::px4_msgs::msg::RoverAckermannGuidanceStatus::_timestamp_type arg)
+  Init_RoverAckermannGuidanceStatus_lookahead_distance timestamp(::px4_msgs::msg::RoverAckermannGuidanceStatus::_timestamp_type arg)
   {
     msg_.timestamp = std::move(arg);
-    return Init_RoverAckermannGuidanceStatus_desired_speed(msg_);
+    return Init_RoverAckermannGuidanceStatus_lookahead_distance(msg_);
   }
 
 private:

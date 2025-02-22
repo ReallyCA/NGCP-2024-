@@ -29,7 +29,6 @@ px4_msgs/msg/_camera_trigger.py
 px4_msgs/msg/_can_interface_status.py
 px4_msgs/msg/_cellular_status.py
 px4_msgs/msg/_collision_constraints.py
-px4_msgs/msg/_collision_report.py
 px4_msgs/msg/_config_overrides.py
 px4_msgs/msg/_control_allocator_status.py
 px4_msgs/msg/_cpuload.py
@@ -153,6 +152,7 @@ px4_msgs/msg/_rc_parameter_map.py
 px4_msgs/msg/_register_ext_component_reply.py
 px4_msgs/msg/_register_ext_component_request.py
 px4_msgs/msg/_rover_ackermann_guidance_status.py
+px4_msgs/msg/_rover_ackermann_setpoint.py
 px4_msgs/msg/_rover_ackermann_status.py
 px4_msgs/msg/_rover_differential_guidance_status.py
 px4_msgs/msg/_rover_differential_setpoint.py

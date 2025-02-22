@@ -22,7 +22,6 @@ from px4_msgs.msg._camera_trigger import CameraTrigger  # noqa: F401
 from px4_msgs.msg._can_interface_status import CanInterfaceStatus  # noqa: F401
 from px4_msgs.msg._cellular_status import CellularStatus  # noqa: F401
 from px4_msgs.msg._collision_constraints import CollisionConstraints  # noqa: F401
-from px4_msgs.msg._collision_report import CollisionReport  # noqa: F401
 from px4_msgs.msg._config_overrides import ConfigOverrides  # noqa: F401
 from px4_msgs.msg._control_allocator_status import ControlAllocatorStatus  # noqa: F401
 from px4_msgs.msg._cpuload import Cpuload  # noqa: F401
@@ -146,6 +145,7 @@ from px4_msgs.msg._rc_parameter_map import RcParameterMap  # noqa: F401
 from px4_msgs.msg._register_ext_component_reply import RegisterExtComponentReply  # noqa: F401
 from px4_msgs.msg._register_ext_component_request import RegisterExtComponentRequest  # noqa: F401
 from px4_msgs.msg._rover_ackermann_guidance_status import RoverAckermannGuidanceStatus  # noqa: F401
+from px4_msgs.msg._rover_ackermann_setpoint import RoverAckermannSetpoint  # noqa: F401
 from px4_msgs.msg._rover_ackermann_status import RoverAckermannStatus  # noqa: F401
 from px4_msgs.msg._rover_differential_guidance_status import RoverDifferentialGuidanceStatus  # noqa: F401
 from px4_msgs.msg._rover_differential_setpoint import RoverDifferentialSetpoint  # noqa: F401

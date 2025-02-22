@@ -61,7 +61,7 @@ class RoverDifferentialSetpoint(metaclass=Metaclass_RoverDifferentialSetpoint):
         '_forward_speed_setpoint',
         '_forward_speed_setpoint_normalized',
         '_yaw_rate_setpoint',
-        '_yaw_rate_setpoint_normalized',
+        '_speed_diff_setpoint_normalized',
         '_yaw_setpoint',
     ]
 
@@ -70,7 +70,7 @@ class RoverDifferentialSetpoint(metaclass=Metaclass_RoverDifferentialSetpoint):
         'forward_speed_setpoint': 'float',
         'forward_speed_setpoint_normalized': 'float',
         'yaw_rate_setpoint': 'float',
-        'yaw_rate_setpoint_normalized': 'float',
+        'speed_diff_setpoint_normalized': 'float',
         'yaw_setpoint': 'float',
     }
 
@@ -91,7 +91,7 @@ class RoverDifferentialSetpoint(metaclass=Metaclass_RoverDifferentialSetpoint):
         self.forward_speed_setpoint = kwargs.get('forward_speed_setpoint', float())
         self.forward_speed_setpoint_normalized = kwargs.get('forward_speed_setpoint_normalized', float())
         self.yaw_rate_setpoint = kwargs.get('yaw_rate_setpoint', float())
-        self.yaw_rate_setpoint_normalized = kwargs.get('yaw_rate_setpoint_normalized', float())
+        self.speed_diff_setpoint_normalized = kwargs.get('speed_diff_setpoint_normalized', float())
         self.yaw_setpoint = kwargs.get('yaw_setpoint', float())
 
     def __repr__(self):
@@ -131,7 +131,7 @@ class RoverDifferentialSetpoint(metaclass=Metaclass_RoverDifferentialSetpoint):
             return False
         if self.yaw_rate_setpoint != other.yaw_rate_setpoint:
             return False
-        if self.yaw_rate_setpoint_normalized != other.yaw_rate_setpoint_normalized:
+        if self.speed_diff_setpoint_normalized != other.speed_diff_setpoint_normalized:
             return False
         if self.yaw_setpoint != other.yaw_setpoint:
             return False
@@ -203,19 +203,19 @@ class RoverDifferentialSetpoint(metaclass=Metaclass_RoverDifferentialSetpoint):
         self._yaw_rate_setpoint = value
 
     @builtins.property
-    def yaw_rate_setpoint_normalized(self):
-        """Message field 'yaw_rate_setpoint_normalized'."""
-        return self._yaw_rate_setpoint_normalized
+    def speed_diff_setpoint_normalized(self):
+        """Message field 'speed_diff_setpoint_normalized'."""
+        return self._speed_diff_setpoint_normalized
 
-    @yaw_rate_setpoint_normalized.setter
-    def yaw_rate_setpoint_normalized(self, value):
+    @speed_diff_setpoint_normalized.setter
+    def speed_diff_setpoint_normalized(self, value):
         if __debug__:
             assert \
                 isinstance(value, float), \
-                "The 'yaw_rate_setpoint_normalized' field must be of type 'float'"
+                "The 'speed_diff_setpoint_normalized' field must be of type 'float'"
             assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
-                "The 'yaw_rate_setpoint_normalized' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
-        self._yaw_rate_setpoint_normalized = value
+                "The 'speed_diff_setpoint_normalized' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
+        self._speed_diff_setpoint_normalized = value
 
     @builtins.property
     def yaw_setpoint(self):

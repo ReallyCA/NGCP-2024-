@@ -316,9 +316,6 @@ CMakeFiles/px4_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_genera
   rosidl_generator_c/px4_msgs/msg/detail/collision_constraints__type_support.h \
   rosidl_generator_c/px4_msgs/msg/detail/collision_constraints__struct.h \
   rosidl_generator_c/px4_msgs/msg/detail/collision_constraints__functions.h \
-  rosidl_generator_c/px4_msgs/msg/detail/collision_report__type_support.h \
-  rosidl_generator_c/px4_msgs/msg/detail/collision_report__struct.h \
-  rosidl_generator_c/px4_msgs/msg/detail/collision_report__functions.h \
   rosidl_generator_c/px4_msgs/msg/detail/config_overrides__type_support.h \
   rosidl_generator_c/px4_msgs/msg/detail/config_overrides__struct.h \
   rosidl_generator_c/px4_msgs/msg/detail/config_overrides__functions.h \
@@ -687,6 +684,9 @@ CMakeFiles/px4_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_genera
   rosidl_generator_c/px4_msgs/msg/detail/rover_ackermann_guidance_status__type_support.h \
   rosidl_generator_c/px4_msgs/msg/detail/rover_ackermann_guidance_status__struct.h \
   rosidl_generator_c/px4_msgs/msg/detail/rover_ackermann_guidance_status__functions.h \
+  rosidl_generator_c/px4_msgs/msg/detail/rover_ackermann_setpoint__type_support.h \
+  rosidl_generator_c/px4_msgs/msg/detail/rover_ackermann_setpoint__struct.h \
+  rosidl_generator_c/px4_msgs/msg/detail/rover_ackermann_setpoint__functions.h \
   rosidl_generator_c/px4_msgs/msg/detail/rover_ackermann_status__type_support.h \
   rosidl_generator_c/px4_msgs/msg/detail/rover_ackermann_status__struct.h \
   rosidl_generator_c/px4_msgs/msg/detail/rover_ackermann_status__functions.h \
@@ -1173,6 +1173,8 @@ rosidl_generator_c/px4_msgs/msg/detail/rover_differential_guidance_status__struc
 
 rosidl_generator_c/px4_msgs/msg/detail/rover_differential_guidance_status__type_support.h:
 
+rosidl_generator_c/px4_msgs/msg/detail/rover_ackermann_setpoint__functions.h:
+
 rosidl_generator_c/px4_msgs/msg/detail/rover_ackermann_guidance_status__struct.h:
 
 rosidl_generator_c/px4_msgs/msg/detail/rover_ackermann_guidance_status__type_support.h:
@@ -1190,6 +1192,10 @@ rosidl_generator_c/px4_msgs/msg/detail/rate_ctrl_status__functions.h:
 rosidl_generator_c/px4_msgs/msg/detail/rate_ctrl_status__struct.h:
 
 rosidl_generator_c/px4_msgs/msg/detail/rate_ctrl_status__type_support.h:
+
+rosidl_generator_c/px4_msgs/msg/detail/uavcan_parameter_request__type_support.h:
+
+rosidl_generator_c/px4_msgs/msg/detail/radio_status__functions.h:
 
 rosidl_generator_c/px4_msgs/msg/detail/radio_status__type_support.h:
 
@@ -1387,10 +1393,6 @@ rosidl_generator_c/px4_msgs/msg/detail/mavlink_log__struct.h:
 
 rosidl_generator_c/px4_msgs/msg/detail/mavlink_log__type_support.h:
 
-rosidl_generator_c/px4_msgs/msg/detail/manual_control_switches__type_support.h:
-
-rosidl_generator_c/px4_msgs/msg/detail/manual_control_setpoint__functions.h:
-
 rosidl_generator_c/px4_msgs/msg/detail/actuator_motors__type_support.h:
 
 rosidl_generator_c/px4_msgs/msg/detail/rover_ackermann_status__functions.h:
@@ -1448,10 +1450,6 @@ rosidl_generator_c/px4_msgs/msg/detail/actuator_controls_status__type_support.h:
 /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h:
-
-rosidl_generator_c/px4_msgs/msg/detail/manual_control_switches__struct.h:
-
-rosidl_generator_c/px4_msgs/msg/detail/internal_combustion_engine_status__struct.h:
 
 rosidl_generator_c/px4_msgs/msg/detail/ulog_stream_ack__type_support.h:
 
@@ -1593,6 +1591,8 @@ rosidl_generator_c/px4_msgs/msg/detail/distance_sensor__struct.h:
 
 rosidl_generator_c/px4_msgs/msg/detail/sensor_airflow__functions.h:
 
+rosidl_generator_c/px4_msgs/msg/detail/rover_ackermann_setpoint__struct.h:
+
 /usr/include/python3.10/classobject.h:
 
 /usr/include/python3.10/bytesobject.h:
@@ -1663,6 +1663,10 @@ rosidl_generator_c/px4_msgs/msg/detail/landing_target_innovations__type_support.
 
 /usr/include/python3.10/cpython/fileutils.h:
 
+rosidl_generator_c/px4_msgs/msg/detail/internal_combustion_engine_status__struct.h:
+
+rosidl_generator_c/px4_msgs/msg/detail/manual_control_switches__struct.h:
+
 /usr/include/x86_64-linux-gnu/bits/floatn-common.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
@@ -1718,6 +1722,8 @@ rosidl_generator_c/px4_msgs/msg/detail/sensor_selection__struct.h:
 rosidl_generator_c/px4_msgs/msg/detail/estimator_status_flags__struct.h:
 
 /usr/include/linux/errno.h:
+
+rosidl_generator_c/px4_msgs/msg/detail/manual_control_switches__type_support.h:
 
 /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h:
 
@@ -1892,6 +1898,12 @@ rosidl_generator_c/px4_msgs/msg/detail/failsafe_flags__functions.h:
 rosidl_generator_c/px4_msgs/msg/detail/vehicle_imu_status__type_support.h:
 
 rosidl_generator_c/px4_msgs/msg/detail/estimator_innovations__functions.h:
+
+rosidl_generator_c/px4_msgs/msg/detail/tiltrotor_extra_controls__functions.h:
+
+/usr/include/x86_64-linux-gnu/bits/waitstatus.h:
+
+/usr/include/x86_64-linux-gnu/bits/stat.h:
 
 rosidl_generator_c/px4_msgs/msg/detail/rover_ackermann_status__struct.h:
 
@@ -2105,6 +2117,8 @@ rosidl_generator_c/px4_msgs/msg/detail/vehicle_optical_flow_vel__struct.h:
 
 /usr/include/python3.10/ceval.h:
 
+/usr/include/linux/limits.h:
+
 /usr/include/x86_64-linux-gnu/bits/posix2_lim.h:
 
 rosidl_generator_c/px4_msgs/msg/detail/hover_thrust_estimate__struct.h:
@@ -2120,6 +2134,8 @@ rosidl_generator_c/px4_msgs/msg/detail/gps_inject_data__functions.h:
 /usr/include/x86_64-linux-gnu/bits/wchar.h:
 
 /usr/include/python3.10/cpython/dictobject.h:
+
+rosidl_generator_c/px4_msgs/msg/detail/rover_ackermann_setpoint__type_support.h:
 
 /usr/include/x86_64-linux-gnu/sys/select.h:
 
@@ -2228,14 +2244,6 @@ rosidl_generator_c/px4_msgs/msg/detail/gimbal_device_attitude_status__functions.
 rosidl_generator_c/px4_msgs/msg/detail/actuator_armed__struct.h:
 
 /usr/include/x86_64-linux-gnu/asm/bitsperlong.h:
-
-rosidl_generator_c/px4_msgs/msg/detail/tiltrotor_extra_controls__functions.h:
-
-/usr/include/x86_64-linux-gnu/bits/waitstatus.h:
-
-/usr/include/x86_64-linux-gnu/bits/stat.h:
-
-rosidl_generator_c/px4_msgs/msg/detail/collision_report__type_support.h:
 
 rosidl_generator_c/px4_msgs/msg/detail/vehicle_magnetometer__type_support.h:
 
@@ -2389,16 +2397,6 @@ rosidl_generator_c/px4_msgs/msg/detail/log_message__struct.h:
 
 rosidl_generator_c/px4_msgs/msg/detail/collision_constraints__type_support.h:
 
-/usr/include/linux/limits.h:
-
-rosidl_generator_c/px4_msgs/msg/detail/collision_report__struct.h:
-
-rosidl_generator_c/px4_msgs/msg/detail/uavcan_parameter_request__type_support.h:
-
-rosidl_generator_c/px4_msgs/msg/detail/radio_status__functions.h:
-
-rosidl_generator_c/px4_msgs/msg/detail/collision_report__functions.h:
-
 rosidl_generator_c/px4_msgs/msg/detail/estimator_aid_source2d__struct.h:
 
 rosidl_generator_c/px4_msgs/msg/detail/tune_control__struct.h:
@@ -2550,6 +2548,8 @@ rosidl_generator_c/px4_msgs/msg/detail/estimator_states__struct.h:
 rosidl_generator_c/px4_msgs/msg/detail/estimator_status__type_support.h:
 
 rosidl_generator_c/px4_msgs/msg/detail/estimator_status__struct.h:
+
+rosidl_generator_c/px4_msgs/msg/detail/manual_control_setpoint__functions.h:
 
 rosidl_generator_c/px4_msgs/msg/detail/estimator_status_flags__type_support.h:
 

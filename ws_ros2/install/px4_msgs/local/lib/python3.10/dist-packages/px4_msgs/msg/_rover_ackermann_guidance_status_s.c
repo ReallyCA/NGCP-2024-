@@ -59,15 +59,6 @@ bool px4_msgs__msg__rover_ackermann_guidance_status__convert_from_py(PyObject * 
     ros_message->timestamp = PyLong_AsUnsignedLongLong(field);
     Py_DECREF(field);
   }
-  {  // desired_speed
-    PyObject * field = PyObject_GetAttrString(_pymsg, "desired_speed");
-    if (!field) {
-      return false;
-    }
-    assert(PyFloat_Check(field));
-    ros_message->desired_speed = (float)PyFloat_AS_DOUBLE(field);
-    Py_DECREF(field);
-  }
   {  // lookahead_distance
     PyObject * field = PyObject_GetAttrString(_pymsg, "lookahead_distance");
     if (!field) {
@@ -84,15 +75,6 @@ bool px4_msgs__msg__rover_ackermann_guidance_status__convert_from_py(PyObject * 
     }
     assert(PyFloat_Check(field));
     ros_message->heading_error = (float)PyFloat_AS_DOUBLE(field);
-    Py_DECREF(field);
-  }
-  {  // pid_throttle_integral
-    PyObject * field = PyObject_GetAttrString(_pymsg, "pid_throttle_integral");
-    if (!field) {
-      return false;
-    }
-    assert(PyFloat_Check(field));
-    ros_message->pid_throttle_integral = (float)PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
 
@@ -128,17 +110,6 @@ PyObject * px4_msgs__msg__rover_ackermann_guidance_status__convert_to_py(void * 
       }
     }
   }
-  {  // desired_speed
-    PyObject * field = NULL;
-    field = PyFloat_FromDouble(ros_message->desired_speed);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "desired_speed", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
   {  // lookahead_distance
     PyObject * field = NULL;
     field = PyFloat_FromDouble(ros_message->lookahead_distance);
@@ -155,17 +126,6 @@ PyObject * px4_msgs__msg__rover_ackermann_guidance_status__convert_to_py(void * 
     field = PyFloat_FromDouble(ros_message->heading_error);
     {
       int rc = PyObject_SetAttrString(_pymessage, "heading_error", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // pid_throttle_integral
-    PyObject * field = NULL;
-    field = PyFloat_FromDouble(ros_message->pid_throttle_integral);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "pid_throttle_integral", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

@@ -101,14 +101,14 @@ static rosidl_typesupport_introspection_c__MessageMember px4_msgs__msg__RoverDif
     NULL  // resize(index) function pointer
   },
   {
-    "yaw_rate_setpoint_normalized",  // name
+    "speed_diff_setpoint_normalized",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_FLOAT,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(px4_msgs__msg__RoverDifferentialSetpoint, yaw_rate_setpoint_normalized),  // bytes offset in struct
+    offsetof(px4_msgs__msg__RoverDifferentialSetpoint, speed_diff_setpoint_normalized),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer

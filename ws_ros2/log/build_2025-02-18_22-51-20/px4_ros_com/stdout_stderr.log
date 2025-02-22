@@ -1,0 +1,33 @@
+[35m[1mConsolidate compiler generated dependencies of target offboard_control[0m
+[ 16%] Built target frame_transforms
+[ 16%] Built target ament_cmake_python_copy_px4_ros_com
+[ 66%] Built target offboard_control_srv
+[ 66%] Built target sensor_combined_listener
+[ 66%] Built target vehicle_gps_position_listener
+[ 83%] Built target debug_vect_advertiser
+[ 91%] [32mBuilding CXX object CMakeFiles/offboard_control.dir/src/examples/offboard/offboard_control.cpp.o[0m
+running egg_info
+writing px4_ros_com.egg-info/PKG-INFO
+writing dependency_links to px4_ros_com.egg-info/dependency_links.txt
+writing top-level names to px4_ros_com.egg-info/top_level.txt
+reading manifest file 'px4_ros_com.egg-info/SOURCES.txt'
+writing manifest file 'px4_ros_com.egg-info/SOURCES.txt'
+[ 91%] Built target ament_cmake_python_build_px4_ros_com_egg
+[01m[K/home/fidelis/ws_offboard_control/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:[m[K In constructor ‘[01m[KOffboardPlane::OffboardPlane(std::vector<std::vector<float> >)[m[K’:
+[01m[K/home/fidelis/ws_offboard_control/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:40:128:[m[K [01;31m[Kerror: [m[K‘[01m[Ktd[m[K’ has not been declared
+   40 |     vehicle_status_subcriber = this->create_subscription<px4_msgs::msg::VehicleStatus>("/fmu/out/vehicle_status", qos_profile, [01;31m[Ktd[m[K::bind(&OffboardPlane::vehicle_status_callback, this, std::placeholders::_1));
+      |                                                                                                                                [01;31m[K^~[m[K
+[01m[K/home/fidelis/ws_offboard_control/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:[m[K In member function ‘[01m[Kvoid OffboardPlane::run()[m[K’:
+[01m[K/home/fidelis/ws_offboard_control/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:87:49:[m[K [01;35m[Kwarning: [m[Kconversion from ‘[01m[Kunsigned int[m[K’ to ‘[01m[Kuint16_t[m[K’ {aka ‘[01m[Kshort unsigned int[m[K’} changes value from ‘[01m[K100000[m[K’ to ‘[01m[K34464[m[K’ [[01;35m[K-Woverflow[m[K]
+   87 |   this->publish_vehicle_command([01;35m[KVehicleCommand::VEHICLE_CMD_SET_GPS_GLOBAL_ORIGIN[m[K, 0.0, 0.0);
+      |                                 [01;35m[K~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/fidelis/ws_offboard_control/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:118:31:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<std::vector<float> >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+  118 |       if ([01;35m[Kwaypoint_index_ + 1 == local_waypoints_.size()[m[K) {
+      |           [01;35m[K~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/fidelis/ws_offboard_control/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:[m[K In member function ‘[01m[Kvoid OffboardPlane::arm()[m[K’:
+[01m[K/home/fidelis/ws_offboard_control/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:149:27:[m[K [01;31m[Kerror: [m[K‘[01m[Kx4_msgs[m[K’ has not been declared
+  149 |   publish_vehicle_command([01;31m[Kx4_msgs[m[K::msg::VehicleCommand::VEHICLE_CMD_COMPONENT_ARM_DISARM, 1.0);
+      |                           [01;31m[K^~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/offboard_control.dir/build.make:76: CMakeFiles/offboard_control.dir/src/examples/offboard/offboard_control.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:254: CMakeFiles/offboard_control.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

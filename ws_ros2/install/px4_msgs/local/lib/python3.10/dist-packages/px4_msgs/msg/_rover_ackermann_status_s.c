@@ -59,31 +59,67 @@ bool px4_msgs__msg__rover_ackermann_status__convert_from_py(PyObject * _pymsg, v
     ros_message->timestamp = PyLong_AsUnsignedLongLong(field);
     Py_DECREF(field);
   }
-  {  // throttle_setpoint
-    PyObject * field = PyObject_GetAttrString(_pymsg, "throttle_setpoint");
+  {  // measured_forward_speed
+    PyObject * field = PyObject_GetAttrString(_pymsg, "measured_forward_speed");
     if (!field) {
       return false;
     }
     assert(PyFloat_Check(field));
-    ros_message->throttle_setpoint = (float)PyFloat_AS_DOUBLE(field);
+    ros_message->measured_forward_speed = (float)PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
-  {  // steering_setpoint
-    PyObject * field = PyObject_GetAttrString(_pymsg, "steering_setpoint");
+  {  // adjusted_forward_speed_setpoint
+    PyObject * field = PyObject_GetAttrString(_pymsg, "adjusted_forward_speed_setpoint");
     if (!field) {
       return false;
     }
     assert(PyFloat_Check(field));
-    ros_message->steering_setpoint = (float)PyFloat_AS_DOUBLE(field);
+    ros_message->adjusted_forward_speed_setpoint = (float)PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
-  {  // actual_speed
-    PyObject * field = PyObject_GetAttrString(_pymsg, "actual_speed");
+  {  // steering_setpoint_normalized
+    PyObject * field = PyObject_GetAttrString(_pymsg, "steering_setpoint_normalized");
     if (!field) {
       return false;
     }
     assert(PyFloat_Check(field));
-    ros_message->actual_speed = (float)PyFloat_AS_DOUBLE(field);
+    ros_message->steering_setpoint_normalized = (float)PyFloat_AS_DOUBLE(field);
+    Py_DECREF(field);
+  }
+  {  // adjusted_steering_setpoint_normalized
+    PyObject * field = PyObject_GetAttrString(_pymsg, "adjusted_steering_setpoint_normalized");
+    if (!field) {
+      return false;
+    }
+    assert(PyFloat_Check(field));
+    ros_message->adjusted_steering_setpoint_normalized = (float)PyFloat_AS_DOUBLE(field);
+    Py_DECREF(field);
+  }
+  {  // measured_lateral_acceleration
+    PyObject * field = PyObject_GetAttrString(_pymsg, "measured_lateral_acceleration");
+    if (!field) {
+      return false;
+    }
+    assert(PyFloat_Check(field));
+    ros_message->measured_lateral_acceleration = (float)PyFloat_AS_DOUBLE(field);
+    Py_DECREF(field);
+  }
+  {  // pid_throttle_integral
+    PyObject * field = PyObject_GetAttrString(_pymsg, "pid_throttle_integral");
+    if (!field) {
+      return false;
+    }
+    assert(PyFloat_Check(field));
+    ros_message->pid_throttle_integral = (float)PyFloat_AS_DOUBLE(field);
+    Py_DECREF(field);
+  }
+  {  // pid_lat_accel_integral
+    PyObject * field = PyObject_GetAttrString(_pymsg, "pid_lat_accel_integral");
+    if (!field) {
+      return false;
+    }
+    assert(PyFloat_Check(field));
+    ros_message->pid_lat_accel_integral = (float)PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
 
@@ -119,33 +155,77 @@ PyObject * px4_msgs__msg__rover_ackermann_status__convert_to_py(void * raw_ros_m
       }
     }
   }
-  {  // throttle_setpoint
+  {  // measured_forward_speed
     PyObject * field = NULL;
-    field = PyFloat_FromDouble(ros_message->throttle_setpoint);
+    field = PyFloat_FromDouble(ros_message->measured_forward_speed);
     {
-      int rc = PyObject_SetAttrString(_pymessage, "throttle_setpoint", field);
+      int rc = PyObject_SetAttrString(_pymessage, "measured_forward_speed", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;
       }
     }
   }
-  {  // steering_setpoint
+  {  // adjusted_forward_speed_setpoint
     PyObject * field = NULL;
-    field = PyFloat_FromDouble(ros_message->steering_setpoint);
+    field = PyFloat_FromDouble(ros_message->adjusted_forward_speed_setpoint);
     {
-      int rc = PyObject_SetAttrString(_pymessage, "steering_setpoint", field);
+      int rc = PyObject_SetAttrString(_pymessage, "adjusted_forward_speed_setpoint", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;
       }
     }
   }
-  {  // actual_speed
+  {  // steering_setpoint_normalized
     PyObject * field = NULL;
-    field = PyFloat_FromDouble(ros_message->actual_speed);
+    field = PyFloat_FromDouble(ros_message->steering_setpoint_normalized);
     {
-      int rc = PyObject_SetAttrString(_pymessage, "actual_speed", field);
+      int rc = PyObject_SetAttrString(_pymessage, "steering_setpoint_normalized", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // adjusted_steering_setpoint_normalized
+    PyObject * field = NULL;
+    field = PyFloat_FromDouble(ros_message->adjusted_steering_setpoint_normalized);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "adjusted_steering_setpoint_normalized", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // measured_lateral_acceleration
+    PyObject * field = NULL;
+    field = PyFloat_FromDouble(ros_message->measured_lateral_acceleration);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "measured_lateral_acceleration", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // pid_throttle_integral
+    PyObject * field = NULL;
+    field = PyFloat_FromDouble(ros_message->pid_throttle_integral);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "pid_throttle_integral", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // pid_lat_accel_integral
+    PyObject * field = NULL;
+    field = PyFloat_FromDouble(ros_message->pid_lat_accel_integral);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "pid_lat_accel_integral", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

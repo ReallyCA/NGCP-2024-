@@ -32,24 +32,52 @@ inline void to_flow_style_yaml(
     out << ", ";
   }
 
-  // member: throttle_setpoint
+  // member: measured_forward_speed
   {
-    out << "throttle_setpoint: ";
-    rosidl_generator_traits::value_to_yaml(msg.throttle_setpoint, out);
+    out << "measured_forward_speed: ";
+    rosidl_generator_traits::value_to_yaml(msg.measured_forward_speed, out);
     out << ", ";
   }
 
-  // member: steering_setpoint
+  // member: adjusted_forward_speed_setpoint
   {
-    out << "steering_setpoint: ";
-    rosidl_generator_traits::value_to_yaml(msg.steering_setpoint, out);
+    out << "adjusted_forward_speed_setpoint: ";
+    rosidl_generator_traits::value_to_yaml(msg.adjusted_forward_speed_setpoint, out);
     out << ", ";
   }
 
-  // member: actual_speed
+  // member: steering_setpoint_normalized
   {
-    out << "actual_speed: ";
-    rosidl_generator_traits::value_to_yaml(msg.actual_speed, out);
+    out << "steering_setpoint_normalized: ";
+    rosidl_generator_traits::value_to_yaml(msg.steering_setpoint_normalized, out);
+    out << ", ";
+  }
+
+  // member: adjusted_steering_setpoint_normalized
+  {
+    out << "adjusted_steering_setpoint_normalized: ";
+    rosidl_generator_traits::value_to_yaml(msg.adjusted_steering_setpoint_normalized, out);
+    out << ", ";
+  }
+
+  // member: measured_lateral_acceleration
+  {
+    out << "measured_lateral_acceleration: ";
+    rosidl_generator_traits::value_to_yaml(msg.measured_lateral_acceleration, out);
+    out << ", ";
+  }
+
+  // member: pid_throttle_integral
+  {
+    out << "pid_throttle_integral: ";
+    rosidl_generator_traits::value_to_yaml(msg.pid_throttle_integral, out);
+    out << ", ";
+  }
+
+  // member: pid_lat_accel_integral
+  {
+    out << "pid_lat_accel_integral: ";
+    rosidl_generator_traits::value_to_yaml(msg.pid_lat_accel_integral, out);
   }
   out << "}";
 }  // NOLINT(readability/fn_size)
@@ -68,33 +96,73 @@ inline void to_block_style_yaml(
     out << "\n";
   }
 
-  // member: throttle_setpoint
+  // member: measured_forward_speed
   {
     if (indentation > 0) {
       out << std::string(indentation, ' ');
     }
-    out << "throttle_setpoint: ";
-    rosidl_generator_traits::value_to_yaml(msg.throttle_setpoint, out);
+    out << "measured_forward_speed: ";
+    rosidl_generator_traits::value_to_yaml(msg.measured_forward_speed, out);
     out << "\n";
   }
 
-  // member: steering_setpoint
+  // member: adjusted_forward_speed_setpoint
   {
     if (indentation > 0) {
       out << std::string(indentation, ' ');
     }
-    out << "steering_setpoint: ";
-    rosidl_generator_traits::value_to_yaml(msg.steering_setpoint, out);
+    out << "adjusted_forward_speed_setpoint: ";
+    rosidl_generator_traits::value_to_yaml(msg.adjusted_forward_speed_setpoint, out);
     out << "\n";
   }
 
-  // member: actual_speed
+  // member: steering_setpoint_normalized
   {
     if (indentation > 0) {
       out << std::string(indentation, ' ');
     }
-    out << "actual_speed: ";
-    rosidl_generator_traits::value_to_yaml(msg.actual_speed, out);
+    out << "steering_setpoint_normalized: ";
+    rosidl_generator_traits::value_to_yaml(msg.steering_setpoint_normalized, out);
+    out << "\n";
+  }
+
+  // member: adjusted_steering_setpoint_normalized
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "adjusted_steering_setpoint_normalized: ";
+    rosidl_generator_traits::value_to_yaml(msg.adjusted_steering_setpoint_normalized, out);
+    out << "\n";
+  }
+
+  // member: measured_lateral_acceleration
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "measured_lateral_acceleration: ";
+    rosidl_generator_traits::value_to_yaml(msg.measured_lateral_acceleration, out);
+    out << "\n";
+  }
+
+  // member: pid_throttle_integral
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "pid_throttle_integral: ";
+    rosidl_generator_traits::value_to_yaml(msg.pid_throttle_integral, out);
+    out << "\n";
+  }
+
+  // member: pid_lat_accel_integral
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "pid_lat_accel_integral: ";
+    rosidl_generator_traits::value_to_yaml(msg.pid_lat_accel_integral, out);
     out << "\n";
   }
 }  // NOLINT(readability/fn_size)
