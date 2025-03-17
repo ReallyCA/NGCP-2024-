@@ -1,5 +1,1 @@
-uint64 timestamp		# time since system start (microseconds)
-
-int32 val
-
-# TOPICS orb_test orb_multitest
+/home/fidelis/NGCP-2024-/ws_ros2/src/px4_msgs/msg/OrbTest.msg

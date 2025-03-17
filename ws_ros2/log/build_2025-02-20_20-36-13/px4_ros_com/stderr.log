@@ -1,8 +1,0 @@
-[01m[K/home/fidelis/ws_offboard_control/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:[m[K In member function ‘[01m[Kvoid OffboardPlane::run()[m[K’:
-[01m[K/home/fidelis/ws_offboard_control/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:65:49:[m[K [01;35m[Kwarning: [m[Kconversion from ‘[01m[Kunsigned int[m[K’ to ‘[01m[Kuint16_t[m[K’ {aka ‘[01m[Kshort unsigned int[m[K’} changes value from ‘[01m[K100000[m[K’ to ‘[01m[K34464[m[K’ [[01;35m[K-Woverflow[m[K]
-   65 |   this->publish_vehicle_command([01;35m[KVehicleCommand::VEHICLE_CMD_SET_GPS_GLOBAL_ORIGIN[m[K, 0.0, 0.0);
-      |                                 [01;35m[K~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
-[01m[K/home/fidelis/ws_offboard_control/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:[m[K In member function ‘[01m[Kvoid OffboardPlane::vehicle_status_callback(px4_msgs::msg::VehicleStatus_<std::allocator<void> >::SharedPtr)[m[K’:
-[01m[K/home/fidelis/ws_offboard_control/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:109:91:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K-Wunused-parameter[m[K]
-  109 | void OffboardPlane::vehicle_status_callback([01;35m[Kconst px4_msgs::msg::VehicleStatus::SharedPtr msg[m[K) {}
-      |                                             [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K

@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/fidelis/ws_offboard_control/src/px4_msgs
+CMAKE_SOURCE_DIR = /home/fidelis/NGCP-2024-/ws_ros2/src/px4_msgs
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/fidelis/ws_offboard_control/build/px4_msgs
+CMAKE_BINARY_DIR = /home/fidelis/NGCP-2024-/ws_ros2/build/px4_msgs
 
 # Utility rule file for px4_msgs__cpp.
 
@@ -1224,8 +1224,8 @@ rosidl_generator_cpp/px4_msgs/msg/action_request.hpp: rosidl_adapter/px4_msgs/ms
 rosidl_generator_cpp/px4_msgs/msg/action_request.hpp: rosidl_adapter/px4_msgs/srv/VehicleCommand.idl
 rosidl_generator_cpp/px4_msgs/msg/action_request.hpp: /opt/ros/humble/share/builtin_interfaces/msg/Duration.idl
 rosidl_generator_cpp/px4_msgs/msg/action_request.hpp: /opt/ros/humble/share/builtin_interfaces/msg/Time.idl
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/fidelis/ws_offboard_control/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code for ROS interfaces"
-	/usr/bin/python3 /opt/ros/humble/share/rosidl_generator_cpp/cmake/../../../lib/rosidl_generator_cpp/rosidl_generator_cpp --generator-arguments-file /home/fidelis/ws_offboard_control/build/px4_msgs/rosidl_generator_cpp__arguments.json
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/fidelis/NGCP-2024-/ws_ros2/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code for ROS interfaces"
+	/usr/bin/python3 /opt/ros/humble/share/rosidl_generator_cpp/cmake/../../../lib/rosidl_generator_cpp/rosidl_generator_cpp --generator-arguments-file /home/fidelis/NGCP-2024-/ws_ros2/build/px4_msgs/rosidl_generator_cpp__arguments.json
 
 rosidl_generator_cpp/px4_msgs/msg/detail/action_request__builder.hpp: rosidl_generator_cpp/px4_msgs/msg/action_request.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/px4_msgs/msg/detail/action_request__builder.hpp
@@ -4885,6 +4885,6 @@ CMakeFiles/px4_msgs__cpp.dir/clean:
 .PHONY : CMakeFiles/px4_msgs__cpp.dir/clean
 
 CMakeFiles/px4_msgs__cpp.dir/depend:
-	cd /home/fidelis/ws_offboard_control/build/px4_msgs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/fidelis/ws_offboard_control/src/px4_msgs /home/fidelis/ws_offboard_control/src/px4_msgs /home/fidelis/ws_offboard_control/build/px4_msgs /home/fidelis/ws_offboard_control/build/px4_msgs /home/fidelis/ws_offboard_control/build/px4_msgs/CMakeFiles/px4_msgs__cpp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/fidelis/NGCP-2024-/ws_ros2/build/px4_msgs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/fidelis/NGCP-2024-/ws_ros2/src/px4_msgs /home/fidelis/NGCP-2024-/ws_ros2/src/px4_msgs /home/fidelis/NGCP-2024-/ws_ros2/build/px4_msgs /home/fidelis/NGCP-2024-/ws_ros2/build/px4_msgs /home/fidelis/NGCP-2024-/ws_ros2/build/px4_msgs/CMakeFiles/px4_msgs__cpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/px4_msgs__cpp.dir/depend
 

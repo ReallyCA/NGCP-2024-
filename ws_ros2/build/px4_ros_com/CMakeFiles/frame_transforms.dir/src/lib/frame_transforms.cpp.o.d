@@ -1,7 +1,7 @@
 CMakeFiles/frame_transforms.dir/src/lib/frame_transforms.cpp.o: \
- /home/fidelis/ws_offboard_control/src/px4_ros_com/src/lib/frame_transforms.cpp \
+ /home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com/src/lib/frame_transforms.cpp \
  /usr/include/stdc-predef.h \
- /home/fidelis/ws_offboard_control/src/px4_ros_com/include/px4_ros_com/frame_transforms.h \
+ /home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com/include/px4_ros_com/frame_transforms.h \
  /usr/include/eigen3/Eigen/Eigen /usr/include/eigen3/Eigen/Dense \
  /usr/include/eigen3/Eigen/Core \
  /usr/include/eigen3/Eigen/src/Core/util/DisableStupidWarnings.h \

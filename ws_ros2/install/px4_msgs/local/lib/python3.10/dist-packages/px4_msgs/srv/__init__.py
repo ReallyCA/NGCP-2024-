@@ -1,1 +1,1 @@
-from px4_msgs.srv._vehicle_command import VehicleCommand  # noqa: F401
+/home/fidelis/NGCP-2024-/ws_ros2/build/px4_msgs/rosidl_generator_py/px4_msgs/srv/__init__.py

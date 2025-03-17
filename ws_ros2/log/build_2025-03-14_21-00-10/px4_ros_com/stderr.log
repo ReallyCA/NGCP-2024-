@@ -1,0 +1,4 @@
+[01m[K/home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:[m[K In member function ‘[01m[Kvoid OffboardPlane::run()[m[K’:
+[01m[K/home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:118:31:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<std::vector<float> >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+  118 |       if ([01;35m[Kwaypoint_index_ + 1 == local_waypoints_.size()[m[K) {
+      |           [01;35m[K~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K

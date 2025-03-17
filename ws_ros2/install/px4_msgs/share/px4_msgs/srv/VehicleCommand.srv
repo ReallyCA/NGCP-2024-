@@ -1,3 +1,1 @@
-VehicleCommand request
----
-VehicleCommandAck reply
+/home/fidelis/NGCP-2024-/ws_ros2/src/px4_msgs/srv/VehicleCommand.srv

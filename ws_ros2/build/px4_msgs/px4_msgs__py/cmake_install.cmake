@@ -1,8 +1,8 @@
-# Install script for directory: /home/fidelis/ws_offboard_control/build/px4_msgs/px4_msgs__py
+# Install script for directory: /home/fidelis/NGCP-2024-/ws_ros2/build/px4_msgs/px4_msgs__py
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/fidelis/ws_offboard_control/install/px4_msgs")
+  set(CMAKE_INSTALL_PREFIX "/home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

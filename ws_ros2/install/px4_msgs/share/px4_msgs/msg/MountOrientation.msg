@@ -1,2 +1,1 @@
-uint64 timestamp				# time since system start (microseconds)
-float32[3] attitude_euler_angle		# Attitude/direction of the mount as euler angles in rad
+/home/fidelis/NGCP-2024-/ws_ros2/src/px4_msgs/msg/MountOrientation.msg

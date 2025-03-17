@@ -1,3 +1,1 @@
-uint64 timestamp
-uint8 status
-char[50] error
+/home/fidelis/NGCP-2024-/ws_ros2/src/px4_msgs/msg/OpenDroneIdArmStatus.msg

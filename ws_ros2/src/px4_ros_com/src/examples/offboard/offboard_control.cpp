@@ -51,7 +51,7 @@ public:
 
 private:
   std::vector<std::vector<float>> local_waypoints_;
-  int waypoint_index_ = 0;
+  size_t waypoint_index_ = 0;
   px4_msgs::msg::VehicleStatus vehicle_status_;
   px4_msgs::msg::VehicleOdometry vehicle_odometry_;
 
@@ -65,7 +65,7 @@ private:
 
   void publish_offboard_control_mode();
   void publish_trajectory_setpoint();
-  void publish_vehicle_command(uint16_t command, float param1 = 0.0,float param2 = 0.0);
+  void publish_vehicle_command(uint16_t command, float param1 = 0.0,float param2 = 0.0, float param3 = 0.0);
   void vehicle_status_callback(const px4_msgs::msg::VehicleStatus::SharedPtr msg);
   void vehicle_odometry_callback(const px4_msgs::msg::VehicleOdometry::SharedPtr msg);
 };
@@ -82,7 +82,7 @@ void OffboardPlane::run() {
 
   // Set home position to current gps position
   this->publish_vehicle_command(VehicleCommand::VEHICLE_CMD_DO_SET_HOME, 0.0, 0.0);
-  this->publish_vehicle_command(VehicleCommand::VEHICLE_CMD_SET_GPS_GLOBAL_ORIGIN, 0.0, 0.0);
+  //this->publish_vehicle_command(VehicleCommand::VEHICLE_CMD_SET_GPS_GLOBAL_ORIGIN, 0.0, 0.0);
 
   while (rclcpp::ok()) {
 
@@ -115,8 +115,12 @@ void OffboardPlane::run() {
 
     if (distance_to_waypoint < 5.0) {
 
+      // this->publish_vehicle_command(VehicleCommand::VEHICLE_CMD_DO_SET_MODE, 1, 3, 0);
+      // this->publish_vehicle_command(VehicleCommand::VEHICLE_CMD_NAV_LOITER_TURNS, 5, 50);
+      // RCLCPP_INFO(this->get_logger(), "Loiter mode 5 turns");
+
       if (waypoint_index_ + 1 == local_waypoints_.size()) {
-        RCLCPP_INFO(this->get_logger(), "All waypoints have traversed!");
+        RCLCPP_INFO(this->get_logger(), "All waypoints have been traversed!");
         mission_completed = true;
         land();
       } else {
@@ -124,7 +128,7 @@ void OffboardPlane::run() {
       }
     }
     if(!mission_completed) {
-      RCLCPP_INFO(this->get_logger(), "Distance to waypoint: %f, setpoint: %d", distance_to_waypoint, waypoint_index_);
+      RCLCPP_INFO(this->get_logger(), "Distance to waypoint: %f, setpoint: %zu", distance_to_waypoint, waypoint_index_);
       RCLCPP_INFO(this->get_logger(), "Position: N: %f, E:, %f, D: %f", pos_n, pos_e, pos_d);
     }
     
@@ -179,16 +183,17 @@ void OffboardPlane::publish_trajectory_setpoint() {
   msg.position[0] = local_waypoints_[waypoint_index_][0];
   msg.position[1] = local_waypoints_[waypoint_index_][1];
   msg.position[2] = local_waypoints_[waypoint_index_][2];
-  msg.velocity = {1,1,1};
+  msg.velocity = {50,10,10};
 
   // pub
   trajectory_setpoint_publisher_->publish(msg);
 }
 
-void OffboardPlane::publish_vehicle_command(uint16_t command, float param1, float param2) {
+void OffboardPlane::publish_vehicle_command(uint16_t command, float param1, float param2, float param3) {
   px4_msgs::msg::VehicleCommand msg{};
   msg.param1 = param1;
   msg.param2 = param2;
+  msg.param3 = param3;
   msg.command = command;
   msg.target_system = 1;
   msg.target_component = 1;
@@ -202,7 +207,7 @@ void OffboardPlane::publish_vehicle_command(uint16_t command, float param1, floa
 int main(int argc, char *argv[]) {
   rclcpp::init(argc, argv);
 
-  std::vector<std::vector<float>> local_waypoints = {{500.0, 100.0, -20.0}};
+  std::vector<std::vector<float>> local_waypoints = {{200.0, 100.0, -20.0}, {0, 300, -20}};
 
 
   auto node = std::make_shared<OffboardPlane>(local_waypoints);
