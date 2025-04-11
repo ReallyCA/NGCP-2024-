@@ -296,11 +296,9 @@ CMakeFiles/offboard_control.dir/src/examples/offboard/offboard_control.cpp.o
  /home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs/include/px4_msgs/px4_msgs/msg/detail/vehicle_status__struct.hpp
  /home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs/include/px4_msgs/px4_msgs/msg/detail/vehicle_status__builder.hpp
  /home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs/include/px4_msgs/px4_msgs/msg/detail/vehicle_status__traits.hpp
- /home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs/include/px4_msgs/px4_msgs/msg/vehicle_trajectory_waypoint.hpp
- /home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs/include/px4_msgs/px4_msgs/msg/detail/vehicle_trajectory_waypoint__struct.hpp
+ /home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs/include/px4_msgs/px4_msgs/msg/trajectory_waypoint.hpp
  /home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs/include/px4_msgs/px4_msgs/msg/detail/trajectory_waypoint__struct.hpp
- /home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs/include/px4_msgs/px4_msgs/msg/detail/vehicle_trajectory_waypoint__builder.hpp
- /home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs/include/px4_msgs/px4_msgs/msg/detail/vehicle_trajectory_waypoint__traits.hpp
+ /home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs/include/px4_msgs/px4_msgs/msg/detail/trajectory_waypoint__builder.hpp
  /home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs/include/px4_msgs/px4_msgs/msg/detail/trajectory_waypoint__traits.hpp
  /opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp
  /usr/include/c++/11/csignal
