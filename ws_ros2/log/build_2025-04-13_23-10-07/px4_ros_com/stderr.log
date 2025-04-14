@@ -1,0 +1,7 @@
+[01m[K/home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:[m[K In member function ‘[01m[Kvoid OffboardPlane::run()[m[K’:
+[01m[K/home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:80:9:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kprev_d[m[K’ [[01;35m[K-Wunused-variable[m[K]
+   80 |   float [01;35m[Kprev_d[m[K = 9999;
+      |         [01;35m[K^~~~~~[m[K
+[01m[K/home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:81:8:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kmission_completed[m[K’ [[01;35m[K-Wunused-variable[m[K]
+   81 |   bool [01;35m[Kmission_completed[m[K = false;
+      |        [01;35m[K^~~~~~~~~~~~~~~~~[m[K

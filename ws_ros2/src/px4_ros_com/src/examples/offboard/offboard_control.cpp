@@ -54,7 +54,10 @@ public:
   void run();
 
 private:
- 
+  float loiter_theta_= 0.0;
+  float loiter_radius_ = 50.0;
+  float loiter_angular_velocity_ = 0.05;
+  std::vector<float> loiter_center_;
   std::vector<std::vector<float>> local_waypoints_;
   size_t waypoint_index_ = 0;
   px4_msgs::msg::VehicleStatus vehicle_status_;
@@ -72,67 +75,54 @@ private:
   void publish_vehicle_command(uint16_t command, float param1 = 0.0, float param2 = 0.0, float param3 = 0.0);
   void vehicle_status_callback(const px4_msgs::msg::VehicleStatus::SharedPtr msg);
   void vehicle_odometry_callback(const px4_msgs::msg::VehicleOdometry::SharedPtr msg);
-  std::vector<std::vector<float>> get_loiter_waypoints(float x, float y, float z, float r, int n);
 };
 
 void OffboardPlane::run() {
 
-  float prev_d = 9999;
+  using clock = std::chrono::steady_clock;
+  clock::time_point loiter_start_time;
   bool mission_completed = false;
   bool loiter_mode = false;
-  bool loiter_calculated = false;
-  size_t loiter_index = 0;
-  float x, y, z = 0;
-  std::vector<std::vector<float>> loiter_waypoints;
+  const std::chrono::seconds loiter_duration(20);
 
   while (rclcpp::ok()) {
     
-    publish_vehicle_command(px4_msgs::msg::VehicleCommand::VEHICLE_CMD_DO_SET_HOME, 1.0);
     publish_vehicle_command(VehicleCommand::VEHICLE_CMD_DO_SET_MODE, 1, 6);
 
     float pos_n = vehicle_odometry_.position[0];
     float pos_e = vehicle_odometry_.position[1];
     float pos_d = vehicle_odometry_.position[2];
 
-    x = local_waypoints_[waypoint_index_][0];
-    y = local_waypoints_[waypoint_index_][1];
-    z = local_waypoints_[waypoint_index_][2];
-
-    if(loiter_mode) {
-      x = loiter_waypoints[loiter_index][0];
-      y = loiter_waypoints[loiter_index][1];
-      z = loiter_waypoints[loiter_index][2];
-    }
+    float x = local_waypoints_[waypoint_index_][0];
+    float y = local_waypoints_[waypoint_index_][1];
+    float z = local_waypoints_[waypoint_index_][2];
 
     float dx = x - pos_n;
     float dy = y - pos_e;
     float dz = z - pos_d;
     float distance = sqrt(dx * dx + dy * dy + dz * dz);
 
-    RCLCPP_INFO(this->get_logger(), "Distance to waypoint: %f", distance);
-
-    if(distance < 5.0) {
-      if(!loiter_calculated) {
-        loiter_waypoints = get_loiter_waypoints(x,y,z, 50, 6);
-        loiter_calculated = true;
+    if(!loiter_mode) {
+      RCLCPP_INFO(this->get_logger(), "Distance to waypoint: %f", distance);
+      if (distance < 10.0) {
+        loiter_mode = true;
+        loiter_start_time = clock::now();
       }
+    }
 
-      if(loiter_mode) {
-        if(loiter_index + 1 == loiter_waypoints.size()) {
-          loiter_mode = false;
-          loiter_calculated = false;
-        } else {
-          loiter_index++;
-        }
+    if(loiter_mode) {
+      auto now = clock::now();
+      auto elapsed = std::chrono::duration_cast<std::chrono::seconds>(now - loiter_start_time);
+      auto remaining = loiter_duration - elapsed;
 
-      } else {
+      RCLCPP_INFO(this->get_logger(), "Loiter mode, time remaining: %ld s", remaining.count());
+
+      if(now - loiter_start_time > loiter_duration) {
+        loiter_mode = false;
         if(waypoint_index_ + 1 == local_waypoints_.size()) {
-          mission_completed = true;
-          RCLCPP_INFO(this->get_logger(), "MISSION COMPLETED!!");
-        } else {
-          waypoint_index_++;
-          loiter_mode = true;
+          waypoint_index_ = 0;
         }
+        waypoint_index_++;
       }
     }
 
@@ -144,25 +134,6 @@ void OffboardPlane::run() {
   }
 }
 
-// RCLCPP_INFO(this->get_logger(), "Distance to waypoint: %f, setpoint: %zu", distance, waypoint_index_);
-// if(prev_d < distance) {
-//   RCLCPP_INFO(this->get_logger(), "wrong wayy!");
-// }
-// prev_d = distance;
-
-std::vector<std::vector<float>> OffboardPlane::get_loiter_waypoints(float x, float y, float z, float r, int n) {
-  std::vector<std::vector<float>> loiter_waypoints;
-  const double PI = 3.141592653589793;
-
-  for(int i = 0; i < n; i++) {
-    double theta = 2 * PI * i / n;
-    float x_n = x + r * cos(theta);
-    float y_n = y + r * sin(theta);
-    loiter_waypoints.push_back({x_n, y_n, z});
-  }
-
-  return loiter_waypoints;
-}
 
 void OffboardPlane::land() {
   publish_vehicle_command(px4_msgs::msg::VehicleCommand::VEHICLE_CMD_NAV_LAND, 0.0, 0.0);
@@ -212,8 +183,8 @@ void OffboardPlane::publish_trajectory_setpoint(float x, float y, float z) {
   msg.position = {x,y,z};
   msg.velocity = {NAN, NAN, NAN};
 
-  RCLCPP_INFO(this->get_logger(), "Publishing Trajectory Setpoint: x: %.2f, y: %.2f, z: %.2f", 
-              msg.position[0], msg.position[1], msg.position[2]);
+  // RCLCPP_INFO(this->get_logger(), "Publishing Trajectory Setpoint: x: %.2f, y: %.2f, z: %.2f", 
+  //             msg.position[0], msg.position[1], msg.position[2]);
   // pub
   trajectory_setpoint_publisher_->publish(msg);
 }
