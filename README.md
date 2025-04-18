@@ -43,7 +43,7 @@ sudo apt install ros-dev-tools
 
 Run QGroundControl
 
-**PX4 Gazebo Fixed Wing**
+**PX4 Gazebo Fixed Wing [OPTIONAL, YOU CAN RUN IT HEADLESS]**
 
 ``
 cd PX4-Autopilot
