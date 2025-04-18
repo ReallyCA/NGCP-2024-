@@ -1,0 +1,17 @@
+[01m[K/home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:[m[K In member function ‘[01m[Kvoid OffboardPlane::publish_trajectory_setpoint(bool, float)[m[K’:
+[01m[K/home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:286:54:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kis_orbiting[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  286 | void OffboardPlane::publish_trajectory_setpoint([01;35m[Kbool is_orbiting[m[K, float orbit_angle) {
+      |                                                 [01;35m[K~~~~~^~~~~~~~~~~[m[K
+[01m[K/home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:286:73:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Korbit_angle[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  286 | void OffboardPlane::publish_trajectory_setpoint(bool is_orbiting, [01;35m[Kfloat orbit_angle[m[K) {
+      |                                                                   [01;35m[K~~~~~~^~~~~~~~~~~[m[K
+[01m[K/home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:[m[K At global scope:
+[01m[K/home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:337:3:[m[K [01;31m[Kerror: [m[K‘[01m[Ktrajectory_setpoint_publisher_[m[K’ does not name a type
+  337 |   [01;31m[Ktrajectory_setpoint_publisher_[m[K->publish(msg);
+      |   [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:338:1:[m[K [01;31m[Kerror: [m[Kexpected declaration before ‘[01m[K}[m[K’ token
+  338 | [01;31m[K}[m[K
+      | [01;31m[K^[m[K
+gmake[2]: *** [CMakeFiles/offboard_control.dir/build.make:76: CMakeFiles/offboard_control.dir/src/examples/offboard/offboard_control.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:254: CMakeFiles/offboard_control.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

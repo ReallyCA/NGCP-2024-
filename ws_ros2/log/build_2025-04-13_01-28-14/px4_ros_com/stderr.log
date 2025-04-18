@@ -1,0 +1,4 @@
+[01m[K/home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:[m[K In member function ‘[01m[Kvoid OffboardPlane::publish_trajectory_setpoint(float, float, float, float)[m[K’:
+[01m[K/home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:203:82:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kv[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  203 | void OffboardPlane::publish_trajectory_setpoint(float x, float y, float z, [01;35m[Kfloat v[m[K) {
+      |                                                                            [01;35m[K~~~~~~^[m[K

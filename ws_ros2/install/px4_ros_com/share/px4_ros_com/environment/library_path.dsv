@@ -1,1 +1,1 @@
-prepend-non-duplicate;LD_LIBRARY_PATH;lib
+/home/fidelis/NGCP-2024-/ws_ros2/build/px4_ros_com/ament_cmake_environment_hooks/library_path.dsv

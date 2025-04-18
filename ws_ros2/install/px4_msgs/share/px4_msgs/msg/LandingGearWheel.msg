@@ -1,3 +1,1 @@
-uint64 timestamp # time since system start (microseconds)
-
-float32 normalized_wheel_setpoint	# negative is turning left, positive turning right [-1, 1]
+/home/fidelis/NGCP-2024-/ws_ros2/src/px4_msgs/msg/LandingGearWheel.msg

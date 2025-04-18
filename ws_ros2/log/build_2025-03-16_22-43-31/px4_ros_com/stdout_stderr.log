@@ -1,0 +1,51 @@
+[35m[1mConsolidate compiler generated dependencies of target offboard_control[0m
+[ 50%] Built target sensor_combined_listener
+[ 50%] Built target frame_transforms
+[ 50%] Built target vehicle_gps_position_listener
+[ 83%] Built target debug_vect_advertiser
+[ 83%] Built target offboard_control_srv
+[ 83%] Built target ament_cmake_python_symlink_px4_ros_com
+[ 91%] [32mBuilding CXX object CMakeFiles/offboard_control.dir/src/examples/offboard/offboard_control.cpp.o[0m
+running egg_info
+writing px4_ros_com.egg-info/PKG-INFO
+writing dependency_links to px4_ros_com.egg-info/dependency_links.txt
+writing top-level names to px4_ros_com.egg-info/top_level.txt
+reading manifest file 'px4_ros_com.egg-info/SOURCES.txt'
+writing manifest file 'px4_ros_com.egg-info/SOURCES.txt'
+[ 91%] Built target ament_cmake_python_build_px4_ros_com_egg
+[01m[K/home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:[m[K In constructor ‘[01m[KOffboardControl::OffboardControl()[m[K’:
+[01m[K/home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:67:31:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass OffboardControl[m[K’ has no member named ‘[01m[Kgetclock[m[K’; did you mean ‘[01m[Kget_clock[m[K’?
+   67 |     auto takeoff_time = this->[01;31m[Kgetclock[m[K()->now();
+      |                               [01;31m[K^~~~~~~~[m[K
+      |                               [32m[Kget_clock[m[K
+[01m[K/home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:[m[K In lambda function:
+[01m[K/home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:79:39:[m[K [01;31m[Kerror: [m[K‘[01m[Ktakeoff_time[m[K’ is not captured
+   79 |         if(this->get_clock()->now() - [01;31m[Ktakeoff_time[m[K > 10s && !takeoff_done) {
+      |                                       [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:70:32:[m[K [01;36m[Knote: [m[Kthe lambda has no capture-default
+   70 |     auto timer_callback = [this[01;36m[K][m[K() -> void {
+      |                                [01;36m[K^[m[K
+[01m[K/home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:67:10:[m[K [01;36m[Knote: [m[K‘[01m[K<typeprefixerror>takeoff_time[m[K’ declared here
+   67 |     auto [01;36m[Ktakeoff_time[m[K = this->getclock()->now();
+      |          [01;36m[K^~~~~~~~~~~~[m[K
+[01m[K/home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:79:62:[m[K [01;31m[Kerror: [m[K‘[01m[Ktakeoff_done[m[K’ is not captured
+   79 |         if(this->get_clock()->now() - takeoff_time > 10s && ![01;31m[Ktakeoff_done[m[K) {
+      |                                                              [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:70:32:[m[K [01;36m[Knote: [m[Kthe lambda has no capture-default
+   70 |     auto timer_callback = [this[01;36m[K][m[K() -> void {
+      |                                [01;36m[K^[m[K
+[01m[K/home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:68:10:[m[K [01;36m[Knote: [m[K‘[01m[Kbool takeoff_done[m[K’ declared here
+   68 |     bool [01;36m[Ktakeoff_done[m[K = false;
+      |          [01;36m[K^~~~~~~~~~~~[m[K
+[01m[K/home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:80:11:[m[K [01;31m[Kerror: [m[K‘[01m[Ktakeoff_done[m[K’ is not captured
+   80 |           [01;31m[Ktakeoff_done[m[K = true;
+      |           [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:70:32:[m[K [01;36m[Knote: [m[Kthe lambda has no capture-default
+   70 |     auto timer_callback = [this[01;36m[K][m[K() -> void {
+      |                                [01;36m[K^[m[K
+[01m[K/home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:68:10:[m[K [01;36m[Knote: [m[K‘[01m[Kbool takeoff_done[m[K’ declared here
+   68 |     bool [01;36m[Ktakeoff_done[m[K = false;
+      |          [01;36m[K^~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/offboard_control.dir/build.make:76: CMakeFiles/offboard_control.dir/src/examples/offboard/offboard_control.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:254: CMakeFiles/offboard_control.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

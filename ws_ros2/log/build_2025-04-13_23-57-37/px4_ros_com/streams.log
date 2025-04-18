@@ -1,0 +1,37 @@
+[0.009s] Invoking command in '/home/fidelis/NGCP-2024-/ws_ros2/build/px4_ros_com': AMENT_PREFIX_PATH=/home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/fidelis/NGCP-2024-/ws_ros2/build/px4_ros_com -- -j16 -l16
+[0.060s] [35m[1mConsolidate compiler generated dependencies of target offboard_control[0m
+[0.075s] [ 33%] Built target frame_transforms
+[0.075s] [ 33%] Built target sensor_combined_listener
+[0.075s] [ 50%] Built target vehicle_gps_position_listener
+[0.075s] [ 66%] Built target offboard_control_srv
+[0.077s] [ 83%] Built target debug_vect_advertiser
+[0.084s] [ 83%] Built target ament_cmake_python_symlink_px4_ros_com
+[0.089s] [ 91%] [32mBuilding CXX object CMakeFiles/offboard_control.dir/src/examples/offboard/offboard_control.cpp.o[0m
+[0.242s] running egg_info
+[0.252s] writing px4_ros_com.egg-info/PKG-INFO
+[0.252s] writing dependency_links to px4_ros_com.egg-info/dependency_links.txt
+[0.252s] writing top-level names to px4_ros_com.egg-info/top_level.txt
+[0.284s] reading manifest file 'px4_ros_com.egg-info/SOURCES.txt'
+[0.285s] writing manifest file 'px4_ros_com.egg-info/SOURCES.txt'
+[0.317s] [ 91%] Built target ament_cmake_python_build_px4_ros_com_egg
+[7.238s] [01m[K/home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:[m[K In member function ‘[01m[Kvoid OffboardPlane::run()[m[K’:
+[7.238s] [01m[K/home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:88:20:[m[K [01;31m[Kerror: [m[Kfound ‘[01m[K:[m[K’ in nested-name-specifier, expected ‘[01m[K::[m[K’
+[7.238s]    88 |   const std::chrono[01;31m[K:[m[Kseconds loiter_duration(60);
+[7.238s]       |                    [01;31m[K^[m[K
+[7.238s]       |                    [32m[K::[m[K
+[7.238s] [01m[K/home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:109:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kloiter_start_time[m[K’ was not declared in this scope
+[7.238s]   109 |       [01;31m[Kloiter_start_time[m[K = clock::now();
+[7.238s]       |       [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[7.238s] [01m[K/home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:114:77:[m[K [01;31m[Kerror: [m[K‘[01m[Kloiter_start_time[m[K’ was not declared in this scope
+[7.238s]   114 |       auto elapsed = std::chrono::duration_cast<std::chrono::seconds>(now - [01;31m[Kloiter_start_time[m[K);
+[7.238s]       |                                                                             [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[7.238s] [01m[K/home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:84:9:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kprev_d[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[7.238s]    84 |   float [01;35m[Kprev_d[m[K = 9999;
+[7.238s]       |         [01;35m[K^~~~~~[m[K
+[7.238s] [01m[K/home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:85:8:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kmission_completed[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[7.238s]    85 |   bool [01;35m[Kmission_completed[m[K = false;
+[7.238s]       |        [01;35m[K^~~~~~~~~~~~~~~~~[m[K
+[7.239s] gmake[2]: *** [CMakeFiles/offboard_control.dir/build.make:76: CMakeFiles/offboard_control.dir/src/examples/offboard/offboard_control.cpp.o] Error 1
+[7.239s] gmake[1]: *** [CMakeFiles/Makefile2:254: CMakeFiles/offboard_control.dir/all] Error 2
+[7.240s] gmake: *** [Makefile:146: all] Error 2
+[7.243s] Invoked command in '/home/fidelis/NGCP-2024-/ws_ros2/build/px4_ros_com' returned '2': AMENT_PREFIX_PATH=/home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/fidelis/NGCP-2024-/ws_ros2/build/px4_ros_com -- -j16 -l16

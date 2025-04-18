@@ -1,0 +1,14 @@
+[01m[K/home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:[m[K In member function ‘[01m[Kvoid OffboardPlane::run()[m[K’:
+[01m[K/home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:80:49:[m[K [01;35m[Kwarning: [m[Kconversion from ‘[01m[Kunsigned int[m[K’ to ‘[01m[Kuint16_t[m[K’ {aka ‘[01m[Kshort unsigned int[m[K’} changes value from ‘[01m[K100000[m[K’ to ‘[01m[K34464[m[K’ [[01;35m[K-Woverflow[m[K]
+   80 |   this->publish_vehicle_command([01;35m[KVehicleCommand::VEHICLE_CMD_SET_GPS_GLOBAL_ORIGIN[m[K, 0.0, 0.0);
+      |                                 [01;35m[K~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:[m[K In member function ‘[01m[Kvoid OffboardPlane::publish_trajectory_setpoint()[m[K’:
+[01m[K/home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:169:9:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kpos_n[m[K’ [[01;35m[K-Wunused-variable[m[K]
+  169 |   float [01;35m[Kpos_n[m[K = vehicle_odometry_.position[0];
+      |         [01;35m[K^~~~~[m[K
+[01m[K/home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:170:9:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kpos_e[m[K’ [[01;35m[K-Wunused-variable[m[K]
+  170 |   float [01;35m[Kpos_e[m[K = vehicle_odometry_.position[1];
+      |         [01;35m[K^~~~~[m[K
+[01m[K/home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:171:9:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kpos_d[m[K’ [[01;35m[K-Wunused-variable[m[K]
+  171 |   float [01;35m[Kpos_d[m[K = vehicle_odometry_.position[2];
+      |         [01;35m[K^~~~~[m[K

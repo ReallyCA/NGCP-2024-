@@ -1,0 +1,20 @@
+[01m[K/home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:[m[K In member function ‘[01m[Kvoid OffboardPlane::run()[m[K’:
+[01m[K/home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:88:20:[m[K [01;31m[Kerror: [m[Kfound ‘[01m[K:[m[K’ in nested-name-specifier, expected ‘[01m[K::[m[K’
+   88 |   const std::chrono[01;31m[K:[m[Kseconds loiter_duration(60);
+      |                    [01;31m[K^[m[K
+      |                    [32m[K::[m[K
+[01m[K/home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:109:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kloiter_start_time[m[K’ was not declared in this scope
+  109 |       [01;31m[Kloiter_start_time[m[K = clock::now();
+      |       [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:114:77:[m[K [01;31m[Kerror: [m[K‘[01m[Kloiter_start_time[m[K’ was not declared in this scope
+  114 |       auto elapsed = std::chrono::duration_cast<std::chrono::seconds>(now - [01;31m[Kloiter_start_time[m[K);
+      |                                                                             [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:84:9:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kprev_d[m[K’ [[01;35m[K-Wunused-variable[m[K]
+   84 |   float [01;35m[Kprev_d[m[K = 9999;
+      |         [01;35m[K^~~~~~[m[K
+[01m[K/home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:85:8:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kmission_completed[m[K’ [[01;35m[K-Wunused-variable[m[K]
+   85 |   bool [01;35m[Kmission_completed[m[K = false;
+      |        [01;35m[K^~~~~~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/offboard_control.dir/build.make:76: CMakeFiles/offboard_control.dir/src/examples/offboard/offboard_control.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:254: CMakeFiles/offboard_control.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

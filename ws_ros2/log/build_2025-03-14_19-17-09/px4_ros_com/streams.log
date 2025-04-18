@@ -1,0 +1,169 @@
+[0.007s] Invoking command in '/home/fidelis/NGCP-2024-/ws_ros2/build/px4_ros_com': AMENT_PREFIX_PATH=/home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com
+[0.056s] -- The C compiler identification is GNU 11.4.0
+[0.108s] -- The CXX compiler identification is GNU 11.4.0
+[0.117s] -- Detecting C compiler ABI info
+[0.166s] -- Detecting C compiler ABI info - done
+[0.170s] -- Check for working C compiler: /usr/lib/ccache/cc - skipped
+[0.170s] -- Detecting C compile features
+[0.171s] -- Detecting C compile features - done
+[0.172s] -- Detecting CXX compiler ABI info
+[0.231s] -- Detecting CXX compiler ABI info - done
+[0.236s] -- Check for working CXX compiler: /usr/lib/ccache/c++ - skipped
+[0.236s] -- Detecting CXX compile features
+[0.236s] -- Detecting CXX compile features - done
+[0.238s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.476s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.520s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.538s] -- Found builtin_interfaces: 1.2.1 (/opt/ros/humble/share/builtin_interfaces/cmake)
+[0.557s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.559s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.564s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.570s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.578s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.586s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[0.596s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[0.597s] -- Found geometry_msgs: 4.2.4 (/opt/ros/humble/share/geometry_msgs/cmake)
+[0.619s] -- Found px4_msgs: 2.0.1 (/home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs/share/px4_msgs/cmake)
+[0.627s] -- Found rclcpp: 16.0.10 (/opt/ros/humble/share/rclcpp/cmake)
+[0.655s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.659s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.746s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[0.765s] -- Found FastRTPS: /opt/ros/humble/include  
+[0.799s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.806s] -- Looking for pthread.h
+[0.883s] -- Looking for pthread.h - found
+[0.883s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[0.962s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[0.962s] -- Found Threads: TRUE  
+[0.991s] -- Found sensor_msgs: 4.2.4 (/opt/ros/humble/share/sensor_msgs/cmake)
+[1.005s] -- Found rclpy: 3.3.14 (/opt/ros/humble/share/rclpy/cmake)
+[1.012s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.082s] -- Added test 'copyright' to check source files copyright and LICENSE
+[1.085s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.085s] -- Configured cppcheck include dirs: /home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com/include;$<BUILD_INTERFACE:/home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com/include/px4_ros_com>
+[1.085s] -- Configured cppcheck exclude dirs and/or files: 
+[1.087s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[1.087s] -- Configured cpplint exclude dirs and/or files: 
+[1.088s] -- Added test 'flake8' to check Python code syntax and style conventions
+[1.090s] -- Added test 'lint_cmake' to check CMake code style
+[1.091s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[1.093s] -- Added test 'uncrustify' to check C / C++ code style
+[1.093s] -- Configured uncrustify additional arguments: 
+[1.094s] -- Added test 'xmllint' to check XML markup files
+[1.096s] -- Configuring done
+[1.115s] -- Generating done
+[1.117s] -- Build files have been written to: /home/fidelis/NGCP-2024-/ws_ros2/build/px4_ros_com
+[1.127s] Invoked command in '/home/fidelis/NGCP-2024-/ws_ros2/build/px4_ros_com' returned '0': AMENT_PREFIX_PATH=/home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com
+[1.127s] Invoking command in '/home/fidelis/NGCP-2024-/ws_ros2/build/px4_ros_com': AMENT_PREFIX_PATH=/home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/fidelis/NGCP-2024-/ws_ros2/build/px4_ros_com -- -j16 -l16
+[1.167s] [ 41%] [32mBuilding CXX object CMakeFiles/debug_vect_advertiser.dir/src/examples/advertisers/debug_vect_advertiser.cpp.o[0m
+[1.167s] [ 41%] [32mBuilding CXX object CMakeFiles/offboard_control.dir/src/examples/offboard/offboard_control.cpp.o[0m
+[1.167s] [ 41%] [32mBuilding CXX object CMakeFiles/frame_transforms.dir/src/lib/frame_transforms.cpp.o[0m
+[1.167s] [ 41%] [32mBuilding CXX object CMakeFiles/vehicle_gps_position_listener.dir/src/examples/listeners/vehicle_gps_position_listener.cpp.o[0m
+[1.168s] [ 41%] [32mBuilding CXX object CMakeFiles/offboard_control_srv.dir/src/examples/offboard/offboard_control_srv.cpp.o[0m
+[1.168s] [ 50%] [32mBuilding CXX object CMakeFiles/sensor_combined_listener.dir/src/examples/listeners/sensor_combined_listener.cpp.o[0m
+[1.175s] [ 50%] Built target ament_cmake_python_symlink_px4_ros_com
+[1.307s] running egg_info
+[1.308s] creating px4_ros_com.egg-info
+[1.317s] writing px4_ros_com.egg-info/PKG-INFO
+[1.317s] writing dependency_links to px4_ros_com.egg-info/dependency_links.txt
+[1.317s] writing top-level names to px4_ros_com.egg-info/top_level.txt
+[1.317s] writing manifest file 'px4_ros_com.egg-info/SOURCES.txt'
+[1.344s] reading manifest file 'px4_ros_com.egg-info/SOURCES.txt'
+[1.344s] writing manifest file 'px4_ros_com.egg-info/SOURCES.txt'
+[1.370s] [ 50%] Built target ament_cmake_python_build_px4_ros_com_egg
+[4.561s] [ 58%] [32m[1mLinking CXX executable debug_vect_advertiser[0m
+[4.731s] [ 58%] Built target debug_vect_advertiser
+[5.777s] [ 66%] [32m[1mLinking CXX executable offboard_control_srv[0m
+[5.967s] [ 66%] Built target offboard_control_srv
+[6.534s] [ 75%] [32m[1mLinking CXX shared library libframe_transforms.so[0m
+[6.742s] [ 75%] Built target frame_transforms
+[7.342s] [ 83%] [32m[1mLinking CXX executable sensor_combined_listener[0m
+[7.382s] [ 91%] [32m[1mLinking CXX executable vehicle_gps_position_listener[0m
+[7.621s] [ 91%] Built target sensor_combined_listener
+[7.648s] [ 91%] Built target vehicle_gps_position_listener
+[10.660s] [01m[K/home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:[m[K In member function ‘[01m[Kvoid OffboardPlane::run()[m[K’:
+[10.661s] [01m[K/home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:85:49:[m[K [01;35m[Kwarning: [m[Kconversion from ‘[01m[Kunsigned int[m[K’ to ‘[01m[Kuint16_t[m[K’ {aka ‘[01m[Kshort unsigned int[m[K’} changes value from ‘[01m[K100000[m[K’ to ‘[01m[K34464[m[K’ [[01;35m[K-Woverflow[m[K]
+[10.661s]    85 |   this->publish_vehicle_command([01;35m[KVehicleCommand::VEHICLE_CMD_SET_GPS_GLOBAL_ORIGIN[m[K, 0.0, 0.0);
+[10.661s]       |                                 [01;35m[K~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[10.661s] [01m[K/home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:118:31:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<std::vector<float> >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+[10.661s]   118 |       if ([01;35m[Kwaypoint_index_ + 1 == local_waypoints_.size()[m[K) {
+[10.661s]       |           [01;35m[K~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[10.661s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+[10.661s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+[10.661s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[10.661s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[10.661s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[10.661s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[10.662s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[10.662s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[10.662s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[10.662s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[10.662s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[10.662s]                  from [01m[K/home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:11[m[K:
+[10.662s] [01m[K/home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:127:39:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%d[m[K’ expects argument of type ‘[01m[Kint[m[K’, but argument 7 has type ‘[01m[Kstd::vector<std::vector<float> >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wformat=[m[K]
+[10.662s]   127 |       RCLCPP_INFO(this->get_logger(), [01;35m[K"Distance to waypoint: %f, setpoint: %d, size: %d"[m[K, distance_to_waypoint, waypoint_index_, [32m[Klocal_waypoints_.size()[m[K);
+[10.662s]       |                                       [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K                                         [32m[K~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[10.662s]       |                                                                                                                                                       [32m[K|[m[K
+[10.662s]       |                                                                                                                                                       [32m[Kstd::vector<std::vector<float> >::size_type {aka long unsigned int}[m[K
+[10.662s] [01m[K/home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:127:87:[m[K [01;36m[Knote: [m[Kformat string is defined here
+[10.662s]   127 |       RCLCPP_INFO(this->get_logger(), "Distance to waypoint: %f, setpoint: %d, size: [01;36m[K%d[m[K", distance_to_waypoint, waypoint_index_, local_waypoints_.size());
+[10.662s]       |                                                                                      [01;36m[K~^[m[K
+[10.662s]       |                                                                                       [01;36m[K|[m[K
+[10.662s]       |                                                                                       [01;36m[Kint[m[K
+[10.662s]       |                                                                                      [32m[K%ld[m[K
+[10.672s] [100%] [32m[1mLinking CXX executable offboard_control[0m
+[11.058s] [100%] Built target offboard_control
+[11.068s] Invoked command in '/home/fidelis/NGCP-2024-/ws_ros2/build/px4_ros_com' returned '0': AMENT_PREFIX_PATH=/home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/fidelis/NGCP-2024-/ws_ros2/build/px4_ros_com -- -j16 -l16
+[11.108s] Invoking command in '/home/fidelis/NGCP-2024-/ws_ros2/build/px4_ros_com': AMENT_PREFIX_PATH=/home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/fidelis/NGCP-2024-/ws_ros2/build/px4_ros_com
+[11.113s] -- Install configuration: ""
+[11.113s] -- Execute custom install script
+[11.113s] -- Symlinking: /home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/lib/px4_ros_com/sensor_combined_listener
+[11.121s] -- Symlinking: /home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/lib/px4_ros_com/vehicle_gps_position_listener
+[11.130s] -- Symlinking: /home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/lib/px4_ros_com/debug_vect_advertiser
+[11.137s] -- Symlinking: /home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/lib/px4_ros_com/offboard_control
+[11.144s] -- Symlinking: /home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/lib/px4_ros_com/offboard_control_srv
+[11.152s] -- Symlinking: /home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/share/px4_ros_com/environment/library_path.sh
+[11.158s] -- Symlinking: /home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/share/px4_ros_com/environment/library_path.dsv
+[11.165s] -- Symlinking: /home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/include/px4_ros_com/frame_transforms.h
+[11.172s] -- Symlinking: /home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/share/px4_ros_com//launch/offboard_control_launch.yaml
+[11.179s] -- Symlinking: /home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/share/px4_ros_com//launch/sensor_combined_listener.launch.py
+[11.185s] -- Symlinking: /home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/share/px4_ros_com//test/__init__.py
+[11.191s] -- Symlinking: /home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/share/px4_ros_com//test/pipeline_io_test.py
+[11.197s] -- Symlinking: /home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/share/px4_ros_com//test/test_input.py
+[11.203s] -- Symlinking: /home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/share/px4_ros_com//test/test_output.py
+[11.210s] -- Symlinking: /home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/share/px4_ros_com/environment/pythonpath.sh
+[11.218s] -- Symlinking: /home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/share/px4_ros_com/environment/pythonpath.dsv
+[11.227s] -- Symlinking: /home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/local/lib/python3.10/dist-packages/px4_ros_com-0.1.0-py3.10.egg-info/PKG-INFO
+[11.235s] -- Symlinking: /home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/local/lib/python3.10/dist-packages/px4_ros_com-0.1.0-py3.10.egg-info/SOURCES.txt
+[11.242s] -- Symlinking: /home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/local/lib/python3.10/dist-packages/px4_ros_com-0.1.0-py3.10.egg-info/dependency_links.txt
+[11.248s] -- Symlinking: /home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/local/lib/python3.10/dist-packages/px4_ros_com-0.1.0-py3.10.egg-info/top_level.txt
+[11.256s] -- Symlinking: /home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/local/lib/python3.10/dist-packages/px4_ros_com/__init__.py
+[11.263s] -- Symlinking: /home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/local/lib/python3.10/dist-packages/px4_ros_com/module_to_import.py
+[11.270s] -- Symlinking: /home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/lib/px4_ros_com/offboard_control.py
+[11.279s] -- Symlinking: /home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/share/ament_index/resource_index/package_run_dependencies/px4_ros_com
+[11.285s] -- Symlinking: /home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/share/ament_index/resource_index/parent_prefix_path/px4_ros_com
+[11.292s] -- Symlinking: /home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/share/px4_ros_com/environment/ament_prefix_path.sh
+[11.298s] -- Symlinking: /home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/share/px4_ros_com/environment/ament_prefix_path.dsv
+[11.305s] -- Symlinking: /home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/share/px4_ros_com/environment/path.sh
+[11.313s] -- Symlinking: /home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/share/px4_ros_com/environment/path.dsv
+[11.321s] -- Symlinking: /home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/share/px4_ros_com/local_setup.bash
+[11.331s] -- Symlinking: /home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/share/px4_ros_com/local_setup.sh
+[11.339s] -- Symlinking: /home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/share/px4_ros_com/local_setup.zsh
+[11.346s] -- Symlinking: /home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/share/px4_ros_com/local_setup.dsv
+[11.354s] -- Symlinking: /home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/share/px4_ros_com/package.dsv
+[11.361s] -- Symlinking: /home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/share/ament_index/resource_index/packages/px4_ros_com
+[11.369s] -- Symlinking: /home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/share/px4_ros_com/cmake/ament_cmake_export_dependencies-extras.cmake
+[11.377s] -- Symlinking: /home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/share/px4_ros_com/cmake/ament_cmake_export_targets-extras.cmake
+[11.385s] -- Symlinking: /home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/share/px4_ros_com/cmake/ament_cmake_export_include_directories-extras.cmake
+[11.393s] -- Symlinking: /home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/share/px4_ros_com/cmake/ament_cmake_export_libraries-extras.cmake
+[11.401s] -- Symlinking: /home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/share/px4_ros_com/cmake/px4_ros_comConfig.cmake
+[11.407s] -- Symlinking: /home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/share/px4_ros_com/cmake/px4_ros_comConfig-version.cmake
+[11.415s] -- Symlinking: /home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/share/px4_ros_com/package.xml
+[11.422s] -- Installing: /home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/lib/libframe_transforms.so
+[11.427s] -- Set runtime path of "/home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/lib/libframe_transforms.so" to ""
+[11.449s] Listing '/home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/local/lib/python3.10/dist-packages/px4_ros_com'...
+[11.449s] Compiling '/home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/local/lib/python3.10/dist-packages/px4_ros_com/__init__.py'...
+[11.449s] Compiling '/home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/local/lib/python3.10/dist-packages/px4_ros_com/module_to_import.py'...
+[11.452s] -- Installing: /home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/share/px4_ros_com/cmake/export_frame_transformsExport.cmake
+[11.453s] -- Installing: /home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/share/px4_ros_com/cmake/export_frame_transformsExport-noconfig.cmake
+[11.456s] Invoked command in '/home/fidelis/NGCP-2024-/ws_ros2/build/px4_ros_com' returned '0': AMENT_PREFIX_PATH=/home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/fidelis/NGCP-2024-/ws_ros2/build/px4_ros_com

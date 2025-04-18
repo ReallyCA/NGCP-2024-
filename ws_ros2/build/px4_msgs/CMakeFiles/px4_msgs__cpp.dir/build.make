@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/cali/ws_sensor_combined/src/px4_msgs
+CMAKE_SOURCE_DIR = /home/fidelis/NGCP-2024-/ws_ros2/src/px4_msgs
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/cali/ws_sensor_combined/build/px4_msgs
+CMAKE_BINARY_DIR = /home/fidelis/NGCP-2024-/ws_ros2/build/px4_msgs
 
 # Utility rule file for px4_msgs__cpp.
 
@@ -162,10 +162,6 @@ CMakeFiles/px4_msgs__cpp: rosidl_generator_cpp/px4_msgs/msg/collision_constraint
 CMakeFiles/px4_msgs__cpp: rosidl_generator_cpp/px4_msgs/msg/detail/collision_constraints__builder.hpp
 CMakeFiles/px4_msgs__cpp: rosidl_generator_cpp/px4_msgs/msg/detail/collision_constraints__struct.hpp
 CMakeFiles/px4_msgs__cpp: rosidl_generator_cpp/px4_msgs/msg/detail/collision_constraints__traits.hpp
-CMakeFiles/px4_msgs__cpp: rosidl_generator_cpp/px4_msgs/msg/collision_report.hpp
-CMakeFiles/px4_msgs__cpp: rosidl_generator_cpp/px4_msgs/msg/detail/collision_report__builder.hpp
-CMakeFiles/px4_msgs__cpp: rosidl_generator_cpp/px4_msgs/msg/detail/collision_report__struct.hpp
-CMakeFiles/px4_msgs__cpp: rosidl_generator_cpp/px4_msgs/msg/detail/collision_report__traits.hpp
 CMakeFiles/px4_msgs__cpp: rosidl_generator_cpp/px4_msgs/msg/config_overrides.hpp
 CMakeFiles/px4_msgs__cpp: rosidl_generator_cpp/px4_msgs/msg/detail/config_overrides__builder.hpp
 CMakeFiles/px4_msgs__cpp: rosidl_generator_cpp/px4_msgs/msg/detail/config_overrides__struct.hpp
@@ -658,6 +654,10 @@ CMakeFiles/px4_msgs__cpp: rosidl_generator_cpp/px4_msgs/msg/rover_ackermann_guid
 CMakeFiles/px4_msgs__cpp: rosidl_generator_cpp/px4_msgs/msg/detail/rover_ackermann_guidance_status__builder.hpp
 CMakeFiles/px4_msgs__cpp: rosidl_generator_cpp/px4_msgs/msg/detail/rover_ackermann_guidance_status__struct.hpp
 CMakeFiles/px4_msgs__cpp: rosidl_generator_cpp/px4_msgs/msg/detail/rover_ackermann_guidance_status__traits.hpp
+CMakeFiles/px4_msgs__cpp: rosidl_generator_cpp/px4_msgs/msg/rover_ackermann_setpoint.hpp
+CMakeFiles/px4_msgs__cpp: rosidl_generator_cpp/px4_msgs/msg/detail/rover_ackermann_setpoint__builder.hpp
+CMakeFiles/px4_msgs__cpp: rosidl_generator_cpp/px4_msgs/msg/detail/rover_ackermann_setpoint__struct.hpp
+CMakeFiles/px4_msgs__cpp: rosidl_generator_cpp/px4_msgs/msg/detail/rover_ackermann_setpoint__traits.hpp
 CMakeFiles/px4_msgs__cpp: rosidl_generator_cpp/px4_msgs/msg/rover_ackermann_status.hpp
 CMakeFiles/px4_msgs__cpp: rosidl_generator_cpp/px4_msgs/msg/detail/rover_ackermann_status__builder.hpp
 CMakeFiles/px4_msgs__cpp: rosidl_generator_cpp/px4_msgs/msg/detail/rover_ackermann_status__struct.hpp
@@ -1018,7 +1018,6 @@ rosidl_generator_cpp/px4_msgs/msg/action_request.hpp: rosidl_adapter/px4_msgs/ms
 rosidl_generator_cpp/px4_msgs/msg/action_request.hpp: rosidl_adapter/px4_msgs/msg/CanInterfaceStatus.idl
 rosidl_generator_cpp/px4_msgs/msg/action_request.hpp: rosidl_adapter/px4_msgs/msg/CellularStatus.idl
 rosidl_generator_cpp/px4_msgs/msg/action_request.hpp: rosidl_adapter/px4_msgs/msg/CollisionConstraints.idl
-rosidl_generator_cpp/px4_msgs/msg/action_request.hpp: rosidl_adapter/px4_msgs/msg/CollisionReport.idl
 rosidl_generator_cpp/px4_msgs/msg/action_request.hpp: rosidl_adapter/px4_msgs/msg/ConfigOverrides.idl
 rosidl_generator_cpp/px4_msgs/msg/action_request.hpp: rosidl_adapter/px4_msgs/msg/ControlAllocatorStatus.idl
 rosidl_generator_cpp/px4_msgs/msg/action_request.hpp: rosidl_adapter/px4_msgs/msg/Cpuload.idl
@@ -1142,6 +1141,7 @@ rosidl_generator_cpp/px4_msgs/msg/action_request.hpp: rosidl_adapter/px4_msgs/ms
 rosidl_generator_cpp/px4_msgs/msg/action_request.hpp: rosidl_adapter/px4_msgs/msg/RegisterExtComponentReply.idl
 rosidl_generator_cpp/px4_msgs/msg/action_request.hpp: rosidl_adapter/px4_msgs/msg/RegisterExtComponentRequest.idl
 rosidl_generator_cpp/px4_msgs/msg/action_request.hpp: rosidl_adapter/px4_msgs/msg/RoverAckermannGuidanceStatus.idl
+rosidl_generator_cpp/px4_msgs/msg/action_request.hpp: rosidl_adapter/px4_msgs/msg/RoverAckermannSetpoint.idl
 rosidl_generator_cpp/px4_msgs/msg/action_request.hpp: rosidl_adapter/px4_msgs/msg/RoverAckermannStatus.idl
 rosidl_generator_cpp/px4_msgs/msg/action_request.hpp: rosidl_adapter/px4_msgs/msg/RoverDifferentialGuidanceStatus.idl
 rosidl_generator_cpp/px4_msgs/msg/action_request.hpp: rosidl_adapter/px4_msgs/msg/RoverDifferentialSetpoint.idl
@@ -1224,8 +1224,8 @@ rosidl_generator_cpp/px4_msgs/msg/action_request.hpp: rosidl_adapter/px4_msgs/ms
 rosidl_generator_cpp/px4_msgs/msg/action_request.hpp: rosidl_adapter/px4_msgs/srv/VehicleCommand.idl
 rosidl_generator_cpp/px4_msgs/msg/action_request.hpp: /opt/ros/humble/share/builtin_interfaces/msg/Duration.idl
 rosidl_generator_cpp/px4_msgs/msg/action_request.hpp: /opt/ros/humble/share/builtin_interfaces/msg/Time.idl
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/cali/ws_sensor_combined/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code for ROS interfaces"
-	/usr/bin/python3 /opt/ros/humble/share/rosidl_generator_cpp/cmake/../../../lib/rosidl_generator_cpp/rosidl_generator_cpp --generator-arguments-file /home/cali/ws_sensor_combined/build/px4_msgs/rosidl_generator_cpp__arguments.json
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/fidelis/NGCP-2024-/ws_ros2/build/px4_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code for ROS interfaces"
+	/usr/bin/python3 /opt/ros/humble/share/rosidl_generator_cpp/cmake/../../../lib/rosidl_generator_cpp/rosidl_generator_cpp --generator-arguments-file /home/fidelis/NGCP-2024-/ws_ros2/build/px4_msgs/rosidl_generator_cpp__arguments.json
 
 rosidl_generator_cpp/px4_msgs/msg/detail/action_request__builder.hpp: rosidl_generator_cpp/px4_msgs/msg/action_request.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/px4_msgs/msg/detail/action_request__builder.hpp
@@ -1511,18 +1511,6 @@ rosidl_generator_cpp/px4_msgs/msg/detail/collision_constraints__struct.hpp: rosi
 
 rosidl_generator_cpp/px4_msgs/msg/detail/collision_constraints__traits.hpp: rosidl_generator_cpp/px4_msgs/msg/action_request.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/px4_msgs/msg/detail/collision_constraints__traits.hpp
-
-rosidl_generator_cpp/px4_msgs/msg/collision_report.hpp: rosidl_generator_cpp/px4_msgs/msg/action_request.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/px4_msgs/msg/collision_report.hpp
-
-rosidl_generator_cpp/px4_msgs/msg/detail/collision_report__builder.hpp: rosidl_generator_cpp/px4_msgs/msg/action_request.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/px4_msgs/msg/detail/collision_report__builder.hpp
-
-rosidl_generator_cpp/px4_msgs/msg/detail/collision_report__struct.hpp: rosidl_generator_cpp/px4_msgs/msg/action_request.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/px4_msgs/msg/detail/collision_report__struct.hpp
-
-rosidl_generator_cpp/px4_msgs/msg/detail/collision_report__traits.hpp: rosidl_generator_cpp/px4_msgs/msg/action_request.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/px4_msgs/msg/detail/collision_report__traits.hpp
 
 rosidl_generator_cpp/px4_msgs/msg/config_overrides.hpp: rosidl_generator_cpp/px4_msgs/msg/action_request.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/px4_msgs/msg/config_overrides.hpp
@@ -3000,6 +2988,18 @@ rosidl_generator_cpp/px4_msgs/msg/detail/rover_ackermann_guidance_status__struct
 rosidl_generator_cpp/px4_msgs/msg/detail/rover_ackermann_guidance_status__traits.hpp: rosidl_generator_cpp/px4_msgs/msg/action_request.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/px4_msgs/msg/detail/rover_ackermann_guidance_status__traits.hpp
 
+rosidl_generator_cpp/px4_msgs/msg/rover_ackermann_setpoint.hpp: rosidl_generator_cpp/px4_msgs/msg/action_request.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/px4_msgs/msg/rover_ackermann_setpoint.hpp
+
+rosidl_generator_cpp/px4_msgs/msg/detail/rover_ackermann_setpoint__builder.hpp: rosidl_generator_cpp/px4_msgs/msg/action_request.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/px4_msgs/msg/detail/rover_ackermann_setpoint__builder.hpp
+
+rosidl_generator_cpp/px4_msgs/msg/detail/rover_ackermann_setpoint__struct.hpp: rosidl_generator_cpp/px4_msgs/msg/action_request.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/px4_msgs/msg/detail/rover_ackermann_setpoint__struct.hpp
+
+rosidl_generator_cpp/px4_msgs/msg/detail/rover_ackermann_setpoint__traits.hpp: rosidl_generator_cpp/px4_msgs/msg/action_request.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/px4_msgs/msg/detail/rover_ackermann_setpoint__traits.hpp
+
 rosidl_generator_cpp/px4_msgs/msg/rover_ackermann_status.hpp: rosidl_generator_cpp/px4_msgs/msg/action_request.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/px4_msgs/msg/rover_ackermann_status.hpp
 
@@ -3985,7 +3985,6 @@ px4_msgs__cpp: rosidl_generator_cpp/px4_msgs/msg/camera_trigger.hpp
 px4_msgs__cpp: rosidl_generator_cpp/px4_msgs/msg/can_interface_status.hpp
 px4_msgs__cpp: rosidl_generator_cpp/px4_msgs/msg/cellular_status.hpp
 px4_msgs__cpp: rosidl_generator_cpp/px4_msgs/msg/collision_constraints.hpp
-px4_msgs__cpp: rosidl_generator_cpp/px4_msgs/msg/collision_report.hpp
 px4_msgs__cpp: rosidl_generator_cpp/px4_msgs/msg/config_overrides.hpp
 px4_msgs__cpp: rosidl_generator_cpp/px4_msgs/msg/control_allocator_status.hpp
 px4_msgs__cpp: rosidl_generator_cpp/px4_msgs/msg/cpuload.hpp
@@ -4067,9 +4066,6 @@ px4_msgs__cpp: rosidl_generator_cpp/px4_msgs/msg/detail/cellular_status__traits.
 px4_msgs__cpp: rosidl_generator_cpp/px4_msgs/msg/detail/collision_constraints__builder.hpp
 px4_msgs__cpp: rosidl_generator_cpp/px4_msgs/msg/detail/collision_constraints__struct.hpp
 px4_msgs__cpp: rosidl_generator_cpp/px4_msgs/msg/detail/collision_constraints__traits.hpp
-px4_msgs__cpp: rosidl_generator_cpp/px4_msgs/msg/detail/collision_report__builder.hpp
-px4_msgs__cpp: rosidl_generator_cpp/px4_msgs/msg/detail/collision_report__struct.hpp
-px4_msgs__cpp: rosidl_generator_cpp/px4_msgs/msg/detail/collision_report__traits.hpp
 px4_msgs__cpp: rosidl_generator_cpp/px4_msgs/msg/detail/config_overrides__builder.hpp
 px4_msgs__cpp: rosidl_generator_cpp/px4_msgs/msg/detail/config_overrides__struct.hpp
 px4_msgs__cpp: rosidl_generator_cpp/px4_msgs/msg/detail/config_overrides__traits.hpp
@@ -4439,6 +4435,9 @@ px4_msgs__cpp: rosidl_generator_cpp/px4_msgs/msg/detail/register_ext_component_r
 px4_msgs__cpp: rosidl_generator_cpp/px4_msgs/msg/detail/rover_ackermann_guidance_status__builder.hpp
 px4_msgs__cpp: rosidl_generator_cpp/px4_msgs/msg/detail/rover_ackermann_guidance_status__struct.hpp
 px4_msgs__cpp: rosidl_generator_cpp/px4_msgs/msg/detail/rover_ackermann_guidance_status__traits.hpp
+px4_msgs__cpp: rosidl_generator_cpp/px4_msgs/msg/detail/rover_ackermann_setpoint__builder.hpp
+px4_msgs__cpp: rosidl_generator_cpp/px4_msgs/msg/detail/rover_ackermann_setpoint__struct.hpp
+px4_msgs__cpp: rosidl_generator_cpp/px4_msgs/msg/detail/rover_ackermann_setpoint__traits.hpp
 px4_msgs__cpp: rosidl_generator_cpp/px4_msgs/msg/detail/rover_ackermann_status__builder.hpp
 px4_msgs__cpp: rosidl_generator_cpp/px4_msgs/msg/detail/rover_ackermann_status__struct.hpp
 px4_msgs__cpp: rosidl_generator_cpp/px4_msgs/msg/detail/rover_ackermann_status__traits.hpp
@@ -4790,6 +4789,7 @@ px4_msgs__cpp: rosidl_generator_cpp/px4_msgs/msg/rc_parameter_map.hpp
 px4_msgs__cpp: rosidl_generator_cpp/px4_msgs/msg/register_ext_component_reply.hpp
 px4_msgs__cpp: rosidl_generator_cpp/px4_msgs/msg/register_ext_component_request.hpp
 px4_msgs__cpp: rosidl_generator_cpp/px4_msgs/msg/rover_ackermann_guidance_status.hpp
+px4_msgs__cpp: rosidl_generator_cpp/px4_msgs/msg/rover_ackermann_setpoint.hpp
 px4_msgs__cpp: rosidl_generator_cpp/px4_msgs/msg/rover_ackermann_status.hpp
 px4_msgs__cpp: rosidl_generator_cpp/px4_msgs/msg/rover_differential_guidance_status.hpp
 px4_msgs__cpp: rosidl_generator_cpp/px4_msgs/msg/rover_differential_setpoint.hpp
@@ -4885,6 +4885,6 @@ CMakeFiles/px4_msgs__cpp.dir/clean:
 .PHONY : CMakeFiles/px4_msgs__cpp.dir/clean
 
 CMakeFiles/px4_msgs__cpp.dir/depend:
-	cd /home/cali/ws_sensor_combined/build/px4_msgs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/cali/ws_sensor_combined/src/px4_msgs /home/cali/ws_sensor_combined/src/px4_msgs /home/cali/ws_sensor_combined/build/px4_msgs /home/cali/ws_sensor_combined/build/px4_msgs /home/cali/ws_sensor_combined/build/px4_msgs/CMakeFiles/px4_msgs__cpp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/fidelis/NGCP-2024-/ws_ros2/build/px4_msgs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/fidelis/NGCP-2024-/ws_ros2/src/px4_msgs /home/fidelis/NGCP-2024-/ws_ros2/src/px4_msgs /home/fidelis/NGCP-2024-/ws_ros2/build/px4_msgs /home/fidelis/NGCP-2024-/ws_ros2/build/px4_msgs /home/fidelis/NGCP-2024-/ws_ros2/build/px4_msgs/CMakeFiles/px4_msgs__cpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/px4_msgs__cpp.dir/depend
 

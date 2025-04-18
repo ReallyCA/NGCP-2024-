@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/cali/ws_sensor_combined/src/px4_ros_com
+CMAKE_SOURCE_DIR = /home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/cali/ws_sensor_combined/build/px4_ros_com
+CMAKE_BINARY_DIR = /home/fidelis/NGCP-2024-/ws_ros2/build/px4_ros_com
 
 # Utility rule file for uninstall.
 
@@ -78,6 +78,6 @@ CMakeFiles/uninstall.dir/clean:
 .PHONY : CMakeFiles/uninstall.dir/clean
 
 CMakeFiles/uninstall.dir/depend:
-	cd /home/cali/ws_sensor_combined/build/px4_ros_com && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/cali/ws_sensor_combined/src/px4_ros_com /home/cali/ws_sensor_combined/src/px4_ros_com /home/cali/ws_sensor_combined/build/px4_ros_com /home/cali/ws_sensor_combined/build/px4_ros_com /home/cali/ws_sensor_combined/build/px4_ros_com/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/fidelis/NGCP-2024-/ws_ros2/build/px4_ros_com && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com /home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com /home/fidelis/NGCP-2024-/ws_ros2/build/px4_ros_com /home/fidelis/NGCP-2024-/ws_ros2/build/px4_ros_com /home/fidelis/NGCP-2024-/ws_ros2/build/px4_ros_com/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/uninstall.dir/depend
 

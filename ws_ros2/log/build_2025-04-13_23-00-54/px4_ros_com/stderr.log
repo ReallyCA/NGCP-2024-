@@ -1,0 +1,34 @@
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:14[m[K:
+[01m[K/home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:[m[K In member function ‘[01m[Kvoid OffboardPlane::run()[m[K’:
+[01m[K/home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:103:37:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%f[m[K’ expects argument of type ‘[01m[Kdouble[m[K’, but argument 6 has type ‘[01m[Krclcpp::Time[m[K’ [[01;35m[K-Wformat=[m[K]
+  103 |     RCLCPP_INFO(this->get_logger(), [01;35m[K"Distance to waypoint: %f, time: %f"[m[K, distance, test_time);
+      |                                     [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:103:71:[m[K [01;36m[Knote: [m[Kformat string is defined here
+  103 |     RCLCPP_INFO(this->get_logger(), "Distance to waypoint: %f, time: [01;36m[K%f[m[K", distance, test_time);
+      |                                                                      [01;36m[K~^[m[K
+      |                                                                       [01;36m[K|[m[K
+      |                                                                       [01;36m[Kdouble[m[K
+[01m[K/home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:80:9:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kprev_d[m[K’ [[01;35m[K-Wunused-variable[m[K]
+   80 |   float [01;35m[Kprev_d[m[K = 9999;
+      |         [01;35m[K^~~~~~[m[K
+[01m[K/home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:81:8:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kmission_completed[m[K’ [[01;35m[K-Wunused-variable[m[K]
+   81 |   bool [01;35m[Kmission_completed[m[K = false;
+      |        [01;35m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:83:8:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kloiter_here[m[K’ [[01;35m[K-Wunused-variable[m[K]
+   83 |   bool [01;35m[Kloiter_here[m[K = false;
+      |        [01;35m[K^~~~~~~~~~~[m[K
+[01m[K/home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:[m[K In member function ‘[01m[Kstd::vector<std::vector<float> > OffboardPlane::get_loiter_waypoints(float, float, float, float, int)[m[K’:
+[01m[K/home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:142:109:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kn[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  142 | std::vector<std::vector<float>> OffboardPlane::get_loiter_waypoints(float x, float y, float z, float r, [01;35m[Kint n[m[K) {
+      |                                                                                                         [01;35m[K~~~~^[m[K

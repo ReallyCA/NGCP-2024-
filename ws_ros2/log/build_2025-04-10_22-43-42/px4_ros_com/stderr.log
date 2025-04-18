@@ -1,0 +1,7 @@
+[01m[K/home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:[m[K In member function ‘[01m[Kvoid OffboardPlane::publish_trajectory_setpoint(bool, float)[m[K’:
+[01m[K/home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:286:54:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kis_orbiting[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  286 | void OffboardPlane::publish_trajectory_setpoint([01;35m[Kbool is_orbiting[m[K, float orbit_angle) {
+      |                                                 [01;35m[K~~~~~^~~~~~~~~~~[m[K
+[01m[K/home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:286:73:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Korbit_angle[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  286 | void OffboardPlane::publish_trajectory_setpoint(bool is_orbiting, [01;35m[Kfloat orbit_angle[m[K) {
+      |                                                                   [01;35m[K~~~~~~^~~~~~~~~~~[m[K

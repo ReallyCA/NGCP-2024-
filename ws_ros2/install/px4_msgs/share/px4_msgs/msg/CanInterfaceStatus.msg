@@ -1,6 +1,1 @@
-uint64 timestamp		# time since system start (microseconds)
-uint8 interface
-
-uint64 io_errors
-uint64 frames_tx
-uint64 frames_rx
+/home/fidelis/NGCP-2024-/ws_ros2/src/px4_msgs/msg/CanInterfaceStatus.msg

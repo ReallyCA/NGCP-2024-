@@ -1,7 +1,1 @@
-launch:
-
-- node:
-    pkg: "px4_ros_com"
-    exec: "offboard_control"
-    name: "offboard_control"
-    output: "screen"
+/home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com/launch/offboard_control_launch.yaml
