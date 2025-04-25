@@ -23,9 +23,9 @@ using namespace std::chrono_literals;
 using namespace px4_msgs::msg;
 
 // MISSION PARAMETERS
-const int OFFBOARD_LOITER_TIME = 10; // adjust loiter time in seconds
+const int OFFBOARD_LOITER_TIME = 10; // adjust loiter time (seconds)
+const float DISTANCE_THRESHOLD = 10; // not sure if needed tbh (meters)
 const std::vector<std::vector<float>> MISSION_SETPOINTS = {{100.0, 50, -30.0}, {-100, -50, -30}};
-
 
 // DON'T TOUCH
 class OffboardPlane : public rclcpp::Node {
@@ -107,7 +107,7 @@ void OffboardPlane::run() {
 
     if(!loiter_mode) {
       RCLCPP_INFO(this->get_logger(), "Distance to waypoint: %f", distance);
-      if (distance < 10.0) {
+      if (distance < DISTANCE_THRESHOLD) {
         loiter_mode = true;
         loiter_start_time = clock::now();
       }
