@@ -26,6 +26,8 @@ using namespace px4_msgs::msg;
 const int OFFBOARD_LOITER_TIME = 10; // adjust loiter time in seconds
 const std::vector<std::vector<float>> MISSION_SETPOINTS = {{100.0, 50, -30.0}, {-100, -50, -30}};
 
+
+// DON'T TOUCH
 class OffboardPlane : public rclcpp::Node {
 public:
   OffboardPlane(const std::vector<std::vector<float>>& local_setpoints) : Node("offboard_plane"), local_setpoints_(local_setpoints) {
@@ -68,7 +70,7 @@ private:
   void vehicle_odometry_callback(const px4_msgs::msg::VehicleOdometry::SharedPtr msg);
 };
 
-// MAIN, MODIFY THE WAYPOINTS HERE
+
 int main(int argc, char *argv[]) {
   rclcpp::init(argc, argv);
 
