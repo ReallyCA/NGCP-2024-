@@ -7,10 +7,8 @@
 #include <px4_msgs/msg/trajectory_setpoint.hpp>
 #include <px4_msgs/msg/vehicle_command.hpp>
 #include <px4_msgs/msg/vehicle_control_mode.hpp>
-#include <px4_msgs/msg/vehicle_local_position_setpoint.hpp>
 #include <px4_msgs/msg/vehicle_odometry.hpp>
 #include <px4_msgs/msg/vehicle_status.hpp>
-#include <px4_msgs/msg/trajectory_waypoint.hpp>
 #include <rclcpp/rclcpp.hpp>
 #include <stdexcept>
 #include <stdint.h>
@@ -24,9 +22,13 @@ using namespace std::chrono;
 using namespace std::chrono_literals;
 using namespace px4_msgs::msg;
 
+// MISSION PARAMETERS
+const int OFFBOARD_LOITER_TIME = 10; // adjust loiter time in seconds
+const std::vector<std::vector<float>> MISSION_SETPOINTS = {{100.0, 50, -30.0}, {-100, -50, -30}};
+
 class OffboardPlane : public rclcpp::Node {
 public:
-  OffboardPlane(std::vector<std::vector<float>> local_waypoints) : Node("offboard_plane"), local_waypoints_(local_waypoints) {
+  OffboardPlane(const std::vector<std::vector<float>>& local_setpoints) : Node("offboard_plane"), local_setpoints_(local_setpoints) {
     
     rclcpp::QoS qos_profile = rclcpp::QoS(rclcpp::KeepLast(10));
     qos_profile.reliability(RMW_QOS_POLICY_RELIABILITY_BEST_EFFORT);
@@ -38,27 +40,17 @@ public:
     trajectory_setpoint_publisher_ = this->create_publisher<TrajectorySetpoint>("/fmu/in/trajectory_setpoint", 10);
 
     vehicle_command_publisher_ = this->create_publisher<VehicleCommand>("/fmu/in/vehicle_command", 10);
-    vehicle_local_position_setpoint_publisher_ = this->create_publisher<VehicleLocalPositionSetpoint>("/fmu/in/vehicle_local_position_setpoint", 10);
     vehicle_status_subcriber = this->create_subscription<VehicleStatus>("/fmu/out/vehicle_status", qos_profile, std::bind(&OffboardPlane::vehicle_status_callback, this, std::placeholders::_1));
     vehicle_odometry_subscriber = this->create_subscription<VehicleOdometry>("/fmu/out/vehicle_odometry", qos_profile, std::bind(&OffboardPlane::vehicle_odometry_callback, this, std::placeholders::_1));
     
-
     std::thread t1(&OffboardPlane::run, this);
     t1.detach();
   }
 
-  void arm();
-  void disarm();
-  void takeoff();
-  void land();
   void run();
 
 private:
-  float loiter_theta_= 0.0;
-  float loiter_radius_ = 50.0;
-  float loiter_angular_velocity_ = 0.05;
-  std::vector<float> loiter_center_;
-  std::vector<std::vector<float>> local_waypoints_;
+  std::vector<std::vector<float>> local_setpoints_;
   size_t waypoint_index_ = 0;
   px4_msgs::msg::VehicleStatus vehicle_status_;
   px4_msgs::msg::VehicleOdometry vehicle_odometry_;
@@ -66,7 +58,6 @@ private:
   rclcpp::Publisher<px4_msgs::msg::OffboardControlMode>::SharedPtr offboard_control_mode_publisher_;
   rclcpp::Publisher<px4_msgs::msg::TrajectorySetpoint>::SharedPtr trajectory_setpoint_publisher_;
   rclcpp::Publisher<px4_msgs::msg::VehicleCommand>::SharedPtr vehicle_command_publisher_;
-  rclcpp::Publisher<px4_msgs::msg::VehicleLocalPositionSetpoint>::SharedPtr vehicle_local_position_setpoint_publisher_;
   rclcpp::Subscription<px4_msgs::msg::VehicleStatus>::SharedPtr vehicle_status_subcriber;
   rclcpp::Subscription<px4_msgs::msg::VehicleOdometry>::SharedPtr vehicle_odometry_subscriber;
 
@@ -77,25 +68,39 @@ private:
   void vehicle_odometry_callback(const px4_msgs::msg::VehicleOdometry::SharedPtr msg);
 };
 
+// MAIN, MODIFY THE WAYPOINTS HERE
+int main(int argc, char *argv[]) {
+  rclcpp::init(argc, argv);
+
+  auto node = std::make_shared<OffboardPlane>(MISSION_SETPOINTS);
+  rclcpp::spin(node);
+  rclcpp::shutdown();
+  return 0;
+}
+
+
+// MEMBER FUNCTIONS DEFINITION
 void OffboardPlane::run() {
 
   using clock = std::chrono::steady_clock;
   clock::time_point loiter_start_time;
   bool mission_completed = false;
   bool loiter_mode = false;
-  const std::chrono::seconds loiter_duration(20);
+  const std::chrono::seconds loiter_duration(OFFBOARD_LOITER_TIME);
 
-  while (rclcpp::ok()) {
+  while (rclcpp::ok() && !mission_completed) {
     
-    publish_vehicle_command(VehicleCommand::VEHICLE_CMD_DO_SET_MODE, 1, 6);
-
+    if(!mission_completed) {
+      publish_vehicle_command(VehicleCommand::VEHICLE_CMD_DO_SET_MODE, 1, 6);
+    }
+    
     float pos_n = vehicle_odometry_.position[0];
     float pos_e = vehicle_odometry_.position[1];
     float pos_d = vehicle_odometry_.position[2];
 
-    float x = local_waypoints_[waypoint_index_][0];
-    float y = local_waypoints_[waypoint_index_][1];
-    float z = local_waypoints_[waypoint_index_][2];
+    float x = local_setpoints_[waypoint_index_][0];
+    float y = local_setpoints_[waypoint_index_][1];
+    float z = local_setpoints_[waypoint_index_][2];
 
     float dx = x - pos_n;
     float dy = y - pos_e;
@@ -119,40 +124,20 @@ void OffboardPlane::run() {
 
       if(now - loiter_start_time > loiter_duration) {
         loiter_mode = false;
-        if(waypoint_index_ + 1 == local_waypoints_.size()) {
-          waypoint_index_ = 0;
+        if(waypoint_index_ + 1 == local_setpoints_.size()) {
+          publish_vehicle_command(VehicleCommand::VEHICLE_CMD_DO_SET_MODE, 1, 4, 3); // SWITCH TO NATIVE HOLD/ LOITER MODE
+          RCLCPP_INFO(this->get_logger(), "Mission completed, switching to Hold mode...");
+          mission_completed = true;
         }
         waypoint_index_++;
       }
     }
 
-    
     publish_offboard_control_mode();
     publish_trajectory_setpoint(x, y, z);
     
     std::this_thread::sleep_for(std::chrono::milliseconds(100)); // 2Hz
   }
-}
-
-
-void OffboardPlane::land() {
-  publish_vehicle_command(px4_msgs::msg::VehicleCommand::VEHICLE_CMD_NAV_LAND, 0.0, 0.0);
-  RCLCPP_INFO(this->get_logger(), "Land command send");
-}
-
-void OffboardPlane::arm() {
-  publish_vehicle_command(px4_msgs::msg::VehicleCommand::VEHICLE_CMD_COMPONENT_ARM_DISARM, 1.0);
-  RCLCPP_INFO(this->get_logger(), "Arm command send");
-}
-
-void OffboardPlane::disarm() {
-  publish_vehicle_command(px4_msgs::msg::VehicleCommand::VEHICLE_CMD_COMPONENT_ARM_DISARM, 0.0);
-  RCLCPP_INFO(this->get_logger(), "Disarm command send");
-}
-
-void OffboardPlane::takeoff() {
-  publish_vehicle_command(px4_msgs::msg::VehicleCommand::VEHICLE_CMD_NAV_TAKEOFF, 0.0, 0.0);
-  RCLCPP_INFO(this->get_logger(), "Takeoff command send");
 }
 
 void OffboardPlane::vehicle_status_callback(const px4_msgs::msg::VehicleStatus::SharedPtr msg) {
@@ -162,7 +147,6 @@ void OffboardPlane::vehicle_status_callback(const px4_msgs::msg::VehicleStatus::
 void OffboardPlane::vehicle_odometry_callback(const px4_msgs::msg::VehicleOdometry::SharedPtr msg) {
   vehicle_odometry_ = *msg;
 }
-
 
 void OffboardPlane::publish_offboard_control_mode() {
   px4_msgs::msg::OffboardControlMode msg{};
@@ -182,13 +166,8 @@ void OffboardPlane::publish_trajectory_setpoint(float x, float y, float z) {
   msg.timestamp = this->get_clock()->now().nanoseconds() / 1000;
   msg.position = {x,y,z};
   msg.velocity = {NAN, NAN, NAN};
-
-  // RCLCPP_INFO(this->get_logger(), "Publishing Trajectory Setpoint: x: %.2f, y: %.2f, z: %.2f", 
-  //             msg.position[0], msg.position[1], msg.position[2]);
-  // pub
   trajectory_setpoint_publisher_->publish(msg);
 }
-
 
 void OffboardPlane::publish_vehicle_command(uint16_t command, float param1, float param2, float param3) {
   px4_msgs::msg::VehicleCommand msg{};
@@ -205,13 +184,25 @@ void OffboardPlane::publish_vehicle_command(uint16_t command, float param1, floa
   vehicle_command_publisher_->publish(msg);
 }
 
-int main(int argc, char *argv[]) {
-  rclcpp::init(argc, argv);
 
-  std::vector<std::vector<float>> local_waypoints = {{100.0, 50, -30.0}, {-100, -50, -30}};
 
-  auto node = std::make_shared<OffboardPlane>(local_waypoints);
-  rclcpp::spin(node);
-  rclcpp::shutdown();
-  return 0;
-}
+// NOT USED
+// void OffboardPlane::land() {
+//   publish_vehicle_command(px4_msgs::msg::VehicleCommand::VEHICLE_CMD_NAV_LAND, 0.0, 0.0);
+//   RCLCPP_INFO(this->get_logger(), "Land command send");
+// }
+
+// void OffboardPlane::arm() {
+//   publish_vehicle_command(px4_msgs::msg::VehicleCommand::VEHICLE_CMD_COMPONENT_ARM_DISARM, 1.0);
+//   RCLCPP_INFO(this->get_logger(), "Arm command send");
+// }
+
+// void OffboardPlane::disarm() {
+//   publish_vehicle_command(px4_msgs::msg::VehicleCommand::VEHICLE_CMD_COMPONENT_ARM_DISARM, 0.0);
+//   RCLCPP_INFO(this->get_logger(), "Disarm command send");
+// }
+
+// void OffboardPlane::takeoff() {
+//   publish_vehicle_command(px4_msgs::msg::VehicleCommand::VEHICLE_CMD_NAV_TAKEOFF, 0.0, 0.0);
+//   RCLCPP_INFO(this->get_logger(), "Takeoff command send");
+// }

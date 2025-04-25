@@ -283,10 +283,6 @@ CMakeFiles/offboard_control.dir/src/examples/offboard/offboard_control.cpp.o: /h
   /home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs/include/px4_msgs/px4_msgs/msg/detail/vehicle_control_mode__struct.hpp \
   /home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs/include/px4_msgs/px4_msgs/msg/detail/vehicle_control_mode__builder.hpp \
   /home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs/include/px4_msgs/px4_msgs/msg/detail/vehicle_control_mode__traits.hpp \
-  /home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs/include/px4_msgs/px4_msgs/msg/vehicle_local_position_setpoint.hpp \
-  /home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs/include/px4_msgs/px4_msgs/msg/detail/vehicle_local_position_setpoint__struct.hpp \
-  /home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs/include/px4_msgs/px4_msgs/msg/detail/vehicle_local_position_setpoint__builder.hpp \
-  /home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs/include/px4_msgs/px4_msgs/msg/detail/vehicle_local_position_setpoint__traits.hpp \
   /home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs/include/px4_msgs/px4_msgs/msg/vehicle_odometry.hpp \
   /home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs/include/px4_msgs/px4_msgs/msg/detail/vehicle_odometry__struct.hpp \
   /home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs/include/px4_msgs/px4_msgs/msg/detail/vehicle_odometry__builder.hpp \
@@ -295,10 +291,6 @@ CMakeFiles/offboard_control.dir/src/examples/offboard/offboard_control.cpp.o: /h
   /home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs/include/px4_msgs/px4_msgs/msg/detail/vehicle_status__struct.hpp \
   /home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs/include/px4_msgs/px4_msgs/msg/detail/vehicle_status__builder.hpp \
   /home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs/include/px4_msgs/px4_msgs/msg/detail/vehicle_status__traits.hpp \
-  /home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs/include/px4_msgs/px4_msgs/msg/trajectory_waypoint.hpp \
-  /home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs/include/px4_msgs/px4_msgs/msg/detail/trajectory_waypoint__struct.hpp \
-  /home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs/include/px4_msgs/px4_msgs/msg/detail/trajectory_waypoint__builder.hpp \
-  /home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs/include/px4_msgs/px4_msgs/msg/detail/trajectory_waypoint__traits.hpp \
   /opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp \
   /usr/include/c++/11/csignal \
   /usr/include/signal.h \
@@ -879,16 +871,6 @@ CMakeFiles/offboard_control.dir/src/examples/offboard/offboard_control.cpp.o: /h
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/set_parameters_result__builder.hpp:
 
-/opt/ros/humble/include/rclcpp/rclcpp/qos_overriding_options.hpp:
-
-/opt/ros/humble/include/rclcpp/rclcpp/detail/rmw_implementation_specific_payload.hpp:
-
-/opt/ros/humble/include/rclcpp/rclcpp/wait_set_policies/detail/synchronization_policy_common.hpp:
-
-/opt/ros/humble/include/rclcpp/rclcpp/subscription_options.hpp:
-
-/opt/ros/humble/include/rclcpp/rclcpp/detail/resolve_intra_process_buffer_type.hpp:
-
 /usr/include/c++/11/bits/istream.tcc:
 
 /usr/include/c++/11/bits/basic_ios.tcc:
@@ -938,10 +920,6 @@ CMakeFiles/offboard_control.dir/src/examples/offboard/offboard_control.cpp.o: /h
 /opt/ros/humble/include/rcutils/rcutils/logging_macros.h:
 
 /opt/ros/humble/include/rclcpp/rclcpp/context.hpp:
-
-/opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/set_parameters_result.hpp:
-
-/usr/include/sched.h:
 
 /usr/include/x86_64-linux-gnu/bits/errno.h:
 
@@ -1049,8 +1027,6 @@ CMakeFiles/offboard_control.dir/src/examples/offboard/offboard_control.cpp.o: /h
 
 /usr/include/x86_64-linux-gnu/bits/timex.h:
 
-/home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs/include/px4_msgs/px4_msgs/msg/detail/vehicle_local_position_setpoint__struct.hpp:
-
 /usr/include/c++/11/unordered_set:
 
 /usr/include/c++/11/iosfwd:
@@ -1089,6 +1065,10 @@ CMakeFiles/offboard_control.dir/src/examples/offboard/offboard_control.cpp.o: /h
 
 /usr/include/c++/11/bits/align.h:
 
+/opt/ros/humble/include/rclcpp/rclcpp/wait_set_policies/detail/synchronization_policy_common.hpp:
+
+/opt/ros/humble/include/rclcpp/rclcpp/subscription_options.hpp:
+
 /usr/include/c++/11/vector:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h:
@@ -1118,6 +1098,8 @@ CMakeFiles/offboard_control.dir/src/examples/offboard/offboard_control.cpp.o: /h
 /opt/ros/humble/include/rmw/rmw/incompatible_qos_events_statuses.h:
 
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
+
+/opt/ros/humble/include/rclcpp/rclcpp/qos_overriding_options.hpp:
 
 /usr/include/c++/11/bits/cxxabi_forced.h:
 
@@ -1201,6 +1183,8 @@ CMakeFiles/offboard_control.dir/src/examples/offboard/offboard_control.cpp.o: /h
 
 /usr/include/x86_64-linux-gnu/bits/byteswap.h:
 
+/opt/ros/humble/include/rclcpp/rclcpp/detail/resolve_intra_process_buffer_type.hpp:
+
 /usr/include/c++/11/ext/aligned_buffer.h:
 
 /usr/include/c++/11/bits/locale_classes.tcc:
@@ -1220,6 +1204,10 @@ CMakeFiles/offboard_control.dir/src/examples/offboard/offboard_control.cpp.o: /h
 /usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/time64.h:
+
+/opt/ros/humble/include/rcl_interfaces/rcl_interfaces/srv/detail/list_parameters__struct.hpp:
+
+/home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs/include/px4_msgs/px4_msgs/msg/trajectory_setpoint.hpp:
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/srv/get_parameters.hpp:
 
@@ -1294,6 +1282,8 @@ CMakeFiles/offboard_control.dir/src/examples/offboard/offboard_control.cpp.o: /h
 /opt/ros/humble/include/rclcpp/rclcpp/topic_statistics/subscription_topic_statistics.hpp:
 
 /usr/include/features.h:
+
+/usr/include/c++/11/bits/atomic_base.h:
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_event__struct.hpp:
 
@@ -1399,8 +1389,6 @@ CMakeFiles/offboard_control.dir/src/examples/offboard/offboard_control.cpp.o: /h
 
 /opt/ros/humble/include/rclcpp/rclcpp/serialized_message.hpp:
 
-/home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs/include/px4_msgs/px4_msgs/msg/trajectory_waypoint.hpp:
-
 /usr/include/c++/11/bits/stl_algobase.h:
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/floating_point_range__struct.hpp:
@@ -1467,8 +1455,6 @@ CMakeFiles/offboard_control.dir/src/examples/offboard/offboard_control.cpp.o: /h
 
 /usr/include/c++/11/bits/hash_bytes.h:
 
-/home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs/include/px4_msgs/px4_msgs/msg/detail/trajectory_waypoint__struct.hpp:
-
 /usr/include/c++/11/bits/stl_relops.h:
 
 /usr/include/asm-generic/errno-base.h:
@@ -1492,6 +1478,10 @@ CMakeFiles/offboard_control.dir/src/examples/offboard/offboard_control.cpp.o: /h
 /usr/include/c++/11/tr1/poly_laguerre.tcc:
 
 /usr/include/c++/11/bits/std_mutex.h:
+
+/usr/include/x86_64-linux-gnu/c++/11/bits/error_constants.h:
+
+/usr/include/c++/11/tr1/ell_integral.tcc:
 
 /usr/include/c++/11/cctype:
 
@@ -1587,12 +1577,6 @@ CMakeFiles/offboard_control.dir/src/examples/offboard/offboard_control.cpp.o: /h
 
 /home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs/include/px4_msgs/px4_msgs/msg/detail/trajectory_setpoint__builder.hpp:
 
-/opt/ros/humble/include/rcl_interfaces/rcl_interfaces/srv/detail/list_parameters__struct.hpp:
-
-/home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs/include/px4_msgs/px4_msgs/msg/trajectory_setpoint.hpp:
-
-/home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs/include/px4_msgs/px4_msgs/msg/vehicle_local_position_setpoint.hpp:
-
 /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/duration__struct.hpp:
 
 /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/message_initialization.h:
@@ -1625,14 +1609,6 @@ CMakeFiles/offboard_control.dir/src/examples/offboard/offboard_control.cpp.o: /h
 
 /home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs/include/px4_msgs/px4_msgs/msg/detail/vehicle_control_mode__builder.hpp:
 
-/home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs/include/px4_msgs/px4_msgs/msg/detail/vehicle_local_position_setpoint__builder.hpp:
-
-/opt/ros/humble/include/rmw/rmw/impl/config.h:
-
-/usr/include/c++/11/bits/atomic_base.h:
-
-/home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs/include/px4_msgs/px4_msgs/msg/detail/vehicle_local_position_setpoint__traits.hpp:
-
 /home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs/include/px4_msgs/px4_msgs/msg/vehicle_odometry.hpp:
 
 /usr/include/c++/11/array:
@@ -1650,14 +1626,6 @@ CMakeFiles/offboard_control.dir/src/examples/offboard/offboard_control.cpp.o: /h
 /home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs/include/px4_msgs/px4_msgs/msg/detail/vehicle_status__struct.hpp:
 
 /home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs/include/px4_msgs/px4_msgs/msg/detail/vehicle_status__traits.hpp:
-
-/home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs/include/px4_msgs/px4_msgs/msg/detail/trajectory_waypoint__builder.hpp:
-
-/usr/include/x86_64-linux-gnu/c++/11/bits/error_constants.h:
-
-/usr/include/c++/11/tr1/ell_integral.tcc:
-
-/home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs/include/px4_msgs/px4_msgs/msg/detail/trajectory_waypoint__traits.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:
 
@@ -1714,18 +1682,6 @@ CMakeFiles/offboard_control.dir/src/examples/offboard/offboard_control.cpp.o: /h
 /usr/include/c++/11/mutex:
 
 /usr/include/c++/11/ratio:
-
-/usr/include/c++/11/optional:
-
-/usr/include/x86_64-linux-gnu/bits/sigstksz.h:
-
-/usr/include/c++/11/condition_variable:
-
-/opt/ros/humble/include/rclcpp/rclcpp/generic_publisher.hpp:
-
-/opt/ros/humble/include/rclcpp/rclcpp/message_memory_strategy.hpp:
-
-/usr/include/c++/11/thread:
 
 /usr/include/c++/11/bits/parse_numbers.h:
 
@@ -1841,9 +1797,9 @@ CMakeFiles/offboard_control.dir/src/examples/offboard/offboard_control.cpp.o: /h
 
 /opt/ros/humble/include/rcutils/rcutils/qsort.h:
 
-/opt/ros/humble/include/rclcpp/rclcpp/detail/rmw_implementation_specific_subscription_payload.hpp:
-
 /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h:
+
+/opt/ros/humble/include/rclcpp/rclcpp/detail/rmw_implementation_specific_subscription_payload.hpp:
 
 /opt/ros/humble/include/rmw/rmw/rmw.h:
 
@@ -1983,6 +1939,12 @@ CMakeFiles/offboard_control.dir/src/examples/offboard/offboard_control.cpp.o: /h
 
 /opt/ros/humble/include/rclcpp/rclcpp/client.hpp:
 
+/usr/include/x86_64-linux-gnu/bits/sigstksz.h:
+
+/usr/include/c++/11/condition_variable:
+
+/usr/include/c++/11/optional:
+
 /opt/ros/humble/include/rclcpp/rclcpp/exceptions/exceptions.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/function_traits.hpp:
@@ -1996,6 +1958,10 @@ CMakeFiles/offboard_control.dir/src/examples/offboard/offboard_control.cpp.o: /h
 /opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/get_node_base_interface.hpp:
 
 /opt/ros/humble/include/rcpputils/rcpputils/visibility_control.hpp:
+
+/usr/include/sched.h:
+
+/opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/set_parameters_result.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/utilities.hpp:
 
@@ -2024,6 +1990,8 @@ CMakeFiles/offboard_control.dir/src/examples/offboard/offboard_control.cpp.o: /h
 /opt/ros/humble/include/rclcpp/rclcpp/exceptions.hpp:
 
 /opt/ros/humble/include/rmw/rmw/error_handling.h:
+
+/opt/ros/humble/include/rmw/rmw/impl/config.h:
 
 /usr/include/alloca.h:
 
@@ -2086,3 +2054,11 @@ CMakeFiles/offboard_control.dir/src/examples/offboard/offboard_control.cpp.o: /h
 /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/time__builder.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/intra_process_setting.hpp:
+
+/opt/ros/humble/include/rclcpp/rclcpp/generic_publisher.hpp:
+
+/usr/include/c++/11/thread:
+
+/opt/ros/humble/include/rclcpp/rclcpp/message_memory_strategy.hpp:
+
+/opt/ros/humble/include/rclcpp/rclcpp/detail/rmw_implementation_specific_payload.hpp:
