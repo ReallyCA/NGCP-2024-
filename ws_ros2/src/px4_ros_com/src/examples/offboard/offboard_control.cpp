@@ -90,10 +90,6 @@ void OffboardPlane::run() {
 
   while (rclcpp::ok() && !mission_completed) {
     
-    if(!mission_completed) {
-      publish_vehicle_command(VehicleCommand::VEHICLE_CMD_DO_SET_MODE, 1, 6);
-    }
-    
     float pos_n = vehicle_odometry_.position[0];
     float pos_e = vehicle_odometry_.position[1];
     float pos_d = vehicle_odometry_.position[2];
@@ -128,13 +124,16 @@ void OffboardPlane::run() {
           publish_vehicle_command(VehicleCommand::VEHICLE_CMD_DO_SET_MODE, 1, 4, 3); // SWITCH TO NATIVE HOLD/ LOITER MODE
           RCLCPP_INFO(this->get_logger(), "Mission completed, switching to Hold mode...");
           mission_completed = true;
+          return;
         }
         waypoint_index_++;
       }
     }
 
     publish_offboard_control_mode();
-    publish_trajectory_setpoint(x, y, z);
+    if(vehicle_status_.nav_state == vehicle_status_.NAVIGATION_STATE_OFFBOARD) {
+      publish_trajectory_setpoint(x, y, z);
+    }
     
     std::this_thread::sleep_for(std::chrono::milliseconds(100)); // 2Hz
   }
