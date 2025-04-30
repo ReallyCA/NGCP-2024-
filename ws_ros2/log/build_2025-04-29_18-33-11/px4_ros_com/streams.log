@@ -1,0 +1,70 @@
+[0.010s] Invoking command in '/home/fidelis/NGCP-2024-/ws_ros2/build/px4_ros_com': CMAKE_PREFIX_PATH=/home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs:/home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com:/opt/ros/humble LD_LIBRARY_PATH=/home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs/lib:/home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/fidelis/NGCP-2024-/ws_ros2/build/px4_ros_com -- -j16 -l16
+[0.057s] [35m[1mConsolidate compiler generated dependencies of target offboard_control[0m
+[0.057s] [35m[1mConsolidate compiler generated dependencies of target read_telemetry[0m
+[0.070s] [ 42%] Built target vehicle_gps_position_listener
+[0.070s] [ 42%] Built target sensor_combined_listener
+[0.070s] [ 42%] Built target frame_transforms
+[0.070s] [ 57%] Built target offboard_control_srv
+[0.070s] [ 71%] Built target debug_vect_advertiser
+[0.076s] [ 85%] [32mBuilding CXX object CMakeFiles/offboard_control.dir/src/examples/offboard/offboard_control.cpp.o[0m
+[0.077s] [ 92%] Built target read_telemetry
+[0.078s] [ 92%] Built target ament_cmake_python_symlink_px4_ros_com
+[0.259s] running egg_info
+[0.270s] writing px4_ros_com.egg-info/PKG-INFO
+[0.271s] writing dependency_links to px4_ros_com.egg-info/dependency_links.txt
+[0.271s] writing top-level names to px4_ros_com.egg-info/top_level.txt
+[0.303s] reading manifest file 'px4_ros_com.egg-info/SOURCES.txt'
+[0.304s] writing manifest file 'px4_ros_com.egg-info/SOURCES.txt'
+[0.354s] [ 92%] Built target ament_cmake_python_build_px4_ros_com_egg
+[3.933s] [01m[K/home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:33:3:[m[K [01;31m[Kerror: [m[KISO C++ forbids declaration of ‘[01m[KOffboardPlane[m[K’ with no type [[01;31m[K-fpermissive[m[K]
+[3.933s]    33 |   [01;31m[KOffboardPlane[m[K(const std::vector<std::vector<float>>& local_setpoints) : Node("offboard_plane"), local_setpoints_(local_setpoints) {
+[3.933s]       |   [01;31m[K^~~~~~~~~~~~~[m[K
+[3.933s] [01m[K/home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:[m[K In member function ‘[01m[Kint TelemetryReader::OffboardPlane(const std::vector<std::vector<float> >&)[m[K’:
+[3.933s] [01m[K/home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:33:75:[m[K [01;31m[Kerror: [m[Konly constructors take member initializers
+[3.933s]    33 |   OffboardPlane(const std::vector<std::vector<float>>& local_setpoints) : [01;31m[KNode[m[K("offboard_plane"), local_setpoints_(local_setpoints) {
+[3.934s]       |                                                                           [01;31m[K^~~~[m[K
+[3.934s] [01m[K/home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:45:124:[m[K [01;31m[Kerror: [m[K‘[01m[KOffboardPlane[m[K’ is not a class, namespace, or enumeration
+[3.934s]    45 |     vehicle_status_subcriber = this->create_subscription<VehicleStatus>("/fmu/out/vehicle_status", qos_profile, std::bind(&[01;31m[KOffboardPlane[m[K::vehicle_status_callback, this, std::placeholders::_1));
+[3.934s]       |                                                                                                                            [01;31m[K^~~~~~~~~~~~~[m[K
+[3.934s] [01m[K/home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:46:131:[m[K [01;31m[Kerror: [m[K‘[01m[KOffboardPlane[m[K’ is not a class, namespace, or enumeration
+[3.934s]    46 |     vehicle_odometry_subscriber = this->create_subscription<VehicleOdometry>("/fmu/out/vehicle_odometry", qos_profile, std::bind(&[01;31m[KOffboardPlane[m[K::vehicle_odometry_callback, this, std::placeholders::_1));
+[3.934s]       |                                                                                                                                   [01;31m[K^~~~~~~~~~~~~[m[K
+[3.934s] [01m[K/home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:48:21:[m[K [01;31m[Kerror: [m[K‘[01m[KOffboardPlane[m[K’ is not a class, namespace, or enumeration
+[3.934s]    48 |     std::thread t1(&[01;31m[KOffboardPlane[m[K::run, this);
+[3.934s]       |                     [01;31m[K^~~~~~~~~~~~~[m[K
+[3.934s] [01m[K/home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:50:3:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+[3.934s]    50 |   [01;35m[K}[m[K
+[3.934s]       |   [01;35m[K^[m[K
+[3.934s] In file included from [01m[K/usr/include/x86_64-linux-gnu/c++/11/bits/c++allocator.h:33[m[K,
+[3.934s]                  from [01m[K/usr/include/c++/11/bits/allocator.h:46[m[K,
+[3.934s]                  from [01m[K/usr/include/c++/11/unordered_map:40[m[K,
+[3.934s]                  from [01m[K/usr/include/c++/11/functional:61[m[K,
+[3.934s]                  from [01m[K/usr/include/c++/11/pstl/glue_algorithm_defs.h:13[m[K,
+[3.934s]                  from [01m[K/usr/include/c++/11/algorithm:74[m[K,
+[3.934s]                  from [01m[K/home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs/include/px4_msgs/px4_msgs/msg/detail/offboard_control_mode__struct.hpp:8[m[K,
+[3.934s]                  from [01m[K/home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs/include/px4_msgs/px4_msgs/msg/offboard_control_mode.hpp:7[m[K,
+[3.934s]                  from [01m[K/home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:6[m[K:
+[3.934s] /usr/include/c++/11/ext/new_allocator.h: In instantiation of ‘[01m[Kvoid __gnu_cxx::new_allocator<_Tp>::construct(_Up*, _Args&& ...) [with _Up = TelemetryReader; _Args = {const std::vector<std::vector<float, std::allocator<float> >, std::allocator<std::vector<float, std::allocator<float> > > >&}; _Tp = TelemetryReader][m[K’:
+[3.934s] [01m[K/usr/include/c++/11/bits/alloc_traits.h:516:17:[m[K   required from ‘[01m[Kstatic void std::allocator_traits<std::allocator<_Tp1> >::construct(std::allocator_traits<std::allocator<_Tp1> >::allocator_type&, _Up*, _Args&& ...) [with _Up = TelemetryReader; _Args = {const std::vector<std::vector<float, std::allocator<float> >, std::allocator<std::vector<float, std::allocator<float> > > >&}; _Tp = TelemetryReader; std::allocator_traits<std::allocator<_Tp1> >::allocator_type = std::allocator<TelemetryReader>][m[K’
+[3.934s] [01m[K/usr/include/c++/11/bits/shared_ptr_base.h:519:39:[m[K   required from ‘[01m[Kstd::_Sp_counted_ptr_inplace<_Tp, _Alloc, _Lp>::_Sp_counted_ptr_inplace(_Alloc, _Args&& ...) [with _Args = {const std::vector<std::vector<float, std::allocator<float> >, std::allocator<std::vector<float, std::allocator<float> > > >&}; _Tp = TelemetryReader; _Alloc = std::allocator<TelemetryReader>; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic][m[K’
+[3.935s] [01m[K/usr/include/c++/11/bits/shared_ptr_base.h:650:16:[m[K   required from ‘[01m[Kstd::__shared_count<_Lp>::__shared_count(_Tp*&, std::_Sp_alloc_shared_tag<_Alloc>, _Args&& ...) [with _Tp = TelemetryReader; _Alloc = std::allocator<TelemetryReader>; _Args = {const std::vector<std::vector<float, std::allocator<float> >, std::allocator<std::vector<float, std::allocator<float> > > >&}; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic][m[K’
+[3.935s] [01m[K/usr/include/c++/11/bits/shared_ptr_base.h:1342:14:[m[K   required from ‘[01m[Kstd::__shared_ptr<_Tp, _Lp>::__shared_ptr(std::_Sp_alloc_shared_tag<_Tp>, _Args&& ...) [with _Alloc = std::allocator<TelemetryReader>; _Args = {const std::vector<std::vector<float, std::allocator<float> >, std::allocator<std::vector<float, std::allocator<float> > > >&}; _Tp = TelemetryReader; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic][m[K’
+[3.935s] [01m[K/usr/include/c++/11/bits/shared_ptr.h:409:59:[m[K   required from ‘[01m[Kstd::shared_ptr<_Tp>::shared_ptr(std::_Sp_alloc_shared_tag<_Tp>, _Args&& ...) [with _Alloc = std::allocator<TelemetryReader>; _Args = {const std::vector<std::vector<float, std::allocator<float> >, std::allocator<std::vector<float, std::allocator<float> > > >&}; _Tp = TelemetryReader][m[K’
+[3.935s] [01m[K/usr/include/c++/11/bits/shared_ptr.h:862:14:[m[K   required from ‘[01m[Kstd::shared_ptr<_Tp> std::allocate_shared(const _Alloc&, _Args&& ...) [with _Tp = TelemetryReader; _Alloc = std::allocator<TelemetryReader>; _Args = {const std::vector<std::vector<float, std::allocator<float> >, std::allocator<std::vector<float, std::allocator<float> > > >&}][m[K’
+[3.935s] [01m[K/usr/include/c++/11/bits/shared_ptr.h:878:39:[m[K   required from ‘[01m[Kstd::shared_ptr<_Tp> std::make_shared(_Args&& ...) [with _Tp = TelemetryReader; _Args = {const std::vector<std::vector<float, std::allocator<float> >, std::allocator<std::vector<float, std::allocator<float> > > >&}][m[K’
+[3.935s] [01m[K/home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:77:48:[m[K   required from here
+[3.935s] [01m[K/usr/include/c++/11/ext/new_allocator.h:162:11:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KTelemetryReader::TelemetryReader(const std::vector<std::vector<float> >&)[m[K’
+[3.935s]   162 |         { [01;31m[K::new((void *)__p) _Up(std::forward<_Args>(__args)...)[m[K; }
+[3.935s]       |           [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.935s] [01m[K/home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:31:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KTelemetryReader::TelemetryReader()[m[K’ (deleted)
+[3.935s]    31 | class [01;36m[KTelemetryReader[m[K : public rclcpp::Node {
+[3.935s]       |       [01;36m[K^~~~~~~~~~~~~~~[m[K
+[3.935s] [01m[K/home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:31:7:[m[K [01;36m[Knote: [m[K  candidate expects 0 arguments, 1 provided
+[3.935s] [01m[K/home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:31:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KTelemetryReader::TelemetryReader(const TelemetryReader&)[m[K’ (deleted)
+[3.935s] [01m[K/home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:31:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kconst std::vector<std::vector<float> >[m[K’ to ‘[01m[Kconst TelemetryReader&[m[K’
+[3.935s] [01m[K/home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:31:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KTelemetryReader::TelemetryReader(TelemetryReader&&)[m[K’ (deleted)
+[3.935s] [01m[K/home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:31:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kconst std::vector<std::vector<float> >[m[K’ to ‘[01m[KTelemetryReader&&[m[K’
+[3.935s] gmake[2]: *** [CMakeFiles/offboard_control.dir/build.make:76: CMakeFiles/offboard_control.dir/src/examples/offboard/offboard_control.cpp.o] Error 1
+[3.936s] gmake[1]: *** [CMakeFiles/Makefile2:256: CMakeFiles/offboard_control.dir/all] Error 2
+[3.936s] gmake: *** [Makefile:146: all] Error 2
+[3.940s] Invoked command in '/home/fidelis/NGCP-2024-/ws_ros2/build/px4_ros_com' returned '2': CMAKE_PREFIX_PATH=/home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs:/home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com:/opt/ros/humble LD_LIBRARY_PATH=/home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs/lib:/home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/fidelis/NGCP-2024-/ws_ros2/build/px4_ros_com -- -j16 -l16

@@ -322,8 +322,11 @@ include("/home/fidelis/NGCP-2024-/ws_ros2/build/px4_ros_com/ament_cmake_symlink_
 # install("TARGETS" "offboard_control" "DESTINATION" "lib/px4_ros_com")
 include("/home/fidelis/NGCP-2024-/ws_ros2/build/px4_ros_com/ament_cmake_symlink_install_targets_3_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
 
-# install("TARGETS" "offboard_control_srv" "DESTINATION" "lib/px4_ros_com")
+# install("TARGETS" "read_telemetry" "DESTINATION" "lib/px4_ros_com")
 include("/home/fidelis/NGCP-2024-/ws_ros2/build/px4_ros_com/ament_cmake_symlink_install_targets_4_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
+
+# install("TARGETS" "offboard_control_srv" "DESTINATION" "lib/px4_ros_com")
+include("/home/fidelis/NGCP-2024-/ws_ros2/build/px4_ros_com/ament_cmake_symlink_install_targets_5_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
 
 # install(FILES "/opt/ros/humble/lib/python3.10/site-packages/ament_package/template/environment_hook/library_path.sh" "DESTINATION" "share/px4_ros_com/environment")
 ament_cmake_symlink_install_files("/home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com" FILES "/opt/ros/humble/lib/python3.10/site-packages/ament_package/template/environment_hook/library_path.sh" "DESTINATION" "share/px4_ros_com/environment")

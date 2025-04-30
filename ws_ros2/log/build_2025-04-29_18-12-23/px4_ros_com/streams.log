@@ -1,0 +1,109 @@
+[0.009s] Invoking command in '/home/fidelis/NGCP-2024-/ws_ros2/build/px4_ros_com': AMENT_PREFIX_PATH=/home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/fidelis/NGCP-2024-/ws_ros2/build/px4_ros_com -- -j16 -l16
+[0.037s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.132s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.143s] -- Found builtin_interfaces: 1.2.1 (/opt/ros/humble/share/builtin_interfaces/cmake)
+[0.167s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.169s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.174s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.181s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.190s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.197s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[0.198s] -- Found geometry_msgs: 4.2.4 (/opt/ros/humble/share/geometry_msgs/cmake)
+[0.222s] -- Found px4_msgs: 2.0.1 (/home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs/share/px4_msgs/cmake)
+[0.229s] -- Found rclcpp: 16.0.10 (/opt/ros/humble/share/rclcpp/cmake)
+[0.252s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.254s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.344s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.376s] -- Found sensor_msgs: 4.2.4 (/opt/ros/humble/share/sensor_msgs/cmake)
+[0.387s] -- Found rclpy: 3.3.14 (/opt/ros/humble/share/rclpy/cmake)
+[0.392s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.454s] -- Added test 'copyright' to check source files copyright and LICENSE
+[0.458s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[0.458s] -- Configured cppcheck include dirs: /home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com/include;$<BUILD_INTERFACE:/home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com/include/px4_ros_com>
+[0.458s] -- Configured cppcheck exclude dirs and/or files: 
+[0.461s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[0.461s] -- Configured cpplint exclude dirs and/or files: 
+[0.462s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.463s] -- Added test 'lint_cmake' to check CMake code style
+[0.463s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[0.467s] -- Added test 'uncrustify' to check C / C++ code style
+[0.467s] -- Configured uncrustify additional arguments: 
+[0.467s] -- Added test 'xmllint' to check XML markup files
+[0.470s] -- Configuring done
+[0.492s] -- Generating done
+[0.494s] -- Build files have been written to: /home/fidelis/NGCP-2024-/ws_ros2/build/px4_ros_com
+[0.521s] [35m[1mConsolidate compiler generated dependencies of target offboard_control[0m
+[0.521s] [35m[1mConsolidate compiler generated dependencies of target sensor_combined_listener[0m
+[0.521s] [35m[1mConsolidate compiler generated dependencies of target frame_transforms[0m
+[0.521s] [35m[1mConsolidate compiler generated dependencies of target debug_vect_advertiser[0m
+[0.521s] [35m[1mConsolidate compiler generated dependencies of target vehicle_gps_position_listener[0m
+[0.521s] [35m[1mConsolidate compiler generated dependencies of target offboard_control_srv[0m
+[0.532s] [  7%] [32mBuilding CXX object CMakeFiles/read_telemetry.dir/src/examples/offboard/read_telemetry.cpp.o[0m
+[0.537s] [ 57%] Built target debug_vect_advertiser
+[0.537s] [ 57%] Built target sensor_combined_listener
+[0.537s] [ 64%] Built target frame_transforms
+[0.537s] [ 64%] Built target offboard_control
+[0.537s] [ 92%] Built target offboard_control_srv
+[0.537s] [ 92%] Built target vehicle_gps_position_listener
+[0.537s] [ 92%] Built target ament_cmake_python_symlink_px4_ros_com
+[0.671s] running egg_info
+[0.679s] writing px4_ros_com.egg-info/PKG-INFO
+[0.680s] writing dependency_links to px4_ros_com.egg-info/dependency_links.txt
+[0.680s] writing top-level names to px4_ros_com.egg-info/top_level.txt
+[0.707s] reading manifest file 'px4_ros_com.egg-info/SOURCES.txt'
+[0.708s] writing manifest file 'px4_ros_com.egg-info/SOURCES.txt'
+[0.737s] [ 92%] Built target ament_cmake_python_build_px4_ros_com_egg
+[6.317s] [100%] [32m[1mLinking CXX executable read_telemetry[0m
+[6.585s] [100%] Built target read_telemetry
+[6.595s] Invoked command in '/home/fidelis/NGCP-2024-/ws_ros2/build/px4_ros_com' returned '0': AMENT_PREFIX_PATH=/home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/fidelis/NGCP-2024-/ws_ros2/build/px4_ros_com -- -j16 -l16
+[6.643s] Invoking command in '/home/fidelis/NGCP-2024-/ws_ros2/build/px4_ros_com': AMENT_PREFIX_PATH=/home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/fidelis/NGCP-2024-/ws_ros2/build/px4_ros_com
+[6.648s] -- Install configuration: ""
+[6.649s] -- Execute custom install script
+[6.649s] -- Up-to-date symlink: /home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/lib/px4_ros_com/sensor_combined_listener
+[6.649s] -- Up-to-date symlink: /home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/lib/px4_ros_com/vehicle_gps_position_listener
+[6.649s] -- Up-to-date symlink: /home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/lib/px4_ros_com/debug_vect_advertiser
+[6.649s] -- Up-to-date symlink: /home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/lib/px4_ros_com/offboard_control
+[6.649s] -- Symlinking: /home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/lib/px4_ros_com/read_telemetry
+[6.657s] -- Up-to-date symlink: /home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/lib/px4_ros_com/offboard_control_srv
+[6.657s] -- Up-to-date symlink: /home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/share/px4_ros_com/environment/library_path.sh
+[6.657s] -- Up-to-date symlink: /home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/share/px4_ros_com/environment/library_path.dsv
+[6.658s] -- Up-to-date symlink: /home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/include/px4_ros_com/frame_transforms.h
+[6.658s] -- Up-to-date symlink: /home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/share/px4_ros_com//launch/offboard_control_launch.yaml
+[6.658s] -- Up-to-date symlink: /home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/share/px4_ros_com//launch/sensor_combined_listener.launch.py
+[6.658s] -- Up-to-date symlink: /home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/share/px4_ros_com//test/__init__.py
+[6.659s] -- Up-to-date symlink: /home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/share/px4_ros_com//test/pipeline_io_test.py
+[6.659s] -- Up-to-date symlink: /home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/share/px4_ros_com//test/test_input.py
+[6.659s] -- Up-to-date symlink: /home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/share/px4_ros_com//test/test_output.py
+[6.659s] -- Up-to-date symlink: /home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/share/px4_ros_com/environment/pythonpath.sh
+[6.659s] -- Up-to-date symlink: /home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/share/px4_ros_com/environment/pythonpath.dsv
+[6.659s] -- Up-to-date symlink: /home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/local/lib/python3.10/dist-packages/px4_ros_com-0.1.0-py3.10.egg-info/PKG-INFO
+[6.659s] -- Up-to-date symlink: /home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/local/lib/python3.10/dist-packages/px4_ros_com-0.1.0-py3.10.egg-info/SOURCES.txt
+[6.659s] -- Up-to-date symlink: /home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/local/lib/python3.10/dist-packages/px4_ros_com-0.1.0-py3.10.egg-info/dependency_links.txt
+[6.659s] -- Up-to-date symlink: /home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/local/lib/python3.10/dist-packages/px4_ros_com-0.1.0-py3.10.egg-info/top_level.txt
+[6.660s] -- Up-to-date symlink: /home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/local/lib/python3.10/dist-packages/px4_ros_com/__init__.py
+[6.660s] -- Up-to-date symlink: /home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/local/lib/python3.10/dist-packages/px4_ros_com/module_to_import.py
+[6.660s] -- Up-to-date symlink: /home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/lib/px4_ros_com/offboard_control.py
+[6.660s] -- Up-to-date symlink: /home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/share/ament_index/resource_index/package_run_dependencies/px4_ros_com
+[6.660s] -- Up-to-date symlink: /home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/share/ament_index/resource_index/parent_prefix_path/px4_ros_com
+[6.660s] -- Up-to-date symlink: /home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/share/px4_ros_com/environment/ament_prefix_path.sh
+[6.660s] -- Up-to-date symlink: /home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/share/px4_ros_com/environment/ament_prefix_path.dsv
+[6.660s] -- Up-to-date symlink: /home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/share/px4_ros_com/environment/path.sh
+[6.660s] -- Up-to-date symlink: /home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/share/px4_ros_com/environment/path.dsv
+[6.661s] -- Up-to-date symlink: /home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/share/px4_ros_com/local_setup.bash
+[6.661s] -- Up-to-date symlink: /home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/share/px4_ros_com/local_setup.sh
+[6.661s] -- Up-to-date symlink: /home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/share/px4_ros_com/local_setup.zsh
+[6.661s] -- Up-to-date symlink: /home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/share/px4_ros_com/local_setup.dsv
+[6.661s] -- Symlinking: /home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/share/px4_ros_com/package.dsv
+[6.668s] -- Up-to-date symlink: /home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/share/ament_index/resource_index/packages/px4_ros_com
+[6.668s] -- Up-to-date symlink: /home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/share/px4_ros_com/cmake/ament_cmake_export_dependencies-extras.cmake
+[6.668s] -- Up-to-date symlink: /home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/share/px4_ros_com/cmake/ament_cmake_export_targets-extras.cmake
+[6.668s] -- Up-to-date symlink: /home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/share/px4_ros_com/cmake/ament_cmake_export_include_directories-extras.cmake
+[6.668s] -- Up-to-date symlink: /home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/share/px4_ros_com/cmake/ament_cmake_export_libraries-extras.cmake
+[6.668s] -- Up-to-date symlink: /home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/share/px4_ros_com/cmake/px4_ros_comConfig.cmake
+[6.668s] -- Up-to-date symlink: /home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/share/px4_ros_com/cmake/px4_ros_comConfig-version.cmake
+[6.668s] -- Up-to-date symlink: /home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/share/px4_ros_com/package.xml
+[6.668s] -- Up-to-date: /home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/lib/libframe_transforms.so
+[6.690s] Listing '/home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/local/lib/python3.10/dist-packages/px4_ros_com'...
+[6.694s] -- Up-to-date: /home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/share/px4_ros_com/cmake/export_frame_transformsExport.cmake
+[6.694s] -- Up-to-date: /home/fidelis/NGCP-2024-/ws_ros2/install/px4_ros_com/share/px4_ros_com/cmake/export_frame_transformsExport-noconfig.cmake
+[6.696s] Invoked command in '/home/fidelis/NGCP-2024-/ws_ros2/build/px4_ros_com' returned '0': AMENT_PREFIX_PATH=/home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/fidelis/NGCP-2024-/ws_ros2/build/px4_ros_com

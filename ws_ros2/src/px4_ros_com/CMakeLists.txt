@@ -61,6 +61,11 @@ add_executable(offboard_control src/examples/offboard/offboard_control.cpp)
 ament_target_dependencies(offboard_control rclcpp px4_msgs)
 install(TARGETS offboard_control DESTINATION lib/${PROJECT_NAME})
 
+# examples/offboard/read_telemetry
+add_executable(read_telemetry src/examples/offboard/read_telemetry.cpp)
+ament_target_dependencies(read_telemetry rclcpp px4_msgs)
+install(TARGETS read_telemetry DESTINATION lib/${PROJECT_NAME})
+
 # examples/offboard/offboard_control_srv
 add_executable(offboard_control_srv src/examples/offboard/offboard_control_srv.cpp)
 ament_target_dependencies(offboard_control_srv rclcpp px4_msgs)

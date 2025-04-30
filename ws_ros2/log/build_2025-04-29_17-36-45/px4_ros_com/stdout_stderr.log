@@ -1,0 +1,35 @@
+[35m[1mConsolidate compiler generated dependencies of target offboard_control[0m
+[ 83%] Built target vehicle_gps_position_listener
+[ 83%] Built target sensor_combined_listener
+[ 83%] Built target frame_transforms
+[ 83%] Built target offboard_control_srv
+[ 83%] Built target debug_vect_advertiser
+[ 91%] [32mBuilding CXX object CMakeFiles/offboard_control.dir/src/examples/offboard/offboard_control.cpp.o[0m
+[ 91%] Built target ament_cmake_python_symlink_px4_ros_com
+running egg_info
+writing px4_ros_com.egg-info/PKG-INFO
+writing dependency_links to px4_ros_com.egg-info/dependency_links.txt
+writing top-level names to px4_ros_com.egg-info/top_level.txt
+reading manifest file 'px4_ros_com.egg-info/SOURCES.txt'
+writing manifest file 'px4_ros_com.egg-info/SOURCES.txt'
+[ 91%] Built target ament_cmake_python_build_px4_ros_com_egg
+[01m[K/home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:43:53:[m[K [01;31m[Kerror: [m[K‘[01m[KVehicleStatus[m[K’ in namespace ‘[01m[Kpx4_msgs::msg[m[K’ does not name a type
+   43 |   void vehicle_status_callback(const px4_msgs::msg::[01;31m[KVehicleStatus[m[K::SharedPtr msg);
+      |                                                     [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:43:78:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kmsg[m[K’
+   43 |   void vehicle_status_callback(const px4_msgs::msg::VehicleStatus::SharedPtr [01;31m[Kmsg[m[K);
+      |                                                                              [01;31m[K^~~[m[K
+[01m[K/home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:43:77:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kmsg[m[K’
+   43 |   void vehicle_status_callback[34m[K([m[Kconst px4_msgs::msg::VehicleStatus::SharedPtr[01;31m[K [m[K[32m[Kmsg[m[K);
+      |                               [34m[K~[m[K                                             [01;31m[K^[m[K[32m[K~~~[m[K
+      |                                                                             [32m[K)[m[K
+[01m[K/home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:43:68:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+   43 |   void vehicle_status_callback(const px4_msgs::msg::VehicleStatus::[01;31m[KSharedPtr[m[K msg);
+      |                                                                    [01;31m[K^~~~~~~~~[m[K
+      |                                                                             [32m[K;[m[K
+[01m[K/home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:43:78:[m[K [01;31m[Kerror: [m[K‘[01m[Kmsg[m[K’ does not name a type
+   43 |   void vehicle_status_callback(const px4_msgs::msg::VehicleStatus::SharedPtr [01;31m[Kmsg[m[K);
+      |                                                                              [01;31m[K^~~[m[K
+gmake[2]: *** [CMakeFiles/offboard_control.dir/build.make:76: CMakeFiles/offboard_control.dir/src/examples/offboard/offboard_control.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:254: CMakeFiles/offboard_control.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

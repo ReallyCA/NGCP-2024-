@@ -263,6 +263,19 @@ offboard_control/fast:
 .PHONY : offboard_control/fast
 
 #=============================================================================
+# Target rules for targets named read_telemetry
+
+# Build rule for target.
+read_telemetry: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 read_telemetry
+.PHONY : read_telemetry
+
+# fast build rule for target.
+read_telemetry/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_telemetry.dir/build.make CMakeFiles/read_telemetry.dir/build
+.PHONY : read_telemetry/fast
+
+#=============================================================================
 # Target rules for targets named offboard_control_srv
 
 # Build rule for target.
@@ -421,6 +434,30 @@ src/examples/offboard/offboard_control_srv.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/offboard_control_srv.dir/build.make CMakeFiles/offboard_control_srv.dir/src/examples/offboard/offboard_control_srv.cpp.s
 .PHONY : src/examples/offboard/offboard_control_srv.cpp.s
 
+src/examples/offboard/read_telemetry.o: src/examples/offboard/read_telemetry.cpp.o
+.PHONY : src/examples/offboard/read_telemetry.o
+
+# target to build an object file
+src/examples/offboard/read_telemetry.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_telemetry.dir/build.make CMakeFiles/read_telemetry.dir/src/examples/offboard/read_telemetry.cpp.o
+.PHONY : src/examples/offboard/read_telemetry.cpp.o
+
+src/examples/offboard/read_telemetry.i: src/examples/offboard/read_telemetry.cpp.i
+.PHONY : src/examples/offboard/read_telemetry.i
+
+# target to preprocess a source file
+src/examples/offboard/read_telemetry.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_telemetry.dir/build.make CMakeFiles/read_telemetry.dir/src/examples/offboard/read_telemetry.cpp.i
+.PHONY : src/examples/offboard/read_telemetry.cpp.i
+
+src/examples/offboard/read_telemetry.s: src/examples/offboard/read_telemetry.cpp.s
+.PHONY : src/examples/offboard/read_telemetry.s
+
+# target to generate assembly for a file
+src/examples/offboard/read_telemetry.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_telemetry.dir/build.make CMakeFiles/read_telemetry.dir/src/examples/offboard/read_telemetry.cpp.s
+.PHONY : src/examples/offboard/read_telemetry.cpp.s
+
 src/lib/frame_transforms.o: src/lib/frame_transforms.cpp.o
 .PHONY : src/lib/frame_transforms.o
 
@@ -466,6 +503,7 @@ help:
 	@echo "... frame_transforms"
 	@echo "... offboard_control"
 	@echo "... offboard_control_srv"
+	@echo "... read_telemetry"
 	@echo "... sensor_combined_listener"
 	@echo "... vehicle_gps_position_listener"
 	@echo "... src/examples/advertisers/debug_vect_advertiser.o"
@@ -483,6 +521,9 @@ help:
 	@echo "... src/examples/offboard/offboard_control_srv.o"
 	@echo "... src/examples/offboard/offboard_control_srv.i"
 	@echo "... src/examples/offboard/offboard_control_srv.s"
+	@echo "... src/examples/offboard/read_telemetry.o"
+	@echo "... src/examples/offboard/read_telemetry.i"
+	@echo "... src/examples/offboard/read_telemetry.s"
 	@echo "... src/lib/frame_transforms.o"
 	@echo "... src/lib/frame_transforms.i"
 	@echo "... src/lib/frame_transforms.s"
