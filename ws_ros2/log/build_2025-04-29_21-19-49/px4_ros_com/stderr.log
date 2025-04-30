@@ -1,0 +1,8 @@
+[01m[K/home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:68:48:[m[K [01;31m[Kerror: [m[Kcould not convert ‘[01m[KOFFBOARD_LOITER_TIME[m[K’ from ‘[01m[Kconst int[m[K’ to ‘[01m[Kconst seconds[m[K’ {aka ‘[01m[Kconst std::chrono::duration<long int>[m[K’}
+   68 |   const std::chrono::seconds loiter_duration = [01;31m[KOFFBOARD_LOITER_TIME[m[K;
+      |                                                [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+      |                                                [01;31m[K|[m[K
+      |                                                [01;31m[Kconst int[m[K
+gmake[2]: *** [CMakeFiles/offboard_control.dir/build.make:76: CMakeFiles/offboard_control.dir/src/examples/offboard/offboard_control.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:256: CMakeFiles/offboard_control.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

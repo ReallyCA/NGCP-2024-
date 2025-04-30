@@ -1,0 +1,26 @@
+[0.010s] Invoking command in '/home/fidelis/NGCP-2024-/ws_ros2/build/px4_ros_com': AMENT_PREFIX_PATH=/home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/fidelis/NGCP-2024-/ws_ros2/build/px4_ros_com -- -j16 -l16
+[0.050s] [35m[1mConsolidate compiler generated dependencies of target offboard_control[0m
+[0.061s] [ 57%] Built target frame_transforms
+[0.061s] [ 57%] Built target read_telemetry
+[0.061s] [ 57%] Built target sensor_combined_listener
+[0.061s] [ 57%] Built target debug_vect_advertiser
+[0.062s] [ 71%] Built target offboard_control_srv
+[0.062s] [ 85%] Built target vehicle_gps_position_listener
+[0.065s] [ 85%] Built target ament_cmake_python_symlink_px4_ros_com
+[0.065s] [ 92%] [32mBuilding CXX object CMakeFiles/offboard_control.dir/src/examples/offboard/offboard_control.cpp.o[0m
+[0.200s] running egg_info
+[0.211s] writing px4_ros_com.egg-info/PKG-INFO
+[0.211s] writing dependency_links to px4_ros_com.egg-info/dependency_links.txt
+[0.211s] writing top-level names to px4_ros_com.egg-info/top_level.txt
+[0.239s] reading manifest file 'px4_ros_com.egg-info/SOURCES.txt'
+[0.240s] writing manifest file 'px4_ros_com.egg-info/SOURCES.txt'
+[0.268s] [ 92%] Built target ament_cmake_python_build_px4_ros_com_egg
+[5.013s] [01m[K/home/fidelis/NGCP-2024-/ws_ros2/src/px4_ros_com/src/examples/offboard/offboard_control.cpp:68:48:[m[K [01;31m[Kerror: [m[Kcould not convert ‘[01m[KOFFBOARD_LOITER_TIME[m[K’ from ‘[01m[Kconst int[m[K’ to ‘[01m[Kconst seconds[m[K’ {aka ‘[01m[Kconst std::chrono::duration<long int>[m[K’}
+[5.013s]    68 |   const std::chrono::seconds loiter_duration = [01;31m[KOFFBOARD_LOITER_TIME[m[K;
+[5.013s]       |                                                [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[5.013s]       |                                                [01;31m[K|[m[K
+[5.014s]       |                                                [01;31m[Kconst int[m[K
+[5.015s] gmake[2]: *** [CMakeFiles/offboard_control.dir/build.make:76: CMakeFiles/offboard_control.dir/src/examples/offboard/offboard_control.cpp.o] Error 1
+[5.015s] gmake[1]: *** [CMakeFiles/Makefile2:256: CMakeFiles/offboard_control.dir/all] Error 2
+[5.015s] gmake: *** [Makefile:146: all] Error 2
+[5.018s] Invoked command in '/home/fidelis/NGCP-2024-/ws_ros2/build/px4_ros_com' returned '2': AMENT_PREFIX_PATH=/home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/fidelis/NGCP-2024-/ws_ros2/install/px4_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/fidelis/NGCP-2024-/ws_ros2/build/px4_ros_com -- -j16 -l16
