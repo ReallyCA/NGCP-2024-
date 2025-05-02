@@ -1,5 +1,9 @@
 // useful references: https://github.com/PX4/px4_ros_com/blob/main/src/examples/offboard/offboard_control.cpp, https://github.com/PX4/PX4-Autopilot/issues/22288, https://discuss.px4.io/t/offboard-mode-trajectory-setpoint/32850
-// cmd: ros2 run px4_ros_com offboard_control
+// cmd: ros2 run px4_ros_com offboard_control N1, E1, D1, N2, E2, D2, ... , Nn, En, Dn
+// N1 = north coordinate for first waypoint, E1: east coordinate for first waypoint, ... Nn: north coordinate for n'th waypoint
+
+// ros2 run px4_ros_com offboard_control 
+
 // https://discuss.px4.io/t/position-trajectory-to-mc-position-control/7376/5
 
 #include <cmath>
@@ -25,8 +29,7 @@ using namespace px4_msgs::msg;
 // ----------------------------------------------------------------------------------------------------------------------------------------//
 // Adjust as needed
 const seconds OFFBOARD_LOITER_TIME = 10s; // adjust loiter time (seconds)
-const float DISTANCE_THRESHOLD = 10; // not sure if needed tbh (meters)
-const std::vector<std::vector<float>> MISSION_SETPOINTS = {{100.0, 50, -30.0}, {-100, -50, -30}};
+float DISTANCE_THRESHOLD = 10; // not sure if needed tbh (meters)
 // ----------------------------------------------------------------------------------------------------------------------------------------//
 
 
@@ -87,7 +90,20 @@ private:
 int main(int argc, char *argv[]) {
   rclcpp::init(argc, argv);
 
-  auto node = std::make_shared<OffboardPlane>(MISSION_SETPOINTS);
+  std::vector<std::vector<float>> waypoints;
+  if((argc - 1) % 3 != 0) {
+    std::cerr << "Error!";
+    return 1;
+  }
+
+  for(int i = 1; i < argc; i+=3) {
+    float x = std::stof(argv[i]);
+    float y = std::stof(argv[i+1]);
+    float z = std::stof(argv[i+2]);
+    waypoints.push_back({x,y,z});
+  }
+
+  auto node = std::make_shared<OffboardPlane>(waypoints);
   rclcpp::spin(node);
   rclcpp::shutdown();
   return 0;
