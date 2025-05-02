@@ -24,6 +24,8 @@ struct coordinate{
 	double longitude = 0;
 };
 
+double getLat(struct coordinate);
+double getLong(struct coordinate);
 csvResult readFile(string path);
 coordinate findFinal(csvResult result);
 double findDistance(coordinate initial, coordinate final);
@@ -37,7 +39,7 @@ int main(){
 	csvResult result = readFile(path);
 	coordinate point = findFinal(result);
 	cout << fixed << setprecision(8);
-	cout << point.latitude << " " << point.longitude << endl;
+	cout << point.latitude << "," << point.longitude << endl;
 	return 0;
 
 }
@@ -97,7 +99,7 @@ coordinate findFinal(csvResult result){
 		finalPoints.push_back(newCoord);
 	}
 	if (result.maxConfidence < 80){
-		cout << "LOW CONFIDENCE" << endl;
+		// cout << "LOW CONFIDENCE" << endl;
 	}
 	coordinate finalPoint;
 	for (int i = 0; i < finalPoints.size(); i++){
@@ -123,4 +125,3 @@ coordinate findNew(coordinate initial, int angle, double displacement){
 	newCoordinate.longitude = initial.longitude + (displacement * sin(radians));
 	return newCoordinate;
 }
-
