@@ -1,10 +1,11 @@
 // useful references: https://github.com/PX4/px4_ros_com/blob/main/src/examples/offboard/offboard_control.cpp, https://github.com/PX4/PX4-Autopilot/issues/22288, https://discuss.px4.io/t/offboard-mode-trajectory-setpoint/32850
+// https://discuss.px4.io/t/position-trajectory-to-mc-position-control/7376/5
+
+// ------------------------------------ //
+
 // cmd: ros2 run px4_ros_com offboard_control N1, E1, D1, N2, E2, D2, ... , Nn, En, Dn
 // N1 = north coordinate for first waypoint, E1: east coordinate for first waypoint, ... Nn: north coordinate for n'th waypoint
 
-// ros2 run px4_ros_com offboard_control 
-
-// https://discuss.px4.io/t/position-trajectory-to-mc-position-control/7376/5
 
 #include <cmath>
 #include <px4_msgs/msg/offboard_control_mode.hpp>
